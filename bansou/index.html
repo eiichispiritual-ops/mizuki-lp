@@ -117,9 +117,28 @@ h3{
 }
 
 /* ---------- ヒーロー ---------- */
+
+/* ---------- ヒーロー：人物ベース ---------- */
+.hero-person{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-person img{
+  width:100%;height:100%;object-fit:cover;
+  object-position:62% 12%;
+  transform:scale(1.04);
+  animation:heroDrift 26s ease-in-out infinite alternate;
+  filter:saturate(.88) contrast(1.04);
+}
+@keyframes heroDrift{from{transform:scale(1.04)}to{transform:scale(1.11)}}
+/* 左から暗幕をかけて、左側に文字を置ける面を作る */
+.hero-person::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(100deg, rgba(20,17,34,.94) 0%, rgba(20,17,34,.86) 30%, rgba(20,17,34,.42) 58%, rgba(20,17,34,.20) 78%, rgba(20,17,34,.46) 100%),
+    linear-gradient(180deg, rgba(20,17,34,.72) 0%, transparent 26%, transparent 52%, rgba(24,21,40,.92) 92%, var(--sumi) 100%);
+}
+
 .hero{
   min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-  padding-bottom:calc(6svh + 130px);position:relative;overflow:hidden;
+  padding-bottom:calc(6svh + 120px);position:relative;overflow:hidden;
 }
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:72% 32%;opacity:.68;transform:scale(1.08);animation:slowZoom 22s ease-in-out infinite alternate}
@@ -139,44 +158,19 @@ h3{
   color:var(--mute);margin-top:14px;white-space:nowrap;
   text-shadow:0 2px 8px rgba(0,0,0,.8);
 }
-.hero .bottom{position:relative;z-index:3;text-align:center;padding:0 27px}
+.hero .bottom{position:relative;z-index:4;text-align:left;padding:0 27px}
 .hero .tag{
   font-size:11.5px;letter-spacing:.28em;color:var(--gold-hi);
   border:1px solid rgba(201,162,75,.45);display:inline-block;
   padding:11px 20px;background:rgba(15,13,20,.5);backdrop-filter:blur(6px);
   line-height:1.8;
 }
-.scrollcue{margin-top:38px;display:flex;flex-direction:column;align-items:center;gap:9px}
+.scrollcue{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
 .scrollcue span{font-size:9.5px;letter-spacing:.42em;color:var(--mute);font-family:"Cormorant Garamond",serif}
 .scrollcue i{display:block;width:1px;height:52px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 2.4s ease-in-out infinite}
 @keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);transform-origin:top;opacity:1}}
 
 
-/* ---------- ヒーローの人物 ---------- */
-.hero-figure{
-  position:absolute;right:-6%;bottom:0;z-index:2;
-  width:min(66%,300px);
-  -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 74%,transparent 99%);
-  mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 74%,transparent 99%);
-  opacity:0;transform:translateY(22px);
-  animation:figIn 2.2s cubic-bezier(.22,.61,.36,1) .5s forwards;
-  pointer-events:none;
-}
-.hero-figure img{
-  width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 18%;
-  filter:brightness(.92) saturate(.95) contrast(1.02);
-}
-.hero-figure::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(24,21,40,.5) 0%,transparent 30%,transparent 60%,rgba(24,21,40,.72) 100%);
-}
-@keyframes figIn{to{opacity:.92;transform:none}}
-@media (max-width:430px){
-  .hero-figure{width:60%;right:-8%}
-}
-@media (prefers-reduced-motion:reduce){
-  .hero-figure{opacity:.92;transform:none;animation:none}
-}
 
 /* ---------- 引用・強調ブロック ---------- */
 .quote{
@@ -479,11 +473,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 <!-- ============ HERO ============ -->
 <header class="hero">
-  <div class="hero-bg"><img src="../img/moon_01.jpg" alt=""></div>
-  <div class="hero-figure">
-    <img src="../img/mizuki.jpg" alt="みづき"
-         onerror="this.closest('.hero-figure').style.display='none'">
-  </div>
+  <div class="hero-person"><img src="../img/mizuki_hero.jpg" alt="みづき"></div>
 
   <div class="particles" aria-hidden="true" id="particles"></div>
 
