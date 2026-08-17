@@ -501,6 +501,21 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
   font-size:18.5px;padding:24px 14px;font-weight:900;
   box-shadow:0 10px 26px rgba(201,162,75,.36), 0 2px 0 rgba(255,255,255,.45) inset;
 }
+
+/* 文中ミニCTA */
+.minicta{
+  display:block;margin:38px auto;max-width:400px;text-decoration:none;text-align:center;
+  padding:17px 16px;border:1.5px solid rgba(201,162,75,.55);
+  background:linear-gradient(180deg,rgba(201,162,75,.14),rgba(201,162,75,.05));
+  color:var(--gold-hi);font-weight:800;font-size:15.5px;letter-spacing:.06em;
+  border-radius:999px;position:relative;overflow:hidden;
+}
+.minicta::after{
+  content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);
+  animation:ctaSweep 5s ease-in-out infinite;
+}
+.minicta .s{display:block;font-size:11.5px;color:var(--mute);font-weight:400;margin-top:5px;letter-spacing:.08em}
 </style>
 </head>
 <body>
@@ -598,7 +613,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     <div class="big rv">楽になったことと、<br>現実が変わることは、<br>別です。</div>
 
     <div class="rv">
-      <p>涙が出た。<br>胸が軽くなった。<br>当たっていた。</p>
+      <p><span class="mk">涙が出た。</span><br><span class="mk">胸が軽くなった。</span><br><span class="mk">当たっていた。</span></p>
       <p>それだけで終わると、数日後、<strong>また同じ日常に戻ります。</strong></p>
       <p>なぜなら、人生が詰まっていた<strong>根本のパターン</strong>は、気づいただけでは変わりきらないからです。</p>
     </div>
@@ -647,6 +662,8 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="cap2">同じ場所を、違う深さで視ています</div>
     </div>
 
+    <a class="minicta rv" href="#item">二つの鑑定を見てみる<span class="s">どちらを選ぶかの目安もあります</span></a>
+
     <div class="quote rv">
       <p>無料鑑定は、<br>扉の前に立つためのもの。</p>
       <p>本鑑定は、その扉を開けて、<br>本当に人生を<br>動かしていくためのものです。</p>
@@ -692,6 +709,8 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <p><strong>今まで何度も期待して、何度も自分を責めてきたからです。</strong></p>
       <p>急かすつもりは、ありません。</p>
       <p>ただ、今届いているサインを、日常に埋もれさせないためのものです。</p>
+
+    <a class="minicta rv" href="#item">二つの鑑定を見てみる<span class="s">どちらを選ぶかの目安もあります</span></a>
     </div>
   </div>
 </section>
@@ -713,7 +732,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="thumb"><img src="../img/thumb_tsukuyomi.jpg" alt="月読の章"></div>
       <div class="pname">月読の章</div>
       <div class="was"><s>通常価格 7,980円</s></div>
-      <div class="price">4,980<small>円</small></div>
+      <div class="price"><span class="num-gold">4,980</span><small>円</small></div>
       <div class="goal">今の流れを、<br>整えるところまで</div>
       <p>今の人間関係の流れや、心が揺れている場所。<br>落ち着きを取り戻すために、何から整えればいいのか。</p>
       <ul>
@@ -731,7 +750,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="thumb"><img src="../img/thumb_shingon.jpg" alt="神言降ろしの本鑑定"></div>
       <div class="pname">神言降ろしの本鑑定</div>
       <div class="was"><s>通常価格 19,800円</s></div>
-      <div class="price">9,980<small style="color:var(--gold-hi)">円</small></div>
+      <div class="price"><span class="num-gold">9,980</span><small style="color:var(--gold-hi)">円</small></div>
       <div class="goal">なぜ繰り返すのか、<br>根っこまで</div>
       <p>今起きていることだけでなく、<strong>なぜそれが起きたのか</strong>を、魂の深いところから視ていきます。</p>
       <ul>
@@ -794,7 +813,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="st">
         <span class="when">お返事をいただいてから</span>
         <h4>その言葉ごと、深く視ます</h4>
-        <p>いただいた言葉を一つずつ受け取りながら、なぜ今この流れが来ているのかを視ていきます。ここに時間をかけたいので、二〜三日いただいています。</p>
+        <p>いただいた言葉を一つずつ受け取りながら、なぜ今この流れが来ているのかを視ていきます。<br>ここに時間をかけたいので、<strong>二〜三日</strong>いただいています。</p>
       </div>
 
       <div class="st">
