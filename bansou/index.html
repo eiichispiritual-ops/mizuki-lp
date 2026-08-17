@@ -734,6 +734,23 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 .big{word-break:keep-all;overflow-wrap:break-word}
+
+/* CTA直前の感情ピーク */
+.peak{
+  text-align:center;margin:52px auto 30px;max-width:520px;
+  font-family:"Shippori Mincho B1",serif;
+}
+.peak .l1{font-size:15px;color:var(--mute);letter-spacing:.14em;margin-bottom:16px}
+.peak .l2{
+  font-size:clamp(29px,8.6vw,40px);font-weight:800;line-height:1.5;
+  letter-spacing:.02em;color:var(--paper);
+}
+.peak .l2 em{
+  font-style:normal;
+  background:linear-gradient(180deg,#FBEFC4,#D9B45C 52%,#A8813A 68%,#F2DFA6);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.peak .l3{font-size:14.5px;color:var(--mute);margin-top:18px;line-height:1.95}
 </style>
 </head>
 <body>
@@ -1011,7 +1028,11 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
       <div class="big">戻りかけた回数だけ、<br>戻らずに済んだ人が、<br>変わります。</div>
     </div>
 
-    <div class="big">今日から、<br>ひとりじゃなくなります。</div>
+    <div class="peak rv">
+      <div class="l1">明日の朝も、<br>その次の朝も。</div>
+      <div class="l2">もう、<br><em>ひとりで戻らない。</em></div>
+      <div class="l3">お受けできる人数に限りがあります。<br>埋まっている時期は、少しお待ちいただくことがあります。</div>
+    </div>
 
     <a class="cta rv" href="#plan">
       <span class="arrow">▼</span>

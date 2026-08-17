@@ -554,6 +554,40 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 .big{word-break:keep-all;overflow-wrap:break-word}
+
+/* CTA直前の感情ピーク */
+.peak{
+  text-align:center;margin:52px auto 30px;max-width:520px;
+  font-family:"Shippori Mincho B1",serif;
+}
+.peak .l1{font-size:15px;color:var(--mute);letter-spacing:.14em;margin-bottom:16px}
+.peak .l2{
+  font-size:clamp(29px,8.6vw,40px);font-weight:800;line-height:1.5;
+  letter-spacing:.02em;color:var(--paper);
+}
+.peak .l2 em{
+  font-style:normal;
+  background:linear-gradient(180deg,#FBEFC4,#D9B45C 52%,#A8813A 68%,#F2DFA6);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.peak .l3{font-size:14.5px;color:var(--mute);margin-top:18px;line-height:1.95}
+
+/* 2プラン比較表 */
+.vs{margin:34px 0 8px;border:1px solid rgba(201,162,75,.3);overflow:hidden}
+.vs .r{display:grid;grid-template-columns:1fr 1.15fr;border-bottom:1px solid rgba(201,162,75,.16)}
+.vs .r:last-child{border-bottom:none}
+.vs .c{padding:14px 11px;font-size:13.2px;line-height:1.75;text-align:center}
+.vs .c:first-child{border-right:1px solid rgba(201,162,75,.16);color:var(--mute)}
+.vs .r.hd .c{background:rgba(0,0,0,.25);font-weight:800;font-size:14px;color:var(--paper);padding:15px 10px;font-family:"Shippori Mincho B1",serif}
+.vs .r.hd .c:last-child{background:rgba(201,162,75,.16);color:var(--gold-hi)}
+.vs .r.pr .c{padding:16px 10px}
+.vs .r.pr .c .v{font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600;color:var(--paper)}
+.vs .r.pr .c:last-child .v{font-size:29px;
+  background:linear-gradient(180deg,#FBEFC4,#D9B45C 50%,#A8813A 66%,#F2DFA6);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.vs .r .c:last-child{color:var(--paper)}
+.vs .tick{color:var(--gold-hi);font-weight:700}
+.vs .dash{color:var(--mute);opacity:.5}
 </style>
 </head>
 <body>
@@ -777,6 +811,17 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
       <p style="text-align:center">違うのは、<strong>どこまで深く降ろすか</strong>です。</p>
     </div>
 
+    <div class="vs rv">
+      <div class="r hd"><div class="c">月読の章</div><div class="c">神言降ろしの本鑑定</div></div>
+      <div class="r pr"><div class="c"><span class="v">4,980</span>円</div><div class="c"><span class="v">9,980</span>円</div></div>
+      <div class="r"><div class="c">今の流れ・揺れ</div><div class="c">今の流れ・揺れ</div></div>
+      <div class="r"><div class="c">整える順番</div><div class="c">整える順番</div></div>
+      <div class="r"><div class="c dash">—</div><div class="c tick">なぜ起きたのか</div></div>
+      <div class="r"><div class="c dash">—</div><div class="c tick">繰り返す理由</div></div>
+      <div class="r"><div class="c dash">—</div><div class="c tick">これから一年の流れ</div></div>
+      <div class="r"><div class="c dash">—</div><div class="c tick">神様から届いた神言</div></div>
+      <div class="r"><div class="c">今を軽くしたい方</div><div class="c">根っこから知りたい方</div></div>
+    </div>
     <!-- 月読の章 -->
     <div class="item rv">
       <div class="thumb"><img src="../img/thumb_tsukuyomi.jpg" alt="月読の章"></div>
@@ -984,7 +1029,11 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
       <p>あなたがここまで辿り着いたこと自体に、ちゃんと意味があります。</p>
     </div>
 
-    <div class="big rv">その意味を、<br>一緒に見にいきませんか。</div>
+    <div class="peak rv">
+      <div class="l1">迷っている時間も、<br>流れは進んでいます。</div>
+      <div class="l2">見にいくのは、<br><em>今日でいい。</em></div>
+      <div class="l3">申し込みは1分。<br>質問へのお返事をいただいてから、二〜三日でお届けします。</div>
+    </div>
 
     <div class="sign rv">みづき</div>
 
