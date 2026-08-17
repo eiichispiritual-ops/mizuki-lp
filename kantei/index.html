@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sumi:#0F0D14; --ai:#1A1830; --ai2:#141228;
+  --sumi:#181528; --ai:#241F3D; --ai2:#1E1A33;
   --gold:#C9A24B; --gold-hi:#F5DFA0; --gold-lo:#8A6E32;
-  --shu:#B5432E; --paper:#F4EFE6; --mute:#8B85A3;
+  --shu:#B5432E; --paper:#F7F3EA; --mute:#A49DBB;
   --maxw:620px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -75,9 +75,9 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:calc(6svh + 130px);position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:70% 40%;opacity:.5;transform:scale(1.08);animation:slowZoom 22s ease-in-out infinite alternate}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:70% 40%;opacity:.66;transform:scale(1.08);animation:slowZoom 22s ease-in-out infinite alternate}
 @keyframes slowZoom{from{transform:scale(1.08)}to{transform:scale(1.16)}}
-.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 130% 75% at 50% 12%,rgba(26,24,48,.32) 0%,rgba(15,13,20,.86) 58%,var(--sumi) 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 130% 75% at 50% 12%,rgba(26,24,48,.32) 0%,rgba(24,21,40,.78) 58%,var(--sumi) 100%)}
 .hero .vtitle{position:absolute;left:26px;top:7svh;z-index:3;display:flex;flex-direction:row-reverse;gap:20px;align-items:flex-start}
 .hero .vtitle .main{writing-mode:vertical-rl;text-orientation:mixed;font-size:clamp(30px,8.6vw,42px);font-weight:800;letter-spacing:.22em;line-height:1.35;text-shadow:0 4px 16px rgba(0,0,0,.75)}
 .hero .vtitle .sub{writing-mode:vertical-rl;font-size:12px;letter-spacing:.36em;color:var(--mute);margin-top:14px;white-space:nowrap;text-shadow:0 2px 8px rgba(0,0,0,.8)}
@@ -94,14 +94,14 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 .big{font-size:clamp(21px,5.6vw,26px);font-weight:700;line-height:1.95;letter-spacing:.1em;text-align:center;margin:40px 0}
 
 .ph{margin:52px 0;position:relative;overflow:hidden}
-.ph img{width:100%;filter:brightness(.82) saturate(.9)}
+.ph img{width:100%;filter:brightness(.94) saturate(.96)}
 .ph.tall img{aspect-ratio:3/4;object-fit:cover}
 .ph.portrait img{aspect-ratio:868/1882;object-fit:cover;object-position:center top}
 .ph.wide img{aspect-ratio:16/10;object-fit:cover}
 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,20,.3),transparent 30%,transparent 70%,rgba(15,13,20,.55));pointer-events:none}
 .ph .cap{position:absolute;left:0;right:0;bottom:18px;text-align:center;z-index:2;font-size:12.5px;letter-spacing:.2em;color:var(--paper);text-shadow:0 2px 10px rgba(0,0,0,.9)}
 .ph-full{margin:64px -27px;position:relative;overflow:hidden}
-.ph-full img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(.72) saturate(.85)}
+.ph-full img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(.84) saturate(.9)}
 .ph-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--sumi),transparent 22%,transparent 74%,var(--sumi));pointer-events:none}
 .ph-full .ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;padding:0 32px;text-align:center;font-size:clamp(19px,5.2vw,24px);font-weight:700;line-height:2;letter-spacing:.1em;text-shadow:0 3px 18px rgba(0,0,0,.9)}
 
@@ -167,6 +167,37 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 .faq[open] summary::after{transform:translateY(-30%) rotate(225deg)}
 .faq .ans{padding:0 4px 26px;font-size:14.8px;line-height:2.15;color:#D8D3CA}
 
+/* ---------- 受け取りまでの流れ ---------- */
+.steps{margin:44px 0;counter-reset:st}
+.steps .st{
+  position:relative;padding:0 0 34px 62px;
+}
+.steps .st::before{
+  counter-increment:st;content:counter(st);
+  position:absolute;left:0;top:-2px;
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid rgba(201,162,75,.6);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Cormorant Garamond",serif;font-size:16px;color:var(--gold-hi);
+  background:rgba(201,162,75,.07);
+}
+.steps .st::after{
+  content:"";position:absolute;left:19px;top:44px;bottom:6px;width:1px;
+  background:linear-gradient(180deg,rgba(201,162,75,.45),rgba(201,162,75,.08));
+}
+.steps .st:last-child{padding-bottom:0}
+.steps .st:last-child::after{display:none}
+.steps .st h4{
+  font-size:16.5px;font-weight:700;color:var(--gold-hi);
+  letter-spacing:.08em;margin-bottom:10px;line-height:1.8;
+}
+.steps .st p{font-size:14.8px;line-height:2.05;margin-bottom:0;color:#DDD8CE}
+.steps .st .when{
+  display:inline-block;font-size:11.5px;letter-spacing:.16em;
+  color:var(--gold);border:1px solid rgba(201,162,75,.35);
+  padding:3px 11px;margin-bottom:11px;
+}
+
 .stat{text-align:center;margin:52px 0}
 .stat .num{font-family:"Cormorant Garamond",serif;font-size:clamp(52px,15vw,74px);font-weight:600;line-height:1;letter-spacing:.02em}
 .stat .unit{font-size:20px;margin-left:6px;font-family:"Shippori Mincho B1",serif}
@@ -221,7 +252,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     <div class="rv">
       <p>無料鑑定を読んでいる時、<br>どこかで手が止まりませんでしたか。</p>
       <p>胸のあたりが、ざわっとした。<br>なぜか、涙が出そうになった。<br>少し怖いけれど、本当はわかっていた気がした。</p>
-      <p>それは、偶然ではありません。</p>
+      <p>あれ、偶然じゃないんです。</p>
     </div>
 
     <div class="quote rv">
@@ -252,7 +283,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
     <div class="rv">
       <p>私は、鑑定を「当てもの」だと思っていません。</p>
-      <p>未来を言い当てて、すごいでしょと言いたいわけではありません。<br>怖いことを言って、私の言う通りにさせたいわけでもありません。</p>
+      <p>未来を言い当てて、すごいでしょと言いたいわけじゃない。<br>怖いことを言って、私の言う通りにさせたいわけでもない。</p>
       <p>私が届けたいのは、<strong>神様からの本当のメッセージ</strong>です。</p>
     </div>
 
@@ -357,9 +388,9 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <div class="rv">
-      <p>そう思うのは、あなたが弱いからではありません。</p>
+      <p>そう思うのは、あなたが弱いからじゃない。</p>
       <p><strong>今まで何度も期待して、何度も自分を責めてきたからです。</strong></p>
-      <p>本鑑定は、あなたを急かすものではありません。</p>
+      <p>急かすつもりは、ありません。</p>
       <p>ただ、今届いているサインを、日常に埋もれさせないためのものです。</p>
     </div>
   </div>
@@ -436,6 +467,52 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 <div class="band" aria-hidden="true"></div>
 
+<!-- S5.5 受け取りまでの流れ -->
+<section class="s-dark">
+  <div class="wrap">
+    <div class="eyebrow rv lat">The flow</div>
+    <h2 class="rv">受け取るまでの流れ</h2>
+    <div class="gline"></div>
+
+    <div class="rv">
+      <p style="text-align:center">申し込んだあと、どうなるのか。<br>先にお伝えしておきますね。</p>
+    </div>
+
+    <div class="steps rv">
+      <div class="st">
+        <span class="when">お申し込み</span>
+        <h4>ご購入いただく</h4>
+        <p>お名前と、購入画面のスクリーンショットをLINEに送ってください。ここで一度、私が確認します。</p>
+      </div>
+
+      <div class="st">
+        <span class="when">確認がとれたら</span>
+        <h4>二度目の質問をお送りします</h4>
+        <p>ここが、いちばん大事なところ。<br>無料鑑定のときより、ずっと深いことをお聞きします。今いちばんしんどい瞬間。認めるのが怖かったこと。夜にふっと出てくる気持ち。<br>上手に書こうとしなくて大丈夫。思いついたままの言葉で構いません。</p>
+      </div>
+
+      <div class="st">
+        <span class="when">お返事をいただいてから</span>
+        <h4>その言葉ごと、深く視ます</h4>
+        <p>いただいた言葉を一つずつ受け取りながら、なぜ今この流れが来ているのかを視ていきます。ここに時間をかけたいので、二〜三日いただいています。</p>
+      </div>
+
+      <div class="st">
+        <span class="when">仕上がったら</span>
+        <h4>本格鑑定書をお届けします</h4>
+        <p>読み終えたあとに、そのまま置いておける長さで書きます。何度でも読み返してください。</p>
+      </div>
+    </div>
+
+    <div class="whisper rv">
+      申し込んで、はい終わり、<br>ではありません。<br><br>
+      あなたの言葉を聞いてから、<br>書きはじめます。
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"></div>
+
 <!-- S6 感想 -->
 <section class="s-dark">
   <div class="wrap">
@@ -468,7 +545,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <h3>申し込まないでほしい方が、<br>います</h3>
       <p>今、生活が苦しくて、このお金を出すために何かを削らなければならない方。</p>
       <p><strong>今回は、見送ってください。</strong></p>
-      <p>暮らしを削ってまで受けるものではありません。</p>
+      <p>暮らしを削ってまで受けるものじゃないんです。</p>
       <p>無料鑑定でお伝えしたことを、何度でも読み返してください。<br>そこに書いたことは、本当のことです。</p>
       <p>状況が変わった時に、また来てくださったらいい。<br><strong>その時、私はここにいます。</strong></p>
     </div>
