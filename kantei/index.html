@@ -88,6 +88,33 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 .scrollcue i{display:block;width:1px;height:52px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 2.4s ease-in-out infinite}
 @keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);transform-origin:top;opacity:1}}
 
+
+/* ---------- ヒーローの人物 ---------- */
+.hero-figure{
+  position:absolute;right:-6%;bottom:0;z-index:2;
+  width:min(66%,300px);
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 74%,transparent 99%);
+  mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 74%,transparent 99%);
+  opacity:0;transform:translateY(22px);
+  animation:figIn 2.2s cubic-bezier(.22,.61,.36,1) .5s forwards;
+  pointer-events:none;
+}
+.hero-figure img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 18%;
+  filter:brightness(.92) saturate(.95) contrast(1.02);
+}
+.hero-figure::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(24,21,40,.5) 0%,transparent 30%,transparent 60%,rgba(24,21,40,.72) 100%);
+}
+@keyframes figIn{to{opacity:.92;transform:none}}
+@media (max-width:430px){
+  .hero-figure{width:60%;right:-8%}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-figure{opacity:.92;transform:none;animation:none}
+}
+
 .quote{margin:44px 0;padding:34px 28px;border-top:1px solid rgba(201,162,75,.32);border-bottom:1px solid rgba(201,162,75,.32);background:linear-gradient(180deg,rgba(201,162,75,.05),transparent);text-align:center;font-size:18px;line-height:2.15;color:var(--gold-hi)}
 .quote p{margin-bottom:1.2em}
 .whisper{font-size:15.5px;color:var(--mute);text-align:center;margin:38px 0;line-height:2.25}
@@ -260,6 +287,11 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 <!-- HERO -->
 <header class="hero">
   <div class="hero-bg"><img src="../img/japan_01.jpg" alt=""></div>
+  <div class="hero-figure">
+    <img src="../img/mizuki.jpg" alt="みづき"
+         onerror="this.closest('.hero-figure').style.display='none'">
+  </div>
+
   <div class="particles" aria-hidden="true" id="particles"></div>
 
   <div class="vtitle">
