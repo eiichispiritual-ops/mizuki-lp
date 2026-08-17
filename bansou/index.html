@@ -173,6 +173,7 @@ h3{
 .ph{margin:52px 0;position:relative;overflow:hidden}
 .ph img{width:100%;filter:brightness(.82) saturate(.9)}
 .ph.tall img{aspect-ratio:3/4;object-fit:cover}
+.ph.portrait img{aspect-ratio:868/1882;object-fit:cover;object-position:center top}
 .ph.wide img{aspect-ratio:16/10;object-fit:cover}
 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,20,.3),transparent 30%,transparent 70%,rgba(15,13,20,.55));pointer-events:none}
 .ph .cap{
@@ -906,7 +907,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
     <!-- みづき本人の写真。LP_素材_2026-08/mizuki/mizuki.jpg を置けば自動で表示され、
          無い場合は月の写真にフォールバックする -->
-    <div class="ph tall rv-s">
+    <div class="ph portrait rv-s">
       <img src="../img/mizuki.jpg" alt="みづき"
            onerror="this.onerror=null;this.src='../img/moon_03.jpg';this.alt='';">
     </div>
