@@ -174,6 +174,25 @@ h3{
 .ph img{width:100%;filter:brightness(.94) saturate(.96)}
 .ph.tall img{aspect-ratio:3/4;object-fit:cover}
 .ph.portrait{max-width:270px;margin:46px auto}
+
+/* ---------- 波動の重なり ---------- */
+.wave{margin:26px 0 4px}
+.wave .lbl{font-size:12px;letter-spacing:.16em;color:var(--mute);margin-bottom:9px;text-align:center}
+.wave .rings{display:flex;justify-content:center;align-items:center;gap:7px}
+.wave .rings i{
+  width:9px;height:9px;border-radius:50%;
+  border:1px solid rgba(201,162,75,.5);
+  background:transparent;transition:background .6s ease,box-shadow .6s ease;
+}
+.wave .rings i.f{
+  background:radial-gradient(circle,var(--gold-hi) 0%,var(--gold) 75%);
+  box-shadow:0 0 9px rgba(245,223,160,.55);
+}
+.wave .cnt{
+  text-align:center;font-size:13px;color:var(--gold-hi);
+  margin-top:11px;letter-spacing:.1em;
+}
+.wave .cnt b{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:600;margin:0 3px}
 .ph.portrait img{aspect-ratio:3/4;object-fit:cover;object-position:center 20%}
 .ph.wide img{aspect-ratio:16/10;object-fit:cover}
 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,20,.3),transparent 30%,transparent 70%,rgba(15,13,20,.55));pointer-events:none}
@@ -764,12 +783,34 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     </div>
     <div class="whisper rv" style="margin-top:-18px;font-size:14px">月が満ちていくように、<br>整っていきます</div>
 
+    <div class="orn rv" aria-hidden="true"><i></i></div>
+
+    <div class="rv">
+      <h3 style="text-align:center">ひとつだけ、<br>知っておいてほしいこと</h3>
+      <p>遠隔の波動調整は、一度で全部が変わるものじゃないんです。</p>
+      <p>一度目は、表面のざわつきが静かになる。<br>二度目で、身体が少しゆるむ。<br>三度目、四度目と重ねていくうちに、<br>ようやく奥のほうまで届きはじめます。</p>
+      <p>水を一滴垂らしても、乾いた土は湿りません。<br>でも、毎日少しずつ落としていくと、いつのまにか奥まで染みている。</p>
+      <p>あれと、同じです。</p>
+    </div>
+
+    <div class="quote rv">
+      <p>だからプランの違いは、<br>受け取れる<b>回数</b>の違いです。</p>
+      <p>同じ調整を、<br>何度重ねられるか。</p>
+      <p>そこだけが、違います。</p>
+    </div>
+
     <!-- A -->
     <div class="plan rv">
       <div class="pname">月読の伴走　二週間</div>
       <div class="pterm">14 DAYS</div>
       <div class="price">15,800<small>円</small></div>
       <div class="goal">今の揺れを、<br>止めるところまで</div>
+      <div class="wave" aria-hidden="true">
+        <div class="lbl">波動調整が重なる回数</div>
+        <div class="rings"><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="cnt">およそ<b>2〜4</b>回</div>
+      </div>
+      <p class="honest" style="text-align:center;font-size:14px">表面の、いちばん揺れているところまで</p>
       <p>今、波が激しい方へ。</p>
       <p class="honest">正直にお伝えすると、二週間は、整い始めた頃に終わります。</p>
       <p>それでも、今この瞬間の苦しさを一人で抱えたくない方には、ここから始める意味があります。</p>
@@ -782,6 +823,12 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="pterm">1 MONTH</div>
       <div class="price">39,800<small>円</small></div>
       <div class="goal">最初の戻り癖を、<br>またぐところまで</div>
+      <div class="wave" aria-hidden="true">
+        <div class="lbl">波動調整が重なる回数</div>
+        <div class="rings"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="cnt">およそ<b>4〜8</b>回</div>
+      </div>
+      <p class="honest" style="text-align:center;font-size:14px">身体が、少しずつ覚えはじめる回数</p>
       <p>整った後、必ず一度、元に戻ろうとする波が来ます。</p>
       <p>一人だと、ここでほとんどの人が戻ります。</p>
       <p>その一回を、一緒に越えます。</p>
@@ -795,6 +842,12 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="pterm">3 MONTHS</div>
       <div class="price gg">99,800<small style="color:var(--gold-hi)">円</small></div>
       <div class="goal">現実が、<br>動き出すところまで</div>
+      <div class="wave" aria-hidden="true">
+        <div class="lbl">波動調整が重なる回数</div>
+        <div class="rings"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div>
+        <div class="cnt">およそ<b>13〜26</b>回</div>
+      </div>
+      <p class="honest" style="text-align:center;font-size:14px">奥のほうまで、届きはじめる回数</p>
       <p>気づきが行動に変わり、行動が日常に馴染むまでには、時間がかかります。</p>
       <p>三ヶ月というのは、あなたの周りが変わり始めるのに必要な、いちばん短い時間です。</p>
       <p>人との距離。<br>お金の流れ。<br>自分への言葉のかけ方。</p>
@@ -808,6 +861,12 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <div class="pterm">6 MONTHS</div>
       <div class="price">159,800<small>円</small></div>
       <div class="goal">戻り方を、<br>忘れるところまで</div>
+      <div class="wave" aria-hidden="true">
+        <div class="lbl">波動調整が重なる回数</div>
+        <div class="rings"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></div>
+        <div class="cnt">およそ<b>26〜52</b>回</div>
+      </div>
+      <p class="honest" style="text-align:center;font-size:14px">染みこんで、元に戻りにくくなる回数</p>
       <p>仕事、お金、家族、パートナー、自分自身。<br>いくつものテーマが絡んでいる方へ。</p>
       <p>半年あると、新しい選び方の方が自然になります。</p>
       <p>元の癖に戻ろうとしても、もう戻り方がわからなくなっている。</p>
