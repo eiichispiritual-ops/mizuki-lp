@@ -97,6 +97,36 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 .ph img{width:100%;filter:brightness(.94) saturate(.96)}
 .ph.tall img{aspect-ratio:3/4;object-fit:cover}
 .ph.portrait{max-width:270px;margin:46px auto}
+
+/* ---------- 深さの図解 ---------- */
+.depth{margin:46px 0;position:relative}
+.depth .layer{
+  position:relative;padding:20px 18px 20px 96px;
+  border-left:1px solid rgba(201,162,75,.28);
+  margin-left:8px;
+}
+.depth .layer .tag{
+  position:absolute;left:-8px;top:20px;
+  width:auto;min-width:76px;text-align:center;
+  font-size:10.5px;letter-spacing:.14em;padding:4px 8px;
+  background:var(--sumi);color:var(--mute);
+  border:1px solid rgba(201,162,75,.3);
+  transform:translateX(-50%) rotate(0deg);
+  left:0;
+}
+.depth .layer .nm{font-size:15.5px;color:var(--paper);line-height:1.9;margin-bottom:4px}
+.depth .layer .sub{font-size:13px;color:var(--mute);line-height:1.9}
+.depth .layer.free{opacity:.95}
+.depth .layer.deep{background:linear-gradient(90deg,rgba(201,162,75,.09),transparent)}
+.depth .layer.deep .nm{color:var(--gold-hi)}
+.depth .cap2{text-align:center;font-size:12.5px;color:var(--mute);margin-top:20px;letter-spacing:.1em}
+.depth .band-label{
+  display:flex;align-items:center;gap:10px;margin:4px 0 10px 8px;
+  font-size:11.5px;letter-spacing:.2em;
+}
+.depth .band-label.f{color:var(--mute)}
+.depth .band-label.d{color:var(--gold)}
+.depth .band-label::before{content:"";width:22px;height:1px;background:currentColor}
 .ph.portrait img{aspect-ratio:3/4;object-fit:cover;object-position:center 20%}
 .ph.wide img{aspect-ratio:16/10;object-fit:cover}
 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,20,.3),transparent 30%,transparent 70%,rgba(15,13,20,.55));pointer-events:none}
@@ -323,31 +353,48 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
       <p>なぜなら、人生が詰まっていた<strong>根本のパターン</strong>は、気づいただけでは変わりきらないからです。</p>
     </div>
 
-    <div class="cmp rv">
-      <div class="row hd">
-        <div class="c">無料鑑定</div>
-        <div class="c">本鑑定</div>
+    <div class="depth rv">
+      <div class="band-label f">無料鑑定で視えたところ</div>
+
+      <div class="layer free">
+        <div class="tag">表層</div>
+        <div class="nm">今、何が起きているか</div>
+        <div class="sub">目の前で起きていること。今の流れ。</div>
       </div>
-      <div class="row">
-        <div class="c">今、何が起きているか</div>
-        <div class="c">なぜ、それが起きたのか</div>
+
+      <div class="layer free">
+        <div class="tag">その下</div>
+        <div class="nm">何に苦しんでいるか</div>
+        <div class="sub">言葉にできている悩み。</div>
       </div>
-      <div class="row">
-        <div class="c">表に出ている悩み</div>
-        <div class="c">その奥にある根っこ</div>
+
+      <div class="band-label d" style="margin-top:22px">ここから先が、本鑑定</div>
+
+      <div class="layer deep">
+        <div class="tag">深層</div>
+        <div class="nm">なぜ、それが起きたのか</div>
+        <div class="sub">出来事の理由。今この時期に来た意味。</div>
       </div>
-      <div class="row">
-        <div class="c">今の流れ</div>
-        <div class="c">これから一年の流れ</div>
+
+      <div class="layer deep">
+        <div class="tag">根っこ</div>
+        <div class="nm">なぜ、繰り返してきたのか</div>
+        <div class="sub">同じ場所で何度も躓く、その仕組み。</div>
       </div>
-      <div class="row">
-        <div class="c">—</div>
-        <div class="c">なぜ同じことを<br>繰り返してきたのか</div>
+
+      <div class="layer deep">
+        <div class="tag">魂</div>
+        <div class="nm">本来、持っている力</div>
+        <div class="sub">まだ使えていないもの。ブレーキになっているもの。</div>
       </div>
-      <div class="row">
-        <div class="c">—</div>
-        <div class="c">どの順番で<br>整えていけばいいか</div>
+
+      <div class="layer deep">
+        <div class="tag">これから</div>
+        <div class="nm">どの順番で整えるか</div>
+        <div class="sub">一年の流れと、今やるべきこと。</div>
       </div>
+
+      <div class="cap2">同じ場所を、違う深さで視ています</div>
     </div>
 
     <div class="quote rv">
