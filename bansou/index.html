@@ -461,6 +461,145 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
   section{padding:118px 0}
   .ph-full{margin-left:calc((100vw - var(--maxw))/-2);margin-right:calc((100vw - var(--maxw))/-2)}
 }
+
+/* ===== 強調表現（ジャンプ率・アクセント） ===== */
+:root{ --shu-hi:#E2725B; --marker:rgba(201,162,75,.28); }
+
+/* 数字・キーワードの巨大化 */
+.jump{
+  display:inline-block;
+  font-size:1.9em;line-height:1.2;font-weight:800;
+  color:var(--gold-hi);letter-spacing:.02em;
+  text-shadow:0 0 24px rgba(245,223,160,.35);
+  vertical-align:-.06em;margin:0 .04em;
+}
+.jump-l{font-size:2.6em}
+/* 朱のアクセント（感情のピークだけ） */
+.shu{color:var(--shu-hi);font-weight:700}
+/* 蛍光マーカー */
+.mk{
+  background:linear-gradient(transparent 62%, var(--marker) 62%, var(--marker) 94%, transparent 94%);
+  padding:0 .08em;font-weight:600;
+}
+/* 反転カプセル（最重要ワード） */
+.cap{
+  display:inline-block;background:var(--gold-hi);color:#14110A;
+  font-weight:800;padding:.1em .6em;border-radius:999px;
+  margin:0 .2em;letter-spacing:.04em;font-size:.94em;
+}
+/* 箇条書き強調ブロック */
+.bullets{
+  margin:40px -6px;padding:30px 24px;
+  background:linear-gradient(160deg,rgba(36,31,61,.92),rgba(20,17,34,.86));
+  border:1px solid rgba(201,162,75,.24);
+  list-style:none;
+}
+.bullets li{
+  position:relative;padding:12px 0 12px 34px;
+  font-size:16.5px;line-height:1.95;
+}
+.bullets li+li{border-top:1px solid rgba(201,162,75,.12)}
+.bullets li::before{
+  content:"";position:absolute;left:6px;top:22px;
+  width:9px;height:9px;background:var(--gold);
+  transform:rotate(45deg);box-shadow:0 0 10px rgba(201,162,75,.7);
+}
+/* 期間・限定の上帯 */
+.limtag{
+  display:block;text-align:center;font-size:13px;letter-spacing:.2em;
+  color:var(--gold-hi);margin-bottom:12px;font-weight:600;
+}
+.limtag::before,.limtag::after{content:"—";margin:0 .6em;color:var(--gold);opacity:.6}
+
+
+/* ===== 参考LP準拠：明暗コントラスト設計 ===== */
+:root{
+  --kon:#16255C;        /* 濃紺 */
+  --kon-d:#0E1840;
+  --ink-l:#2E3140;      /* 白背景での文字（黒でなくグレー） */
+  --ink-l2:#5A5E70;
+  --rose:#C0456B;       /* 数字の暖色 */
+  --wis:#6B5BA8;        /* 数字の寒色 */
+  --cream:#F7F4EC;      /* 白セクション背景 */
+}
+
+/* 白背景セクション（明） */
+.s-light{background:var(--cream);color:var(--ink-l)}
+.s-light h2{color:var(--ink-l)}
+.s-light h3{color:var(--kon)}
+.s-light p{color:var(--ink-l)}
+.s-light .eyebrow{color:var(--kon)}
+.s-light .gline{background:linear-gradient(90deg,transparent,var(--rose),var(--wis),transparent);height:2px;width:120px}
+.s-light .whisper{color:var(--ink-l2)}
+
+/* 紺帯（見出し・煽り） */
+.konban{
+  background:linear-gradient(160deg,var(--kon) 0%,var(--kon-d) 100%);
+  padding:52px 0 62px;position:relative;color:#fff;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),52% 100%,48% 100%,0 calc(100% - 26px));
+}
+.konban h2{color:#fff;margin-bottom:0}
+.konban .hl{color:#F5D76E}
+.konban p{color:rgba(255,255,255,.88)}
+
+/* 数字の巨大グラデ表示 */
+.num-big{
+  font-size:2.7em;font-weight:800;line-height:1;
+  background:linear-gradient(100deg,var(--rose),var(--wis));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:-.01em;margin:0 .04em;vertical-align:-.08em;
+  display:inline-block;
+}
+.num-gold{
+  font-size:2.7em;font-weight:800;line-height:1;display:inline-block;
+  background:linear-gradient(180deg,#FBEFC4 0%,#D9B45C 46%,#A8813A 62%,#F2DFA6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));
+  margin:0 .04em;vertical-align:-.08em;
+}
+
+/* グラデ帯ラベル */
+.tapelabel{
+  display:inline-block;padding:7px 18px;color:#fff;font-weight:700;
+  font-size:15px;letter-spacing:.08em;
+  background:linear-gradient(100deg,var(--rose),var(--wis));
+}
+/* 金リボン */
+.ribbon{
+  display:inline-block;position:relative;
+  background:linear-gradient(180deg,#E3C87A,#C9A24B);
+  color:#14110A;font-weight:800;font-size:14.5px;letter-spacing:.12em;
+  padding:8px 26px;margin-bottom:18px;
+}
+.ribbon::before,.ribbon::after{
+  content:"";position:absolute;top:0;bottom:0;width:12px;
+  background:linear-gradient(180deg,#C9A24B,#9A7A33);
+}
+.ribbon::before{left:-12px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,30% 50%)}
+.ribbon::after{right:-12px;clip-path:polygon(0 0,100% 0,70% 50%,100% 100%,0 100%)}
+
+/* グラデ区切り線 */
+.gradline{height:2px;background:linear-gradient(90deg,var(--rose),var(--wis));margin:18px 0;border:0}
+
+/* 白カード（声・実績） */
+.wcard{
+  background:#fff;padding:26px 22px;margin:20px 0;
+  box-shadow:0 6px 26px rgba(20,17,34,.10);
+  display:flex;gap:18px;align-items:flex-start;
+}
+.wcard .av{
+  width:82px;height:82px;border-radius:50%;object-fit:cover;flex:none;
+  background:#EAE7E0;
+}
+.wcard .bd{flex:1;min-width:0}
+.wcard .hd{font-size:19px;font-weight:800;color:var(--ink-l);line-height:1.5;margin-bottom:8px}
+.wcard .who{font-size:12.5px;color:var(--ink-l2);margin-top:8px;text-align:center}
+.wcard p{font-size:14px;line-height:1.95;color:var(--ink-l);margin:0}
+@media (max-width:430px){
+  .wcard{flex-direction:column;align-items:center;text-align:center}
+  .wcard .bd{text-align:left}
+}
+
 </style>
 </head>
 <body>
