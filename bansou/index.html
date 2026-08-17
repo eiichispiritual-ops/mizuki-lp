@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sumi:#181528;
-  --ai:#241F3D;
-  --ai2:#1E1A33;
+  --sumi:#1C1614;
+  --ai:#2A211C;
+  --ai2:#231A17;
   --gold:#C9A24B;
   --gold-hi:#F5DFA0;
   --gold-lo:#8A6E32;
   --shu:#B5432E;
   --paper:#F7F3EA;
-  --mute:#A49DBB;
+  --mute:#B0A093;
   --maxw:620px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -511,12 +511,12 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 /* ===== 参考LP準拠：明暗コントラスト設計 ===== */
 :root{
-  --kon:#16255C;        /* 濃紺 */
+  --kon:#4A2B1F;        /* 濃紺 */
   --kon-d:#0E1840;
   --ink-l:#2E3140;      /* 白背景での文字（黒でなくグレー） */
   --ink-l2:#5A5E70;
-  --rose:#C0456B;       /* 数字の暖色 */
-  --wis:#6B5BA8;        /* 数字の寒色 */
+  --rose:#B5542E;       /* 数字の暖色 */
+  --wis:#8A6A3B;        /* 数字の寒色 */
   --cream:#F7F4EC;      /* 白セクション背景 */
 }
 
@@ -610,6 +610,73 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 .s-light h2{color:var(--ink-l)}
 .s-light .big{color:var(--ink-l)}
 .s-light .quote{color:var(--ink-l);border-color:rgba(22,37,92,.24);background:linear-gradient(180deg,rgba(22,37,92,.05),transparent)}
+
+/* ===== スマホ購入最大化：CTA ===== */
+.cta{display:block;margin:52px auto;max-width:420px;text-decoration:none;position:relative}
+.cta .btn{
+  display:block;text-align:center;
+  padding:26px 18px;
+  background:linear-gradient(135deg,#B8862F 0%,#E8C877 22%,#FFF3CC 46%,#E8C877 62%,#A87828 100%);
+  background-size:200% 100%;
+  color:#1A1206;font-weight:900;font-size:19px;letter-spacing:.1em;
+  border-radius:999px;
+  box-shadow:0 12px 32px rgba(201,162,75,.42), 0 2px 0 rgba(255,255,255,.5) inset, 0 -3px 0 rgba(120,86,26,.35) inset;
+  animation:ctaShine 3.4s ease-in-out infinite, ctaPulse 2.6s ease-in-out infinite;
+  position:relative;overflow:hidden;
+}
+.cta .btn::after{
+  content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);
+  animation:ctaSweep 3.6s ease-in-out infinite;
+}
+@keyframes ctaShine{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+@keyframes ctaPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.028)}}
+@keyframes ctaSweep{0%{left:-60%}55%{left:120%}100%{left:120%}}
+.cta .arrow{
+  display:block;text-align:center;color:var(--gold-hi);font-size:22px;line-height:1;
+  margin-bottom:8px;animation:bob 1.5s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(6px);opacity:1}}
+.cta .sub{text-align:center;font-size:13px;color:var(--gold-hi);margin-top:14px;letter-spacing:.1em;display:block;font-weight:600}
+.cta .micro{text-align:center;font-size:11.5px;color:var(--mute);margin-top:7px;display:block}
+
+/* 追従CTA：常時見える強いバー */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,rgba(15,13,20,.55),rgba(15,13,20,.98));
+  backdrop-filter:blur(16px);
+  border-top:1px solid rgba(201,162,75,.4);
+  transform:translateY(105%);transition:transform .5s cubic-bezier(.22,.61,.36,1);
+}
+.sticky.on{transform:none}
+.sticky .lab{
+  display:block;text-align:center;font-size:11px;letter-spacing:.14em;
+  color:var(--gold-hi);margin-bottom:7px;font-weight:600;
+}
+.sticky a{
+  display:block;max-width:440px;margin:0 auto;text-decoration:none;text-align:center;
+  padding:17px;font-weight:900;font-size:17px;letter-spacing:.1em;color:#1A1206;
+  background:linear-gradient(135deg,#B8862F,#F0D68F 48%,#A87828);
+  border-radius:999px;
+  box-shadow:0 6px 20px rgba(201,162,75,.4), 0 2px 0 rgba(255,255,255,.45) inset;
+  animation:ctaPulse 2.6s ease-in-out infinite;
+}
+/* プランカード内ボタンも大きく */
+.plan .pbtn,.item .pbtn{
+  display:block;margin-top:26px;text-decoration:none;text-align:center;
+  padding:21px 14px;font-weight:800;font-size:17px;letter-spacing:.08em;
+  color:var(--gold-hi);border:2px solid rgba(201,162,75,.6);
+  background:rgba(201,162,75,.08);border-radius:999px;
+}
+.plan.rec .pbtn,.item.rec .pbtn{
+  color:#1A1206;border:none;
+  background:linear-gradient(135deg,#B8862F,#F0D68F 48%,#A87828);
+  background-size:200% 100%;
+  animation:ctaShine 3.4s ease-in-out infinite, ctaPulse 2.6s ease-in-out infinite;
+  font-size:18.5px;padding:24px 14px;font-weight:900;
+  box-shadow:0 10px 26px rgba(201,162,75,.36), 0 2px 0 rgba(255,255,255,.45) inset;
+}
 </style>
 </head>
 <body>
@@ -868,8 +935,10 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <a class="cta rv" href="#plan">
+      <span class="arrow">▼</span>
       <span class="btn">伴走を受け取る</span>
-      <span class="sub">プランを見る</span>
+      <span class="sub">▶ プランを選んでお申し込みへ</span>
+      <span class="micro">迷ったら三ヶ月をおすすめしています</span>
     </a>
   </div>
 </section>
@@ -1158,8 +1227,10 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     <div class="sign rv">みづき</div>
 
     <a class="cta rv" href="#plan">
+      <span class="arrow">▼</span>
       <span class="btn">伴走を受け取る</span>
-      <span class="sub">プランを見る</span>
+      <span class="sub">▶ プランを選んでお申し込みへ</span>
+      <span class="micro">迷ったら三ヶ月をおすすめしています</span>
     </a>
   </div>
 </section>
@@ -1175,7 +1246,8 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 </footer>
 
 <div class="sticky" id="sticky">
-  <a href="#plan">伴走を受け取る</a>
+  <span class="lab">お受けできる人数に限りがあります</span>
+  <a href="#plan">プランを見る</a>
 </div>
 
 <script>
