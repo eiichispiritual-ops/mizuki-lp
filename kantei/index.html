@@ -74,30 +74,26 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 @keyframes floatUp{0%{transform:translate3d(0,0,0);opacity:0}12%{opacity:.75}88%{opacity:.35}100%{transform:translate3d(0,-108vh,0);opacity:0}}
 
 
-/* ---------- ヒーロー：人物ベース ---------- */
+
+/* ---------- ヒーロー：人物 ---------- */
 .hero-person{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-person img{
-  width:100%;height:100%;object-fit:cover;
-  object-position:62% 12%;
-  transform:scale(1.04);
-  animation:heroDrift 26s ease-in-out infinite alternate;
-  filter:saturate(.88) contrast(1.04);
+  width:100%;height:100%;object-fit:cover;object-position:42% 30%;
+  transform:scale(1.03);animation:heroDrift 32s ease-in-out infinite alternate;
 }
-@keyframes heroDrift{from{transform:scale(1.04)}to{transform:scale(1.11)}}
-/* 左から暗幕をかけて、左側に文字を置ける面を作る */
+@keyframes heroDrift{from{transform:scale(1.03)}to{transform:scale(1.09)}}
 .hero-person::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(100deg, rgba(20,17,34,.94) 0%, rgba(20,17,34,.86) 30%, rgba(20,17,34,.42) 58%, rgba(20,17,34,.20) 78%, rgba(20,17,34,.46) 100%),
-    linear-gradient(180deg, rgba(20,17,34,.72) 0%, transparent 26%, transparent 52%, rgba(24,21,40,.92) 92%, var(--sumi) 100%);
+    linear-gradient(180deg,rgba(20,17,34,.34) 0%,rgba(20,17,34,.05) 22%,rgba(20,17,34,.06) 48%,rgba(20,17,34,.62) 78%,rgba(24,21,40,.96) 94%,var(--sumi) 100%);
 }
 
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:calc(6svh + 120px);position:relative;overflow:hidden}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:calc(5svh + 96px);position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:70% 40%;opacity:.66;transform:scale(1.08);animation:slowZoom 22s ease-in-out infinite alternate}
 @keyframes slowZoom{from{transform:scale(1.08)}to{transform:scale(1.16)}}
 .hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 130% 75% at 50% 12%,rgba(26,24,48,.32) 0%,rgba(24,21,40,.78) 58%,var(--sumi) 100%)}
-.hero .vtitle{position:absolute;left:26px;top:7svh;z-index:3;display:flex;flex-direction:row-reverse;gap:20px;align-items:flex-start}
+.hero .vtitle{position:absolute;left:24px;top:6svh;z-index:3;display:flex;flex-direction:row-reverse;gap:20px;align-items:flex-start}
 .hero .vtitle .main{writing-mode:vertical-rl;text-orientation:mixed;font-size:clamp(30px,8.6vw,42px);font-weight:800;letter-spacing:.22em;line-height:1.35;text-shadow:0 4px 16px rgba(0,0,0,.75)}
 .hero .vtitle .sub{writing-mode:vertical-rl;font-size:12px;letter-spacing:.36em;color:var(--mute);margin-top:14px;white-space:nowrap;text-shadow:0 2px 8px rgba(0,0,0,.8)}
 .hero .bottom{position:relative;z-index:4;text-align:left;padding:0 27px}
@@ -178,6 +174,10 @@ h3{font-size:18px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bot
 .item{margin:26px 0;padding:34px 26px 30px;border:1px solid rgba(201,162,75,.26);background:linear-gradient(180deg,rgba(26,24,48,.5),rgba(15,13,20,.25));position:relative}
 .item.rec{border:2px solid var(--gold);background:linear-gradient(180deg,rgba(201,162,75,.16),rgba(26,24,48,.5));box-shadow:0 0 60px rgba(201,162,75,.26),inset 0 0 70px rgba(201,162,75,.07);margin:38px -8px;padding:44px 30px 36px}
 .item .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(100deg,var(--gold-lo),var(--gold-hi),var(--gold-lo));color:#14110A;font-size:11.5px;font-weight:700;letter-spacing:.2em;padding:5px 20px;white-space:nowrap}
+.item .thumb{margin:-10px -6px 20px;position:relative;overflow:hidden}
+.item .thumb img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.item .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(24,21,40,.55) 100%);pointer-events:none}
+.item.rec .thumb{margin:-18px -14px 22px}
 .item .pname{font-size:19px;font-weight:700;letter-spacing:.12em;text-align:center;margin-bottom:16px;color:var(--gold-hi)}
 .item.rec .pname{font-size:21px}
 .item .was{text-align:center;font-size:14px;color:var(--mute);margin-bottom:2px}
@@ -341,7 +341,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     </div>
 
     <div class="ph-full rv-s">
-      <img src="../img/moon_02.jpg" alt="夜の月">
+      <img src="../img/mizuki_inori_wide.jpg" alt="鳥居の前で祈るみづき">
       <div class="ov">見捨てられたわけでは、<br>ありません。</div>
     </div>
 
@@ -480,6 +480,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
     <!-- 月読の章 -->
     <div class="item rv">
+      <div class="thumb"><img src="../img/thumb_tsukuyomi.jpg" alt="月読の章"></div>
       <div class="pname">月読の章</div>
       <div class="was"><s>通常価格 7,980円</s></div>
       <div class="price">4,980<small>円</small></div>
@@ -491,13 +492,13 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
         <li>整える順番</li>
       </ul>
       <p style="color:var(--mute);font-size:14.5px">今の苦しさを、まず軽くしたい方へ。</p>
-      <!-- ★要確認: 月読の章のStores URL -->
-      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/69f6f7ac9353253bc9f43e24" target="_blank" rel="noopener">月読の章を受け取る</a>
+      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/6a1d7e1352c94a29de6035ea" target="_blank" rel="noopener">月読の章を受け取る</a>
     </div>
 
     <!-- 神言降ろし -->
     <div class="item rec rv">
       <div class="badge">迷っているなら、こちらです</div>
+      <div class="thumb"><img src="../img/thumb_shingon.jpg" alt="神言降ろしの本鑑定"></div>
       <div class="pname gg">神言降ろしの本鑑定</div>
       <div class="was"><s>通常価格 19,800円</s></div>
       <div class="price gg">9,980<small style="color:var(--gold-hi)">円</small></div>
@@ -513,8 +514,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
         <li>神様から届いた神言</li>
       </ul>
       <p>同じところで何度も躓いている自覚がある方は、こちらの方が深く整理しやすい流れが出ています。</p>
-      <!-- ★要確認: 神言降ろしの本鑑定のStores URL -->
-      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/69f6fa479353254518f43e78" target="_blank" rel="noopener">神言降ろしの本鑑定を受け取る</a>
+      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/6a1d8212a4c9724b477427d2" target="_blank" rel="noopener">神言降ろしの本鑑定を受け取る</a>
     </div>
 
     <div class="whisper rv">
