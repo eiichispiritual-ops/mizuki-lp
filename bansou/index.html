@@ -597,6 +597,19 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
   .wcard .bd{text-align:left}
 }
 
+
+/* 白セクション内の要素上書き */
+.s-light .voice{background:#fff;border-left:3px solid var(--rose);box-shadow:0 4px 20px rgba(20,17,34,.08)}
+.s-light .voice p{color:var(--ink-l)}
+.s-light .voice .meta{color:var(--wis);font-weight:700}
+.s-light .voice::before{color:rgba(107,91,168,.18)}
+.s-light strong{color:var(--rose)}
+.s-light .whisper{color:var(--ink-l2)}
+.s-light .gline{background:linear-gradient(90deg,transparent,var(--rose),var(--wis),transparent);height:2px;width:120px}
+.s-light .eyebrow{color:var(--kon)}
+.s-light h2{color:var(--ink-l)}
+.s-light .big{color:var(--ink-l)}
+.s-light .quote{color:var(--ink-l);border-color:rgba(22,37,92,.24);background:linear-gradient(180deg,rgba(22,37,92,.05),transparent)}
 </style>
 </head>
 <body>
@@ -864,7 +877,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 <div class="band" aria-hidden="true"></div>
 
 <!-- ============ S6 感想 ============ -->
-<section class="s-dark">
+<section class="s-light">
   <div class="wrap">
     <div class="eyebrow rv lat">Voices</div>
     <h2 class="rv">続けた方たちのこと</h2>
