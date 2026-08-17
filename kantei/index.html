@@ -519,6 +519,38 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 .voice .vhd{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:800;line-height:1.6;color:var(--rose);margin-bottom:14px;letter-spacing:.02em}
 .s-light .voice .vhd{color:var(--rose)}
+
+/* 追従バー：価格を常時表示（白蛇型） */
+.sticky .row{display:flex;align-items:center;gap:11px;max-width:460px;margin:0 auto}
+.sticky .pricebox{flex:none;text-align:left;line-height:1.25}
+.sticky .pricebox .p{
+  font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600;
+  background:linear-gradient(180deg,#FBEFC4,#D9B45C 50%,#A8813A 66%,#F2DFA6);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.sticky .pricebox .p small{font-family:"Shippori Mincho B1",serif;font-size:12px;-webkit-text-fill-color:var(--gold-hi);margin-left:2px}
+.sticky .pricebox .n{font-size:10.5px;color:var(--mute);letter-spacing:.06em;white-space:nowrap}
+.sticky .row a{flex:1;margin:0;padding:16px 10px;font-size:15.5px}
+@media (max-width:360px){ .sticky .pricebox .p{font-size:21px} .sticky .row a{font-size:14px} }
+
+/* 冒頭の価格サマリー */
+.pricepeek{
+  margin:0 auto;padding:26px 22px 24px;max-width:var(--maxw);
+  border-top:1px solid rgba(201,162,75,.28);border-bottom:1px solid rgba(201,162,75,.28);
+  background:linear-gradient(180deg,rgba(201,162,75,.07),transparent);
+  text-align:center;
+}
+.pricepeek .ttl{font-size:12px;letter-spacing:.24em;color:var(--gold);margin-bottom:14px}
+.pricepeek .items{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.pricepeek .it{min-width:132px;flex:1 1 132px;max-width:190px;padding:12px 8px;border:1px solid rgba(201,162,75,.24);background:rgba(0,0,0,.18)}
+.pricepeek .it.rec{border-color:rgba(201,162,75,.75);background:rgba(201,162,75,.1)}
+.pricepeek .it .n{font-size:12.5px;color:var(--paper);margin-bottom:7px;line-height:1.5}
+.pricepeek .it .v{font-family:"Cormorant Garamond",serif;font-size:27px;font-weight:600;line-height:1;
+  background:linear-gradient(180deg,#FBEFC4,#D9B45C 50%,#A8813A 66%,#F2DFA6);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.pricepeek .it .v small{font-family:"Shippori Mincho B1",serif;font-size:12px;-webkit-text-fill-color:var(--gold-hi);margin-left:2px}
+.pricepeek .it .b{display:inline-block;font-size:10px;letter-spacing:.1em;color:#1A1206;background:linear-gradient(100deg,#C9A24B,#F0D68F);padding:2px 8px;margin-top:8px}
+.pricepeek .note{font-size:12px;color:var(--mute);margin-top:14px;line-height:1.9}
 </style>
 </head>
 <body>
@@ -538,6 +570,16 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
     <div class="scrollcue"><span class="lat">SCROLL</span><i></i></div>
   </div>
 </header>
+
+<div class="pricepeek rv">
+  <div class="ttl">本鑑定について</div>
+  <div class="items">
+    <div class="it"><div class="n">月読の章</div><div class="v">4,980<small>円</small></div></div>
+    <div class="it rec"><div class="n">神言降ろしの本鑑定</div><div class="v">9,980<small>円</small></div><span class="b">迷うならこちら</span></div>
+  </div>
+  <div class="note">お申し込みは1分。<br>ご質問にお答えいただいてから、二〜三日でお届けします。</div>
+</div>
+
 
 <!-- S1 涙の意味 -->
 <section class="s-ai">
@@ -959,7 +1001,10 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 <div class="sticky" id="sticky">
   <span class="lab">無料鑑定を受け取った方へ</span>
-  <a href="#item">本鑑定を見る</a>
+  <div class="row">
+    <div class="pricebox"><div class="p">4,980<small>円〜</small></div><div class="n">月読の章 / 神言降ろし</div></div>
+    <a href="#item">鑑定を選ぶ</a>
+  </div>
 </div>
 
 <script>
