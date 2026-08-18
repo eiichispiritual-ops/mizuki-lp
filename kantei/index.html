@@ -592,6 +592,57 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 .vs .r .c:last-child{color:var(--paper)}
 .vs .tick{color:var(--gold-hi);font-weight:700}
 .vs .dash{color:var(--mute);opacity:.5}
+
+/* ===== クリエイティブ強化 ===== */
+/* ① 見出しに細い縦線を落とす（余韻の演出） */
+h2{position:relative}
+h2::after{
+  content:"";position:absolute;left:50%;bottom:-26px;
+  width:1px;height:0;background:linear-gradient(180deg,var(--gold),transparent);
+  transform:translateX(-50%);transition:height 1.4s cubic-bezier(.22,.61,.36,1) .35s;
+}
+.rv.on h2::after,section.on h2::after,h2.rv.on::after{height:26px}
+
+/* ② 全面写真に「呼吸」（極ゆっくりのスケール） */
+.ph-full img,.ph img{transition:transform 1.6s cubic-bezier(.22,.61,.36,1)}
+.ph-full:hover img{transform:scale(1.03)}
+
+/* ③ 引用ブロックに鉤括弧の意匠 */
+.quote{position:relative}
+.quote::before,.quote::after{
+  content:"";position:absolute;width:16px;height:16px;opacity:.55;
+}
+.quote::before{top:10px;left:10px;border-top:1px solid var(--gold);border-left:1px solid var(--gold)}
+.quote::after{bottom:10px;right:10px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold)}
+
+/* ④ .big の一文字目を少し大きく（版面の抑揚） */
+.big{text-wrap:balance}
+
+/* ⑤ 章番号（和数字）で構造を可視化 */
+.chapno{
+  display:block;text-align:center;font-family:"Cormorant Garamond",serif;
+  font-size:11px;letter-spacing:.5em;color:var(--gold);opacity:.75;margin-bottom:10px;
+}
+
+/* ⑥ セクション境界に極細の金線＋中央の菱形 */
+.divider{display:flex;align-items:center;justify-content:center;gap:0;margin:0;height:1px;position:relative}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,75,.34))}
+.divider::after{background:linear-gradient(90deg,rgba(201,162,75,.34),transparent)}
+.divider i{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);margin:0 12px;flex:none;box-shadow:0 0 8px rgba(201,162,75,.6)}
+
+/* ⑦ 本文の最初の一文だけ少し大きく（リード文効果） */
+.lead-p{font-size:17.5px;line-height:2.0;color:var(--paper)}
+
+/* ⑧ 数字に下線の光 */
+.num-gold{position:relative;display:inline-block}
+
+/* ⑨ 画像の角にわずかな金の縁（額装感） */
+.ph.portrait{position:relative;padding:9px;background:linear-gradient(160deg,rgba(201,162,75,.30),rgba(201,162,75,.06))}
+.ph.portrait::before{content:"";position:absolute;inset:9px;border:1px solid rgba(201,162,75,.28);z-index:2;pointer-events:none}
+
+/* ⑩ スクロールで金線が伸びる区切り */
+.growline{height:1px;width:0;margin:44px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width 1.8s cubic-bezier(.22,.61,.36,1)}
+.growline.on{width:78%}
 </style>
 </head>
 <body>
@@ -627,6 +678,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- S1 涙の意味 -->
 <section class="s-ai">
   <div class="wrap">
+    <div class="chapno">I</div>
     <div class="eyebrow rv lat">What you felt</div>
     <h2 class="rv">あの感覚には、<br>意味があります</h2>
     <div class="gline"></div>
@@ -661,6 +713,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- S2 当てものではない -->
 <section class="s-dark">
   <div class="wrap">
+    <div class="chapno">II</div>
     <div class="eyebrow rv lat">Not fortune-telling</div>
     <h2 class="rv">鑑定は、<br>当てものではありません</h2>
     <div class="gline"></div>
@@ -688,6 +741,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- S3 無料と本鑑定の差 -->
 <section class="s-ai-r">
   <div class="wrap">
+    <div class="chapno">III</div>
     <div class="eyebrow rv lat">The difference</div>
     <h2 class="rv">無料鑑定で<br>視えたもの、<br>視えなかったもの</h2>
     <div class="gline"></div>
@@ -766,11 +820,12 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
   </div>
 </section>
 
-<div class="band" aria-hidden="true"></div>
+<div class="wrap"><div class="growline rv"></div></div>
 
 <!-- S4 迷っている方へ -->
 <section class="s-dark">
   <div class="wrap">
+    <div class="chapno">IV</div>
     <div class="eyebrow rv lat">If you hesitate</div>
     <h2 class="rv">迷っている方へ</h2>
     <div class="gline"></div>
@@ -806,6 +861,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- S5 商品 -->
 <section class="s-ai" id="item">
   <div class="wrap">
+    <div class="chapno">V</div>
     <div class="eyebrow rv lat">Two ways</div>
     <h2 class="rv">二つの鑑定</h2>
     <div class="gline"></div>
@@ -888,6 +944,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- S5.5 受け取りまでの流れ -->
 <section class="s-light">
   <div class="wrap">
+    <div class="chapno">VI</div>
     <div class="eyebrow rv lat">The flow</div>
     <h2 class="rv">受け取るまでの流れ</h2>
     <div class="gline"></div>
@@ -929,11 +986,12 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
   </div>
 </section>
 
-<div class="band" aria-hidden="true"></div>
+<div class="wrap"><div class="growline rv"></div></div>
 
 <!-- S6 感想 -->
 <section class="s-light">
   <div class="wrap">
+    <div class="chapno">VII</div>
     <div class="eyebrow rv lat">Voices</div>
     <h2 class="rv">受け取った方たちのこと</h2>
     <div class="gline"></div>
@@ -981,6 +1039,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
   <div class="wrap">
     <a class="minicta rv" href="#item" style="margin-bottom:44px">鑑定を申し込む<span class="s">月読の章 4,980円 / 神言降ろし 9,980円</span></a>
 
+    <div class="chapno">VIII</div>
     <div class="eyebrow rv lat">Questions</div>
     <h2 class="rv sm">よくあるご質問</h2>
     <div class="gline"></div>
@@ -1014,6 +1073,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- S9 追伸 -->
 <section class="s-ai">
   <div class="wrap">
+    <div class="chapno">IX</div>
     <div class="eyebrow rv lat">From Mizuki</div>
     <h2 class="rv">最後に</h2>
     <div class="gline"></div>
