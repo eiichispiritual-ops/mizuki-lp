@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sumi:#0C1A2B; --ai:#12283F; --ai2:#0F2035;
-  --gold:#C9A24B; --gold-hi:#F5DFA0; --gold-lo:#8A6E32;
-  --shu:#B5432E; --paper:#F7F3EA; --mute:#8FA3B8;
+  --sumi:#0A1622; --ai:#102437; --ai2:#0D1D2E;
+  --gold:#B8964A; --gold-hi:#EBD9A8; --gold-lo:#8A6E32;
+  --shu:#B5432E; --paper:#F2EFE7; --mute:#7E94AA;
   --maxw:620px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -20,7 +20,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   background:var(--sumi);color:var(--paper);
   font-family:"Noto Sans JP","Hiragino Sans",YuGothic,sans-serif;
-  font-size:16px;line-height:1.95;letter-spacing:.03em;
+  font-size:16.5px;line-height:1.9;letter-spacing:.015em;
   font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;
   overflow-x:hidden;padding-bottom:96px;
 }
@@ -48,8 +48,8 @@ section{padding:74px 0;position:relative}
 .s-ai{background:linear-gradient(180deg,var(--ai) 0%,var(--sumi) 100%)}
 .s-ai-r{background:linear-gradient(180deg,var(--sumi) 0%,var(--ai2) 100%)}
 
-.eyebrow{text-align:center;font-size:10.5px;letter-spacing:.5em;color:var(--gold);margin-bottom:16px;font-family:"Cormorant Garamond",serif;text-transform:uppercase}
-h2{font-family:"Shippori Mincho B1",serif;font-size:34px;font-weight:800;text-align:center;letter-spacing:.1em;line-height:1.72;margin-bottom:8px;color:var(--paper)}
+.eyebrow{text-align:center;font-size:10px;letter-spacing:.62em;color:var(--gold);margin-bottom:16px;font-family:"Cormorant Garamond",serif;text-transform:uppercase}
+h2{font-family:"Shippori Mincho B1",serif;font-size:33px;font-weight:800;text-align:center;letter-spacing:.14em;line-height:1.68;margin-bottom:8px;color:var(--paper)}
 h2.sm{font-size:22px}
 h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bottom:18px;color:var(--gold-hi)}
 .gline{width:56px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto 40px}
@@ -117,8 +117,8 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
 
 .quote{font-family:"Shippori Mincho B1",serif;margin:44px 0;padding:34px 28px;border-top:1px solid rgba(201,162,75,.32);border-bottom:1px solid rgba(201,162,75,.32);background:linear-gradient(180deg,rgba(201,162,75,.05),transparent);text-align:center;font-size:18px;line-height:2.15;color:var(--gold-hi)}
 .quote p{margin-bottom:1.2em}
-.whisper{font-size:15.5px;color:var(--mute);text-align:center;margin:38px 0;line-height:2.25}
-.big{font-family:"Shippori Mincho B1",serif;font-size:clamp(28px,8.2vw,40px);font-weight:800;line-height:1.6;letter-spacing:.04em;text-align:center;margin:44px 0;color:var(--paper)}
+.whisper{font-size:14.5px;color:var(--mute);text-align:center;margin:38px 0;line-height:2.25}
+.big{font-family:"Shippori Mincho B1",serif;font-size:clamp(30px,9vw,44px);font-weight:800;line-height:1.55;letter-spacing:.01em;text-align:center;margin:44px 0;color:var(--paper)}
 
 .ph{margin:52px 0;position:relative;overflow:hidden}
 .ph img{width:100%;filter:brightness(.94) saturate(.96)}
@@ -597,7 +597,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 <!-- HERO -->
 <header class="hero">
   <div class="hero-person">
-    <img src="../img/k_hero.jpg" alt="みづき">
+    <img src="../img/k_hero.jpg" alt="堂内で祈るみづき">
   </div>
   <div class="particles" aria-hidden="true" id="particles"></div>
   <div class="hero-copy rv">
@@ -628,7 +628,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
     <div class="gline"></div>
 
     <div class="rv">
-      <p>あの無料鑑定を書いたのは、私です。</p>
+      <p>あの無料鑑定、書いたのは私です。</p>
       <p>あなたが送ってくれた言葉を、一つずつ読みながら書きました。</p>
       <p>読んでいる時、どこかで手が止まりませんでしたか。</p>
       <p>胸のあたりが、ざわっとした。<br>なぜか、涙が出そうになった。<br>少し怖いけれど、本当はわかっていた気がした。</p>
@@ -641,7 +641,7 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
     </div>
 
     <div class="rv">
-      <p>「少し怖いけどわかる」と思った場所は、<br><strong>本当はもう、変わる準備ができている場所です。</strong></p>
+      <p>「少し怖いけど、わかる」と思った場所。<br><strong>そこはもう、変わる準備ができています。</strong></p>
     </div>
 
     <div class="stat rv">
@@ -662,20 +662,20 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
     <div class="gline"></div>
 
     <div class="rv">
-      <p>私は、鑑定を「当てもの」だと思っていません。</p>
+      <p>私は鑑定を、当てものだと思っていません。</p>
       <p>未来を言い当てて、すごいでしょと言いたいわけじゃない。<br>怖いことを言って、私の言う通りにさせたいわけでもない。</p>
       <p>私が届けたいのは、<strong>神様からの本当のメッセージ</strong>です。</p>
     </div>
 
     <div class="ph-full rv-s">
-      <img src="../img/k_wide.jpg" alt="鳥居の前で祈るみづき">
+      <img src="../img/k_wide.jpg" alt="インドの聖地にて">
       <div class="ov">見捨てられたわけでは、<br>ありません。</div>
     </div>
 
     <div class="rv">
-      <p>多くの人は、人生がうまくいかない理由を自分のせいにします。</p>
-      <p>私の努力が足りないから。<br>私に価値がないから。<br>私だけ、神様に見放されたから。</p>
-      <p>でも、違います。</p>
+      <p>うまくいかない理由を、みんな自分のせいにします。</p>
+      <p>努力が足りないから。<br>価値がないから。<br>私だけ、見放されたから。</p>
+      <p>違います。</p>
       <p>あなたに価値がないわけでもありません。<br><strong>ただ、届いているサインに気づけなくなっているだけです。</strong></p>
     </div>
   </div>
@@ -689,9 +689,9 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
     <div class="gline"></div>
 
     <div class="rv">
-      <p>無料鑑定でお伝えしたのは、<strong>今あなたに何が起きているか</strong>でした。</p>
-      <p>それだけでも、心が軽くなった方は多いです。</p>
-      <p>でも、ひとつだけお伝えしておきたいことがあります。</p>
+      <p>無料鑑定でお伝えしたのは、<strong>今あなたに何が起きているか</strong>。それだけです。</p>
+      <p>それでも、心が軽くなった方は多いです。</p>
+      <p>でも、ひとつだけ。</p>
     </div>
 
     <div class="big rv">楽になったことと、<br>現実が変わることは、<br>別です。</div>
@@ -785,13 +785,13 @@ h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
     </ul>
 
     <div class="ph wide rv-s">
-      <img src="../img/window_02_crop.jpg" alt="光の差す部屋">
+      <img src="../img/window_01.jpg" alt="障子越しの光">
     </div>
 
     <div class="rv">
-      <p>そう思うのは、あなたが弱いからじゃない。</p>
+      <p>それ、あなたが弱いからじゃないんです。</p>
       <p><strong>今まで何度も期待して、何度も自分を責めてきたからです。</strong></p>
-      <p>急かすつもりは、ありません。</p>
+      <p>急かしません。</p>
       <p>ただ、今届いているサインを、日常に埋もれさせないためのものです。</p>
 
     <a class="minicta rv" href="#item">二つの鑑定を見てみる<span class="s">どちらを選ぶかの目安もあります</span></a>
