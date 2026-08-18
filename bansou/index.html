@@ -806,6 +806,18 @@ h2::after{
 /* ⑩ スクロールで金線が伸びる区切り */
 .growline{height:1px;width:0;margin:44px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width 1.8s cubic-bezier(.22,.61,.36,1)}
 .growline.on{width:78%}
+
+/* 狭幅端末（〜380px）での文字溢れ対策 */
+@media (max-width:380px){
+  .plan .price,.item .price{font-size:26px}
+  .plan.rec .price,.item.rec .price{font-size:32px}
+  .num-gold{font-size:2.2em}
+  .peak .l2{font-size:26px}
+  h2{font-size:29px;letter-spacing:.1em}
+  .big{font-size:27px}
+  .pricepeek .it .v{font-size:24px}
+  .sticky .pricebox .p{font-size:21px}
+}
 </style>
 </head>
 <body>
