@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --pad:27px;
   --sumi:#191311;
   --ai:#261D19;
   --ai2:#201814;
@@ -40,7 +41,7 @@ p{margin-bottom:1.85em}
 p:last-child{margin-bottom:0}
 strong{color:#E2725B;font-weight:700}
 em{font-style:normal;color:var(--gold-hi)}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 27px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
 .lat{font-family:"Cormorant Garamond",serif;letter-spacing:.3em}
 
 /* ---------- 金の箔 ---------- */
@@ -212,7 +213,7 @@ h3{
   font-size:12.5px;letter-spacing:.2em;color:var(--paper);
   text-shadow:0 2px 10px rgba(0,0,0,.9);
 }
-.ph-full{margin:64px -27px;position:relative;overflow:hidden}
+.ph-full{margin:56px calc(var(--pad) * -1);position:relative;overflow:hidden;max-width:100vw}
 .ph-full img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(.84) saturate(.9)}
 .ph-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--sumi),transparent 22%,transparent 74%,var(--sumi));pointer-events:none}
 .ph-full .ov{
@@ -335,7 +336,7 @@ h3{
   border-left:2px solid rgba(201,162,75,.5);
 }
 .voice .meta{font-size:12px;color:var(--gold);letter-spacing:.16em;margin-bottom:14px}
-.voice p{font-size:14.8px;line-height:2.15;margin-bottom:0;color:#E8E3DA}
+.voice p{font-size:15px;line-height:2.15;margin-bottom:0;color:#E8E3DA}
 
 /* ---------- 警告ブロック ---------- */
 .warn{
@@ -358,7 +359,7 @@ h3{
   transform:translateY(-70%) rotate(45deg);transition:transform .35s ease;
 }
 .faq[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.faq .ans{padding:0 4px 26px;font-size:14.8px;line-height:2.15;color:#D8D3CA}
+.faq .ans{padding:0 4px 26px;font-size:15px;line-height:2.15;color:#D8D3CA}
 
 /* ---------- 署名 ---------- */
 .sign{text-align:right;font-size:17px;letter-spacing:.16em;color:var(--gold-hi);margin-top:38px}
@@ -366,7 +367,7 @@ h3{
 /* ---------- フッター ---------- */
 footer{padding:56px 0 34px;text-align:center;border-top:1px solid rgba(201,162,75,.14)}
 footer p{font-size:12px;color:var(--mute);letter-spacing:.1em;margin-bottom:.9em;line-height:2}
-footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
+footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:14px 8px;min-height:44px}
 
 /* ---------- 共感チェックリスト ---------- */
 .chk{margin:40px 0;padding:0;list-style:none}
@@ -460,7 +461,8 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 }
 
 /* ===== 強調表現（ジャンプ率・アクセント） ===== */
-:root{ --shu-hi:#E2725B; --marker:rgba(201,162,75,.28); }
+:root{
+  --pad:27px; --shu-hi:#E2725B; --marker:rgba(201,162,75,.28); }
 
 /* 数字・キーワードの巨大化 */
 .jump{
@@ -511,6 +513,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 /* ===== 参考LP準拠：明暗コントラスト設計 ===== */
 :root{
+  --pad:27px;
   --kon:#4A2B1F;        /* 濃紺 */
   --kon-d:#0E1840;
   --ink-l:#2E3140;      /* 白背景での文字（黒でなくグレー） */

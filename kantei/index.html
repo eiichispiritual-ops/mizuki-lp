@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --pad:27px;
   --sumi:#0A1622; --ai:#102437; --ai2:#0D1D2E;
   --gold:#B8964A; --gold-hi:#EBD9A8; --gold-lo:#8A6E32;
   --shu:#B5432E; --paper:#F2EFE7; --mute:#7E94AA;
@@ -22,13 +23,13 @@ body{
   font-family:"Noto Sans JP","Hiragino Sans",YuGothic,sans-serif;
   font-size:16.5px;line-height:1.9;letter-spacing:.015em;
   font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden;padding-bottom:96px;
+  overflow-x:clip;padding-bottom:96px;max-width:100%;
 }
 img{max-width:100%;display:block;height:auto}
 p{margin-bottom:1.85em}
 p:last-child{margin-bottom:0}
 strong{color:#E2725B;font-weight:700}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 27px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
 .lat{font-family:"Cormorant Garamond",serif;letter-spacing:.3em}
 
 .gg{
@@ -142,7 +143,7 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
   left:0;
 }
 .depth .layer .nm{font-size:15.5px;color:var(--paper);line-height:1.9;margin-bottom:4px}
-.depth .layer .sub{font-size:13px;color:var(--mute);line-height:1.9}
+.depth .layer .sub{font-size:13.5px;color:var(--mute);line-height:1.9}
 .depth .layer.free{opacity:.95}
 .depth .layer.deep{background:linear-gradient(90deg,rgba(201,162,75,.09),transparent)}
 .depth .layer.deep .nm{color:var(--gold-hi)}
@@ -158,7 +159,7 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
 .ph.wide img{aspect-ratio:16/10;object-fit:cover}
 .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,20,.3),transparent 30%,transparent 70%,rgba(15,13,20,.55));pointer-events:none}
 .ph .cap{position:absolute;left:0;right:0;bottom:18px;text-align:center;z-index:2;font-size:12.5px;letter-spacing:.2em;color:var(--paper);text-shadow:0 2px 10px rgba(0,0,0,.9)}
-.ph-full{margin:64px -27px;position:relative;overflow:hidden}
+.ph-full{margin:56px calc(var(--pad) * -1);position:relative;overflow:hidden;max-width:100vw}
 .ph-full img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(.84) saturate(.9)}
 .ph-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--sumi),transparent 22%,transparent 74%,var(--sumi));pointer-events:none}
 .ph-full .ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;padding:0 32px;text-align:center;font-size:clamp(19px,5.2vw,24px);font-weight:700;line-height:2;letter-spacing:.1em;text-shadow:0 3px 18px rgba(0,0,0,.9)}
@@ -192,12 +193,12 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
 .item.rec .pname{font-size:21px}
 .item .was{text-align:center;font-size:14px;color:var(--mute);margin-bottom:2px}
 .item .was s{text-decoration:line-through;text-decoration-color:rgba(181,67,46,.7)}
-.item .price{text-align:center;font-size:31px;font-weight:800;letter-spacing:.04em;margin-bottom:6px;font-family:"Cormorant Garamond",serif}
+.item .price{text-align:center;font-size:29px;font-weight:800;letter-spacing:.04em;margin-bottom:6px;font-family:"Cormorant Garamond",serif}
 .item.rec .price{font-size:38px}
 .item .price small{font-size:15px;letter-spacing:.1em;margin-left:3px;font-family:"Shippori Mincho B1",serif}
 .item .goal{text-align:center;font-size:15px;color:var(--gold-hi);letter-spacing:.09em;margin:20px 0;padding:15px 0;border-top:1px solid rgba(201,162,75,.22);border-bottom:1px solid rgba(201,162,75,.22);line-height:1.9}
 .item.rec .goal{font-size:16.5px;border-color:rgba(201,162,75,.5)}
-.item p{font-size:15px;line-height:2.1;margin-bottom:1.4em}
+.item p{font-size:15px;line-height:2.0;margin-bottom:1.4em}
 .item ul{list-style:none;margin:18px 0}
 .item ul li{position:relative;padding-left:20px;font-size:14.5px;line-height:2;margin-bottom:8px}
 .item ul li::before{content:"";position:absolute;left:2px;top:14px;width:5px;height:5px;background:var(--gold);transform:rotate(45deg)}
@@ -217,7 +218,7 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
 .voice{margin:24px 0;padding:26px 24px;background:rgba(26,24,48,.42);border-left:2px solid rgba(201,162,75,.5);position:relative}
 .voice::before{content:"\201C";position:absolute;top:6px;right:16px;font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1;color:rgba(201,162,75,.22)}
 .voice .meta{font-size:12px;color:var(--gold);letter-spacing:.16em;margin-bottom:14px}
-.voice p{font-size:14.8px;line-height:2.15;margin-bottom:0;color:#E8E3DA}
+.voice p{font-size:15px;line-height:2.15;margin-bottom:0;color:#E8E3DA}
 
 .warn{margin:44px 0;padding:34px 27px;border:1px solid rgba(181,67,46,.42);background:linear-gradient(180deg,rgba(181,67,46,.09),rgba(15,13,20,.3))}
 .warn h3{color:#E8A392;text-align:center}
@@ -227,7 +228,7 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"";position:absolute;right:8px;top:50%;width:9px;height:9px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:translateY(-70%) rotate(45deg);transition:transform .35s ease}
 .faq[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.faq .ans{padding:0 4px 26px;font-size:14.8px;line-height:2.15;color:#D8D3CA}
+.faq .ans{padding:0 4px 26px;font-size:15px;line-height:2.15;color:#D8D3CA}
 
 /* ---------- 受け取りまでの流れ ---------- */
 .steps{margin:44px 0;counter-reset:st}
@@ -253,7 +254,7 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
   font-size:16.5px;font-weight:700;color:var(--gold-hi);
   letter-spacing:.08em;margin-bottom:10px;line-height:1.8;
 }
-.steps .st p{font-size:14.8px;line-height:2.05;margin-bottom:0;color:#DDD8CE}
+.steps .st p{font-size:15px;line-height:2.05;margin-bottom:0;color:#DDD8CE}
 .steps .st .when{
   display:inline-block;font-size:11.5px;letter-spacing:.16em;
   color:var(--gold);border:1px solid rgba(201,162,75,.35);
@@ -269,7 +270,7 @@ h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-
 .sign{text-align:right;font-size:17px;letter-spacing:.16em;color:var(--gold-hi);margin-top:38px}
 footer{padding:56px 0 34px;text-align:center;border-top:1px solid rgba(201,162,75,.14)}
 footer p{font-size:12px;color:var(--mute);letter-spacing:.1em;margin-bottom:.9em;line-height:2}
-footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
+footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:14px 8px;min-height:44px}
 
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -284,7 +285,8 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 }
 
 /* ===== 強調表現（ジャンプ率・アクセント） ===== */
-:root{ --shu-hi:#E2725B; --marker:rgba(201,162,75,.28); }
+:root{
+  --pad:27px; --shu-hi:#E2725B; --marker:rgba(201,162,75,.28); }
 
 /* 数字・キーワードの巨大化 */
 .jump{
@@ -335,6 +337,7 @@ footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 
 /* ===== 参考LP準拠：明暗コントラスト設計 ===== */
 :root{
+  --pad:27px;
   --kon:#0B3050;        /* 濃紺 */
   --kon-d:#0E1840;
   --ink-l:#2E3140;      /* 白背景での文字（黒でなくグレー） */
