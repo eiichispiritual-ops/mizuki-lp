@@ -364,3 +364,6 @@ h3.tc{text-align:left!important;padding-left:12px;border-left:3px solid var(--go
 
 /* 商品カード（本鑑定）は縦のまま、角だけやわらかく */
 .item .thumb{border-radius:10px}
+
+/* ヒーローカード：常に中央、最大600px（PCで左寄りにならないよう最後に指定） */
+.hero-copy{margin:-40px auto 0!important;width:calc(100% - 36px);max-width:600px}
