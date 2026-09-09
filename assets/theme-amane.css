@@ -1,0 +1,239 @@
+/* =====================================================================
+   あまね テーマ（spi-sales-lp / theme-amane.css）
+   lp.css の後に読み込む。構造・文字階層・動きは共通、見た目だけ反転する。
+   世界観：明るい象牙色の紙 × 葡萄色（辛口） × ローズゴールド（品）。
+   みづき（闇×金）と並べても同一人物に見えないことが目的。
+   ===================================================================== */
+:root{
+  --bg:#F7F2EC;  --bg2:#F1E8E3; --bg3:#F3ECE6;          /* 象牙・生成り */
+  --paper:#2B2130;                                         /* 本文＝濃い葡萄墨 */
+  --mute:#8A7A86;
+  --gold:#B8577F;  --gold-hi:#8F2F5C;  --gold-lo:#D9A1B6; /* 「金」の役割を葡萄〜ローズに */
+  --shu:#C7343F;                                           /* 辛口の朱 */
+  --marker:rgba(217,161,182,.45);
+  --plum:#5C2444; --plum-d:#3E1730; --rose:#D98BA6; --rosegold:#C98A6B; --ivory:#FFFBF7;
+  --cream:#3A1B33; --ink:#F6EEF2; --ink2:#D9C3CF; --kon:#F3D9E3; --wis:#E8B4C8; /* 明セクション→反転して深い葡萄の間に */
+  --cta-a:#7A2F58; --cta-b:#B8577F; --cta-c:#E7A9C1; --cta-d:#5C2444; --cta-ink:#FFFFFF;
+}
+body{background:var(--bg);color:var(--paper)}
+strong{color:var(--shu)}
+em{color:var(--gold-hi)}
+
+/* 見出し・罫線 */
+h2{color:var(--plum)}
+h2::after{background:linear-gradient(180deg,var(--gold),transparent)}
+h3{color:var(--plum)}
+.chapno,.eyebrow{color:var(--gold)}
+.gline{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.orn::before,.orn::after{background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i{background:var(--gold);box-shadow:0 0 10px rgba(184,87,127,.5)}
+.vline,.growline{background:linear-gradient(180deg,transparent,var(--gold),transparent)}
+.growline{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sign{color:var(--plum)}
+.big{color:var(--plum)}
+.big .g,.peak .l2 em{background:linear-gradient(115deg,#7A2F58,#B8577F 45%,#D98BA6 52%,#7A2F58 70%,#B8577F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big .s{color:var(--mute)}
+.wipe::after{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.gg{background:linear-gradient(115deg,#B8577F 0%,#D98BA6 28%,#8F2F5C 48%,#D98BA6 70%,#B8577F 100%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.quote{color:var(--plum);border-color:rgba(184,87,127,.35);background:linear-gradient(180deg,rgba(184,87,127,.07),transparent)}
+.quote::before,.quote::after{border-color:var(--gold)}
+.ew{color:var(--gold-hi)}
+.lead-p{color:var(--paper)}
+.whisper{color:var(--mute)}
+.peak .l2{color:var(--plum)}
+.peak .l1,.peak .l3{color:var(--mute)}
+
+/* セクション：明るい紙＋反転の深い葡萄の間 */
+.s-dark{background:var(--bg)}
+.s-ai{background:linear-gradient(180deg,#F1E6E2 0%,var(--bg) 100%)}
+.s-ai-r{background:linear-gradient(180deg,var(--bg) 0%,#F0E4E4 100%)}
+.s-light{background:linear-gradient(180deg,#3A1B33,#2E1428);color:#F6EEF2}
+.s-light h2,.s-light .big,.s-light h3{color:#F8E9F0}
+.s-light p{color:#F1E4EA}
+.s-light .eyebrow,.s-light .chapno{color:#E8B4C8}
+.s-light .gline{background:linear-gradient(90deg,transparent,#E8B4C8,#D98BA6,transparent)}
+.s-light .whisper{color:#C9AEBB}
+.s-light strong{color:#FFB3B8}
+.s-light .quote{color:#F8E9F0;border-color:rgba(232,180,200,.35);background:linear-gradient(180deg,rgba(232,180,200,.08),transparent)}
+.s-light .ew{color:#F3C6D6}
+.s-light h2::after{background:linear-gradient(180deg,#E8B4C8,transparent)}
+.s-light .cta .arrow,.s-light .cta .sub{color:#F3C6D6}
+.s-light .cta .micro{color:#C9AEBB}
+.s-light .minicta{border-color:rgba(232,180,200,.7);background:rgba(255,255,255,.06);color:#F8E9F0;box-shadow:none}
+.s-light .minicta .s{color:#C9AEBB}
+.s-light .steps .st::before{background:#3A1B33;color:#F3C6D6;border-color:#E8B4C8}
+.s-light .steps .st::after{background:linear-gradient(180deg,rgba(232,180,200,.5),rgba(232,180,200,.08))}
+.s-light .steps .st h4{color:#F8E9F0}
+.s-light .steps .st .when{color:#3A1B33;background:#F3C6D6;border:none}
+.s-light .steps .st p{color:#F1E4EA}
+.s-light .shot img{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.s-light .stat .num{background:linear-gradient(180deg,#FBE3EC,#E8B4C8 50%,#B8577F 66%,#F8D5E1);-webkit-background-clip:text;background-clip:text}
+.s-light .stat .unit{-webkit-text-fill-color:#F3C6D6}
+.s-light .stat .lbl{color:#C9AEBB}
+
+/* 帯：麻の葉（葡萄） */
+.band{height:70px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='124'%3E%3Cg fill='none' stroke='%23B8577F' stroke-opacity='.16' stroke-width='1'%3E%3Cpath d='M36 0v124M0 31l72 62M72 31L0 93M0 31l36 31L72 31M0 93l36-31 36 31M36 62l36 31M36 62L0 93'/%3E%3C/g%3E%3C/svg%3E");background-size:72px 124px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 45%,transparent);mask-image:linear-gradient(180deg,transparent,#000 45%,transparent)}
+
+/* 進捗バー・粒子 */
+.prog i{background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi));box-shadow:0 0 8px rgba(184,87,127,.5)}
+.particle{background:radial-gradient(circle,rgba(184,87,127,.9) 0%,rgba(184,87,127,0) 70%)}
+
+/* ヒーロー：明るい紙の上に写真を「額」で置く（みづきの全面写真と別物にする） */
+.hero{background:linear-gradient(180deg,#EFE2E4 0%,var(--bg) 100%);min-height:auto;padding:26px 0 8px}
+.hero-person{height:auto;width:min(78vw,330px);aspect-ratio:1/1;margin:0 auto;border-radius:50%;overflow:hidden;box-shadow:0 18px 50px rgba(92,36,68,.28),0 0 0 8px #fff,0 0 0 9px rgba(184,87,127,.35)}
+.hero-person img{object-position:center 18%;animation:none;transform:none}
+.hero-person::after{background:linear-gradient(180deg,transparent 70%,rgba(92,36,68,.18))}
+.hero-flare{display:none}
+.hero-copy{padding:26px 24px 30px}
+.hero-copy .lead{color:var(--gold)}
+.hero-copy h1{color:var(--plum)}
+.hero-copy .tag{color:var(--gold-hi);border-color:rgba(184,87,127,.55);background:#fff}
+.scrollcue span{color:var(--mute)}
+.scrollcue i{background:linear-gradient(180deg,var(--gold),transparent)}
+
+/* 写真 */
+.ph::after{background:linear-gradient(180deg,rgba(43,33,48,.10),transparent 30%,transparent 70%,rgba(43,33,48,.30))}
+.ph .cap{color:#fff}
+.ph.portrait{background:linear-gradient(160deg,rgba(184,87,127,.35),rgba(184,87,127,.08))}
+.ph.portrait::before{border-color:rgba(184,87,127,.35)}
+.ph-full::after{background:linear-gradient(180deg,var(--bg),transparent 22%,transparent 74%,var(--bg))}
+.ph-full img{filter:brightness(.9) saturate(.95)}
+.ph-full .ov{color:#fff}
+
+/* 限定ボックス */
+.limbox{border-color:rgba(199,52,63,.5);background:linear-gradient(180deg,#FFF6F3,#FFFBF7);box-shadow:0 10px 34px rgba(92,36,68,.10)}
+.limbox::before{border-color:rgba(184,87,127,.25)}
+.limbox .lt{background:linear-gradient(100deg,#A82A38,#D8525E 50%,#A82A38);color:#fff}
+.limbox .lh{color:var(--plum)}
+.limbox .lh .g{color:var(--gold-hi)}
+.limbox .ld{color:var(--mute)}
+.limbox .ld b{color:var(--plum)!important}
+.cd .u b{color:var(--plum);text-shadow:0 0 14px rgba(199,52,63,.18)}
+.cd .u.s b{color:var(--shu)}
+.cd .u i{color:var(--mute)}
+.cd .sep{color:rgba(199,52,63,.7)}
+.cd-expired{color:var(--plum)}
+.limbox .ln2{color:var(--gold-hi)}
+.limbox .ln2 b{color:var(--shu)!important}
+.stock .sl{color:var(--mute)}
+.stock .sl b{color:var(--shu)}
+.stock .bar{background:rgba(92,36,68,.08);border-color:rgba(184,87,127,.3)}
+.stock .bar i{background:linear-gradient(90deg,#A82A38,#D8525E 60%,#F08A94);box-shadow:0 0 10px rgba(199,52,63,.35)}
+.stock .sn{color:var(--mute)}
+
+/* 混雑帯・LINE箱・特典 */
+.crowd{border-color:rgba(184,87,127,.35);background:#fff;color:var(--paper)}
+.crowd.hot{border-color:rgba(199,52,63,.55);background:linear-gradient(180deg,#FFF3F2,#fff)}
+.crowd b{color:var(--gold-hi)}
+.crowd .ct{color:var(--shu)}
+.crowd .dot{background:var(--shu);box-shadow:0 0 0 0 rgba(199,52,63,.6)}
+@keyframes crowdPulse{0%{box-shadow:0 0 0 0 rgba(199,52,63,.6)}100%{box-shadow:0 0 0 12px rgba(199,52,63,0)}}
+.linebox{border-color:rgba(184,87,127,.45);background:#fff;box-shadow:0 8px 26px rgba(92,36,68,.08)}
+.linebox .lh{color:var(--plum)}
+.linebox .ls{color:var(--mute)}
+.bonus{border-color:var(--gold);background:linear-gradient(180deg,#FFF5F8,#fff);box-shadow:0 0 40px rgba(184,87,127,.14),inset 0 0 40px rgba(184,87,127,.04)}
+.bonus .bt{background:linear-gradient(100deg,#7A2F58,#B8577F 50%,#7A2F58);color:#fff}
+.bonus .bh{color:var(--plum)}
+.bonus .bw{color:var(--mute)}
+.bonus .bw s{color:var(--paper)}
+.bonus .bfree{background:linear-gradient(180deg,#8F2F5C,#B8577F 52%,#5C2444 68%,#B8577F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bonus .bn{color:var(--mute)}
+.gift{color:var(--gold-hi);border-color:rgba(184,87,127,.55);background:rgba(184,87,127,.08)}
+
+/* CTA */
+.minicta{border-color:rgba(184,87,127,.6);background:#fff;color:var(--gold-hi);box-shadow:0 6px 20px rgba(92,36,68,.08)}
+.minicta .s{color:var(--mute)}
+.cta .arrow{color:var(--gold)}
+.cta .btn{background:linear-gradient(135deg,#5C2444 0%,#8F2F5C 22%,#C7648F 46%,#8F2F5C 62%,#5C2444 100%);background-size:200% 100%;color:#fff;box-shadow:0 12px 32px rgba(92,36,68,.35),0 2px 0 rgba(255,255,255,.25) inset,0 -3px 0 rgba(0,0,0,.18) inset;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.cta .btn::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent)}
+.cta .sub{color:var(--gold-hi)}
+.cta .micro{color:var(--mute)}
+.sticky{background:linear-gradient(180deg,rgba(255,251,247,.8),rgba(255,251,247,.98));border-top-color:rgba(184,87,127,.4)}
+.sticky .lab{color:var(--gold-hi)}
+.sticky .lab .hot{color:var(--shu)}
+.sticky .lab .cdmini{color:var(--plum)}
+.sticky .pricebox .p{background:linear-gradient(180deg,#8F2F5C,#B8577F 50%,#5C2444 66%,#B8577F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sticky .pricebox .p small{-webkit-text-fill-color:var(--gold-hi)}
+.sticky .pricebox .n{color:var(--mute)}
+.sticky .row a{color:#fff;background:linear-gradient(135deg,#5C2444,#B8577F 48%,#5C2444);box-shadow:0 6px 20px rgba(92,36,68,.35),0 2px 0 rgba(255,255,255,.25) inset}
+
+/* 比較表・カード */
+.vs{border-color:rgba(184,87,127,.35);background:#fff}
+.vs .r{border-bottom-color:rgba(184,87,127,.18)}
+.vs .c{color:var(--paper)}
+.vs .c:first-child{border-right-color:rgba(184,87,127,.18);color:var(--mute)}
+.vs .r.hd .c{background:#F3E6EC;color:var(--plum)}
+.vs .r.hd .c:last-child{background:var(--plum);color:#fff}
+.vs .r.pr .c .v{color:var(--plum)}
+.vs .r.pr .c:last-child .v{background:linear-gradient(180deg,#8F2F5C,#B8577F 50%,#5C2444 66%,#B8577F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vs .tick{color:var(--gold-hi)}
+.vs .tick::before{color:var(--gold)}
+.item,.plan{border-color:rgba(184,87,127,.3);background:#fff;box-shadow:0 8px 28px rgba(92,36,68,.08)}
+.item.rec,.plan.rec{border-color:var(--gold-hi);background:linear-gradient(180deg,#FFF3F7,#fff);box-shadow:0 0 50px rgba(184,87,127,.25),inset 0 0 60px rgba(184,87,127,.05)}
+@keyframes recGlow{0%{box-shadow:0 0 50px rgba(184,87,127,.25)}35%{box-shadow:0 0 90px rgba(184,87,127,.5)}100%{box-shadow:0 0 50px rgba(184,87,127,.25)}}
+.badge{background:linear-gradient(100deg,#5C2444,#B8577F,#5C2444);color:#fff}
+.thumb::after{background:linear-gradient(180deg,transparent 62%,rgba(43,33,48,.25) 100%)}
+.pname{color:var(--plum)}
+.pterm{color:var(--mute)}
+.was{color:var(--mute)}
+.price{color:var(--plum)}
+.price small{color:var(--gold-hi)}
+.num-gold{background:linear-gradient(180deg,#8F2F5C 0%,#B8577F 46%,#5C2444 62%,#B8577F 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 1px rgba(0,0,0,.08))}
+.goal{color:var(--gold-hi);border-color:rgba(184,87,127,.3)}
+.rec .goal{border-color:rgba(184,87,127,.55)}
+.honest{color:var(--mute)}
+.item ul li::before,.plan ul li::before{background:var(--gold)}
+.pbtn{color:var(--gold-hi);border-color:rgba(184,87,127,.6);background:rgba(184,87,127,.06)}
+.rec .pbtn{color:#fff;background:linear-gradient(135deg,#5C2444,#B8577F 48%,#5C2444);box-shadow:0 10px 26px rgba(92,36,68,.3),0 2px 0 rgba(255,255,255,.25) inset;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.pr-stage .was s::after{background:var(--shu)}
+.pr-stage .nanto{color:var(--shu)}
+.pr-stage .off{background:linear-gradient(100deg,#5C2444,#8F2F5C 50%,#5C2444);color:#fff}
+.wave .rings i{border-color:rgba(184,87,127,.5)}
+.wave .rings i.f{background:radial-gradient(circle,#D98BA6 0%,#8F2F5C 75%);box-shadow:0 0 8px rgba(184,87,127,.5)}
+.wave .lbl{color:var(--mute)}
+.wave .cnt{color:var(--gold-hi)}
+.moonwrap .m{border-color:rgba(184,87,127,.55)}
+.moonwrap .m i{background:var(--gold)}
+.moonwrap.on .m4 i{background:linear-gradient(135deg,#D98BA6,#8F2F5C)}
+.moonwrap .lb{color:var(--mute)}
+.dev{background:#fff;border-color:rgba(184,87,127,.3);box-shadow:0 8px 26px rgba(92,36,68,.07)}
+.dev::before,.dev::after{border-color:var(--gold)}
+.dev .no{color:var(--gold)}
+.flow .fi{border-color:rgba(184,87,127,.3);background:#fff}
+.flow .fa{background:linear-gradient(180deg,var(--gold),transparent)}
+.flow .fa::after{border-color:var(--gold)}
+.flow .fi.last{border-color:var(--gold-hi);background:#F3E6EC;color:var(--plum)}
+
+/* 深さ図・チェック・実績・流れ */
+.depth .band-label.f{color:var(--mute)}
+.depth .band-label.d{color:var(--gold-hi)}
+.depth .layer{border-left-color:rgba(184,87,127,.3)}
+.depth .layer .tag{color:var(--mute);border-color:rgba(184,87,127,.35);background:#fff}
+.depth .layer .nm{color:var(--paper)}
+.depth .layer .sub{color:var(--mute)}
+.depth .layer.deep{background:linear-gradient(90deg,rgba(184,87,127,.12),transparent);border-left-color:var(--gold-hi)}
+.depth .layer.deep .tag{color:var(--gold-hi);border-color:rgba(184,87,127,.6)}
+.depth .layer.deep .nm{color:var(--plum)}
+.depth .cap2{color:var(--mute)}
+.chk li{border-bottom-color:rgba(184,87,127,.18)}
+.chk li::before{border-color:rgba(184,87,127,.6)}
+.chk li::after{border-color:var(--gold-hi)}
+.chk li.on{background:linear-gradient(90deg,rgba(184,87,127,.08),transparent)}
+.stat .num{background:linear-gradient(180deg,#8F2F5C,#B8577F 50%,#5C2444 66%,#B8577F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .unit{-webkit-text-fill-color:var(--plum)}
+.stat .lbl{color:var(--mute)}
+.steps .st::before{border-color:rgba(184,87,127,.6);color:var(--plum);background:#fff}
+.steps .st::after{background:linear-gradient(180deg,rgba(184,87,127,.45),rgba(184,87,127,.08))}
+.steps .st h4{color:var(--plum)}
+.steps .st .when{color:var(--gold-hi);border-color:rgba(184,87,127,.4)}
+
+/* 声・警告・FAQ・フッター */
+.shot img{box-shadow:0 8px 26px rgba(92,36,68,.16)}
+.warn{border-color:rgba(199,52,63,.45);background:linear-gradient(180deg,#FFF3F2,#fff)}
+.warn h3,.warn .eyebrow{color:#B32A36}
+.faq{border-bottom-color:rgba(184,87,127,.2)}
+.faq summary{color:var(--paper)}
+.faq summary::after{border-color:var(--gold)}
+.faq .ans{color:#4C3E50}
+footer{border-top-color:rgba(184,87,127,.2)}
+footer p,footer a{color:var(--mute)}
