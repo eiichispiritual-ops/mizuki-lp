@@ -255,3 +255,107 @@ h3{color:var(--matsu)}
 .faq .ans{color:#4B463C}
 footer{border-top-color:rgba(183,154,90,.4)}
 footer p,footer a{color:var(--mute)}
+
+/* =====================================================================
+   まり 骨格差分 v2（あまねと並べても別物にする）
+   ヒーロー重ねカード／左寄せ見出し＋縦罫／畳縁の引用／松葉反転の限定箱・特典箱／横組みプランカード／丸ゴシック本文
+   ===================================================================== */
+:root{--sans:"Zen Maru Gothic","Noto Sans JP","Hiragino Sans",sans-serif}
+body{font-family:var(--sans)}
+
+/* ヒーロー：全幅写真＋重なる和紙カード */
+.hero{padding:0 0 10px;background:var(--bg)}
+.hero-person{width:100%;max-width:none;aspect-ratio:4/5;height:auto;border-radius:0 0 28px 28px;box-shadow:none;margin:0}
+.hero-person::before{display:none}
+.hero-person::after{background:linear-gradient(180deg,transparent 55%,rgba(31,51,40,.35))}
+.hero-copy{position:relative;z-index:4;margin:-64px 18px 0;padding:28px 22px 26px;background:var(--washi);border-radius:14px;box-shadow:0 18px 44px rgba(31,51,40,.18);text-align:left;border:1px solid rgba(183,154,90,.45)}
+.hero-copy::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:4px;background:linear-gradient(180deg,var(--matsu),var(--gold));border-radius:0 3px 3px 0}
+.hero-copy .lead{text-align:left;letter-spacing:.3em;margin-bottom:10px}
+.hero-copy h1{text-align:left;font-size:clamp(28px,8.2vw,40px);line-height:1.5}
+.hero-copy .tag{display:inline-block;margin-top:4px}
+.scrollcue{align-items:flex-start;margin-top:14px}
+
+/* 見出し：左寄せ＋縦罫、英字は緑の札 */
+.chapno{text-align:left;padding-left:14px}
+.eyebrow{text-align:left;display:inline-block;padding:3px 12px;border-radius:999px;background:var(--matsu);color:var(--kin)!important;font-size:9.5px;letter-spacing:.3em!important;margin-left:0}
+.eyebrow:not(.on){letter-spacing:.2em!important}
+h2{text-align:left;padding-left:14px;border-left:4px solid var(--matsu);line-height:1.5;letter-spacing:.06em;margin-bottom:12px}
+h2::after{display:none}
+h2.sm{border-left-width:3px}
+.gline{margin:14px 0 30px;width:100%;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.s-light h2{border-left-color:var(--kin)}
+.s-light .eyebrow{background:var(--kin);color:var(--matsu-d)!important}
+.s-light .gline{background:linear-gradient(90deg,var(--kin),transparent)}
+h3.tc{text-align:left!important;padding-left:12px;border-left:3px solid var(--gold)}
+
+/* 引用：畳の縁（左の太い縦罫）、左寄せ */
+.quote{text-align:left;padding:22px 20px 22px 24px;border:none;border-left:6px solid var(--matsu);border-radius:0 12px 12px 0;background:var(--washi)}
+.quote::before,.quote::after{display:none}
+.quote p{text-wrap:pretty}
+.s-light .quote{border-left-color:var(--kin);background:rgba(255,255,255,.05)}
+.big{text-align:left;padding-left:14px}
+.big.xl{text-align:center;padding-left:0}
+.whisper{text-align:left;padding-left:14px}
+.peak{text-align:center}
+.lead-p{padding-left:14px;border-left:2px solid rgba(183,154,90,.5)}
+
+/* 限定ボックス・特典：松葉に反転 */
+.limbox{background:linear-gradient(180deg,#2F4A3A,#1F3328);border-color:rgba(230,213,166,.5);color:#F2EEE3;border-radius:14px}
+.limbox::before{border-color:rgba(230,213,166,.25);border-radius:9px}
+.limbox .lt{background:var(--kin);color:var(--matsu-d)}
+.limbox .lh{color:#F2EEE3}
+.limbox .lh .g{color:var(--kin)}
+.limbox .ld{color:#C9C4B3}
+.limbox .ld b{color:var(--kin)!important}
+.cd .u b{color:#fff}
+.cd .u.s b{color:#F3C9A6}
+.cd .u i{color:#C9C4B3}
+.cd .sep{color:rgba(230,213,166,.7)}
+.cd-expired{color:var(--kin)}
+.limbox .ln2{color:var(--kin)}
+.limbox .ln2 b{color:#F3C9A6!important}
+.limbox .stock .sl{color:#C9C4B3}
+.limbox .stock .sl b{color:#F3C9A6}
+.limbox .stock .bar{background:rgba(255,255,255,.12);border-color:rgba(230,213,166,.4)}
+.limbox .stock .bar i{background:linear-gradient(90deg,#B79A5A,#E6D5A6)}
+.limbox .stock .sn{color:#C9C4B3}
+.bonus{background:linear-gradient(180deg,#2F4A3A,#1F3328);border-color:var(--kin);border-radius:14px;box-shadow:0 14px 40px rgba(31,51,40,.25),inset 0 0 0 5px #2A4335,inset 0 0 0 6px rgba(230,213,166,.4)}
+.bonus .bt{background:var(--kin);color:var(--matsu-d)}
+.bonus .bh{color:#F2EEE3}
+.bonus .bw{color:#C9C4B3}
+.bonus .bw s{color:#F2EEE3}
+.bonus .bfree{background:linear-gradient(180deg,#F6EBC9,#E6D5A6 52%,#B79A5A 68%,#F6EBC9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bonus p{color:#EAE4D4}
+.bonus .bn{color:#C9C4B3}
+
+/* 装置カード：左に番号丸、左縁 */
+.dev{padding:26px 22px 24px 24px;border-left:5px solid var(--matsu);border-radius:0 12px 12px 0}
+.dev::before,.dev::after{display:none}
+.dev .no{display:inline-block;width:30px;height:30px;border-radius:50%;background:var(--matsu);color:var(--kin);text-align:center;line-height:30px;letter-spacing:0;font-size:13px;margin-bottom:10px}
+.dev h3{font-size:19px}
+
+/* 混雑帯・LINE箱：左縁 */
+.crowd,.crowd.hot{border-left:5px solid var(--shu);border-radius:0 12px 12px 0}
+.linebox{text-align:left;border-left:5px solid var(--matsu);border-radius:0 12px 12px 0}
+.linebox::before{display:none}
+
+/* プランカード：横組み（左に小さな正方形サムネ、右に名前と価格） */
+.plan{display:grid;grid-template-columns:112px 1fr;column-gap:16px;align-items:start;padding:24px 20px 24px}
+.plan::before{display:none}
+.plan .thumb{grid-column:1;grid-row:1/span 3;margin:0;border-radius:10px;width:112px;aspect-ratio:1/1}
+.plan .thumb img{aspect-ratio:1/1}
+.plan .badge{position:absolute;top:-14px;left:18px;transform:none;margin:0}
+.plan.rec{padding-top:36px}
+.plan .pname{grid-column:2;text-align:left;font-size:17px;margin:2px 0 2px;letter-spacing:.06em}
+.plan .pterm{grid-column:2;text-align:left;margin-bottom:6px}
+.plan .price{grid-column:2;text-align:left;font-size:30px}
+.plan.rec .price{font-size:34px}
+.plan .goal,.plan .wave,.plan p,.plan ul,.plan .gift,.plan .pbtn{grid-column:1/-1}
+.plan .goal{margin-top:18px}
+.plan.rec{grid-template-columns:112px 1fr;border:2px solid var(--gold);background:linear-gradient(180deg,#FBF6E8,var(--washi));box-shadow:0 0 0 1px rgba(138,110,46,.25),0 18px 50px rgba(31,51,40,.16),0 0 40px rgba(183,154,90,.35)}
+.plan.rec .thumb{margin:0}
+.plan .gift{display:inline-block;width:auto;justify-self:start}
+@media (max-width:360px){.plan,.plan.rec{grid-template-columns:96px 1fr}.plan .thumb{width:96px}}
+
+/* 商品カード（本鑑定）は縦のまま、角だけやわらかく */
+.item .thumb{border-radius:10px}
