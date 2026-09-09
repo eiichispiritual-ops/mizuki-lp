@@ -118,13 +118,13 @@
         minis.forEach(function(m){ m.textContent=''; });
         return;
       }
-      var d = Math.floor(left/86400000), h = Math.floor(left%86400000/3600000), m = Math.floor(left%3600000/60000);
+      var d = Math.floor(left/86400000), h = Math.floor(left%86400000/3600000), m = Math.floor(left%3600000/60000), sec = Math.floor(left%60000/1000);
       cds.forEach(function(c){
-        var ed=c.querySelector('[data-d]'), eh=c.querySelector('[data-h]'), em=c.querySelector('[data-m]');
-        if(ed) ed.textContent = d; if(eh) eh.textContent = pad(h); if(em) em.textContent = pad(m);
+        var ed=c.querySelector('[data-d]'), eh=c.querySelector('[data-h]'), em=c.querySelector('[data-m]'), es=c.querySelector('[data-s]');
+        if(ed) ed.textContent = d; if(eh) eh.textContent = pad(h); if(em) em.textContent = pad(m); if(es) es.textContent = pad(sec);
       });
-      minis.forEach(function(mm){ mm.textContent = '残り'+(d>0? d+'日':'')+h+'時間'+(d===0? pad(m)+'分':''); });
-      setTimeout(tick, 30000);
+      minis.forEach(function(mm){ mm.textContent = '残り'+(d>0? d+'日':'')+pad(h)+':'+pad(m)+':'+pad(sec); });
+      setTimeout(tick, 1000 - (Date.now()%1000));
     }
     tick();
   })();
