@@ -367,3 +367,80 @@ h3.tc{text-align:left!important;padding-left:12px;border-left:3px solid var(--go
 
 /* ヒーローカード：常に中央、最大600px（PCで左寄りにならないよう最後に指定） */
 .hero-copy{margin:-40px auto 0!important;width:calc(100% - 36px);max-width:600px}
+
+/* =====================================================================
+   まり v3 高級感補正（ユーザー指摘「チープ」→ 直角・金ヘアライン・明朝の強弱・余白）
+   ===================================================================== */
+:root{--sans:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;--r:0px}
+body{font-family:var(--sans);font-size:17px;line-height:2.05;letter-spacing:.02em}
+section{padding:72px 0}
+p{margin-bottom:1.9em}
+
+/* 文字の強弱：核心は大きく、囁きは小さく薄く */
+.lead-p{font-size:19px;line-height:1.95;border-left:none;padding-left:0;font-family:var(--serif);font-weight:600;color:var(--matsu)}
+.whisper{font-size:13.5px;letter-spacing:.08em;line-height:2.1;color:#9A9384;text-align:left;padding-left:0}
+.big{font-size:clamp(31px,9vw,44px);line-height:1.45;letter-spacing:.02em;margin:48px 0;padding-left:0;text-align:left}
+.big.xl{font-size:clamp(38px,11.5vw,56px);text-align:center}
+.quote{font-size:19.5px;line-height:2;letter-spacing:.03em;border-left:1px solid var(--gold);border-radius:0;background:transparent;padding:6px 0 6px 22px;margin:44px 0}
+.quote p{margin-bottom:1.1em}
+h2{font-size:clamp(30px,8.6vw,40px);line-height:1.4;letter-spacing:.08em;border-left:none;padding-left:0;margin-bottom:10px}
+h2.sm{font-size:24px}
+.chapno{padding-left:0;font-size:12px;letter-spacing:.6em}
+.eyebrow{background:transparent;color:var(--gold-hi)!important;padding:0;border-radius:0;font-size:10.5px;letter-spacing:.5em!important;border-bottom:1px solid rgba(183,154,90,.5);padding-bottom:6px;margin-bottom:14px}
+.s-light .eyebrow{background:transparent;color:#E6D5A6!important;border-bottom-color:rgba(230,213,166,.5)}
+.gline{margin:12px 0 34px;height:1px;width:56px;background:var(--gold)}
+h3.tc{border-left:none;padding-left:0;font-size:22px}
+.ew{font-size:1.28em}
+.sign{font-size:20px;letter-spacing:.3em}
+
+/* 角を立てる：全部の角丸をゼロに、ピルをやめる */
+.hero-copy,.limbox,.limbox::before,.bonus,.crowd,.crowd.hot,.linebox,.vs,.item,.plan,.dev,.flow .fi,.warn,.ph,.ph.wide::before,.ph.portrait,.ph.portrait::before,.ph.portrait img,.thumb,.plan .thumb,.item .thumb,.shot img,.hero-person::before{border-radius:0!important}
+.minicta,.cta .btn,.sticky .row a,.pbtn,.rec .pbtn,.hero-copy .tag,.limbox .lt,.bonus .bt,.badge,.gift,.depth .layer .tag,.steps .st .when,.stock .bar,.stock .bar i{border-radius:0!important}
+
+/* ヒーロー：丸い写真に細い金の二重リング、カードは影なし＋金ヘアライン（和紙の短冊） */
+.hero-person{box-shadow:0 0 0 6px var(--bg),0 0 0 7px var(--gold),0 0 0 14px var(--bg),0 0 0 15px rgba(183,154,90,.45)}
+.hero-copy{background:var(--washi);box-shadow:none;border:1px solid rgba(183,154,90,.7);padding:30px 26px 28px;margin-top:-30px!important}
+.hero-copy::before{width:2px;background:var(--gold);top:22px;bottom:22px}
+.hero-copy .lead{font-size:12px;letter-spacing:.42em;color:var(--gold-hi)}
+.hero-copy h1{font-size:clamp(32px,9.4vw,46px);line-height:1.42;letter-spacing:.04em}
+.hero-copy .tag{background:transparent;border:1px solid rgba(183,154,90,.7);letter-spacing:.24em;font-size:11.5px;padding:8px 16px}
+
+/* 箱：松葉の反転箱に金の二重ヘアライン */
+.limbox{box-shadow:0 18px 50px rgba(31,51,40,.18);border:1px solid rgba(230,213,166,.65)}
+.limbox::before{border:1px solid rgba(230,213,166,.35);inset:6px}
+.limbox .lt{letter-spacing:.4em;padding:8px 22px}
+.limbox .lh{font-size:clamp(19px,5.5vw,24px);letter-spacing:.02em}
+.cd .u b{font-size:clamp(34px,9.6vw,46px)}
+.bonus{box-shadow:0 18px 50px rgba(31,51,40,.2),inset 0 0 0 6px #2A4335,inset 0 0 0 7px rgba(230,213,166,.45)}
+.crowd,.crowd.hot,.linebox,.dev{border-left-width:1px;border-left-color:rgba(183,154,90,.7)}
+.dev{position:relative;padding:28px 24px}
+.dev::before,.dev::after{display:block;content:"";position:absolute;width:20px;height:20px;border-color:var(--gold)}
+.dev::before{top:-1px;left:-1px;border-top:1px solid;border-left:1px solid}
+.dev::after{bottom:-1px;right:-1px;border-bottom:1px solid;border-right:1px solid}
+.dev .no{background:transparent;color:var(--gold-hi);border:1px solid var(--gold);border-radius:50%!important;width:32px;height:32px;line-height:30px;font-size:13px}
+
+/* ボタン：直角、松葉の塗りに金ヘアラインのインセット */
+.cta .btn{letter-spacing:.18em;font-size:19px;box-shadow:0 16px 36px rgba(31,51,40,.3),inset 0 0 0 1px rgba(230,213,166,.7),inset 0 0 0 4px #24382D,inset 0 0 0 5px rgba(230,213,166,.4)}
+.minicta{border:1px solid rgba(183,154,90,.85);background:transparent;letter-spacing:.12em}
+.pbtn{letter-spacing:.14em}
+.rec .pbtn{box-shadow:0 12px 28px rgba(31,51,40,.3),inset 0 0 0 1px rgba(230,213,166,.6)}
+.sticky .row a{letter-spacing:.14em}
+
+/* カード：金の二重ヘアライン */
+.item::before,.plan::before{display:block;border:1px solid rgba(183,154,90,.35)}
+.plan::before{inset:6px;z-index:0}
+.plan>*{position:relative;z-index:1}
+.plan .badge{left:18px;top:-13px;letter-spacing:.24em}
+.plan.rec{border:1px solid var(--gold);box-shadow:0 0 0 1px rgba(138,110,46,.25),0 18px 50px rgba(31,51,40,.16),0 0 40px rgba(183,154,90,.35)}
+.item ul li::before,.plan ul li::before{border-radius:0;transform:rotate(45deg);width:5px;height:5px}
+.wave .rings i{border-radius:0;transform:rotate(45deg);width:8px;height:8px}
+.moonwrap .m{border-radius:50%!important}
+.orn i{border-radius:0;transform:rotate(45deg);width:7px;height:7px}
+.chk li::before{border-radius:0}
+.depth .layer .tag{letter-spacing:.28em}
+.steps .st::before{border-radius:50%!important}
+.hero-person{border-radius:50%!important}
+.hero-person::before{display:none}
+
+.limbox .ld{font-size:12.5px}
+.hero-copy h1{word-break:keep-all}
