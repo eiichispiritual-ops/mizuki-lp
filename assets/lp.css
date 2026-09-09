@@ -474,6 +474,17 @@ section{padding:60px 0;position:relative}
 /* 追従バーの残り時間 */
 .sticky .lab .cdmini{color:#fff;font-family:var(--lat);font-size:13.5px;letter-spacing:.04em;margin-left:6px;font-variant-numeric:tabular-nums}
 
+/* 今だけ特典（ジャパネット「さらに今なら」型） */
+.bonus{position:relative;margin:34px 0 10px;padding:30px 20px 24px;text-align:center;border:2px solid var(--gold);background:linear-gradient(180deg,rgba(201,162,75,.16),rgba(0,0,0,.25));box-shadow:0 0 40px rgba(201,162,75,.18),inset 0 0 40px rgba(201,162,75,.06)}
+.bonus .bt{display:inline-block;position:relative;top:-46px;margin-bottom:-38px;background:linear-gradient(100deg,var(--gold-lo),var(--gold-hi) 50%,var(--gold-lo));color:#14110A;font-weight:900;font-size:13px;letter-spacing:.2em;padding:7px 20px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.bonus .bh{font-family:var(--serif);font-size:clamp(21px,6vw,26px);font-weight:800;line-height:1.6;color:var(--gold-hi);margin-bottom:10px;word-break:keep-all}
+.bonus .bw{font-size:14px;color:var(--mute);margin-bottom:6px}
+.bonus .bw s{color:var(--paper);font-size:1.15em}
+.bonus .bfree{font-family:var(--serif);font-size:clamp(30px,9vw,42px);font-weight:800;line-height:1.2;background:linear-gradient(180deg,#FBEFC4,#D9B45C 52%,#A8813A 68%,#F2DFA6);-webkit-background-clip:text;background-clip:text;color:transparent;margin:4px 0 12px}
+.bonus p{font-size:15px;line-height:1.95;margin-bottom:8px;text-wrap:balance}
+.bonus .bn{font-size:12px;color:var(--mute);letter-spacing:.06em}
+.gift{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--gold-hi);border:1px solid rgba(201,162,75,.6);background:rgba(201,162,75,.1);padding:4px 12px;border-radius:999px;margin:10px auto 0}
+.plan .gift{display:block;width:max-content;max-width:100%;margin:12px auto 0}
 /* ---------- フッター ---------- */
 footer{padding:56px 0 34px;text-align:center;border-top:1px solid rgba(201,162,75,.14)}
 footer p{font-size:12px;color:var(--mute);letter-spacing:.1em;margin-bottom:.9em;line-height:2}
