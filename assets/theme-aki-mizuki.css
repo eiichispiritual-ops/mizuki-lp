@@ -1,0 +1,257 @@
+/* =====================================================================
+   みづき 秋企画テーマ「紅葉 × 朱 × 金」（spi-sales-lp / theme-aki-mizuki.css）
+   lp.css の後に読み込む。構造・文字階層・動きは共通、見た目だけ差し替える。
+   元の藍×金（通年版 kantei/）は触らない。こちらは秋企画 aki/ 専用。
+   高級感の5原則：色数を絞る／角を立てる／金のヘアライン／余白／写真を大きく。
+   ===================================================================== */
+:root{
+  --bg:#1A0E0A;  --bg2:#2A1710; --bg3:#20110C;              /* 焦茶・宵の杜 */
+  --paper:#F5EDE0;                                            /* 本文＝生成り */
+  --mute:#B09A84;
+  --gold:#C9A227;  --gold-hi:#F0DCA0;  --gold-lo:#8F6B1F;   /* 金 */
+  --shu:#D94E2B;                                              /* 朱（鳥居） */
+  --momiji:#B3271E; --momiji-d:#7A1810; --momiji-l:#E0603A;  /* 紅葉 */
+  --kaki:#E08A3C;                                             /* 柿 */
+  --marker:rgba(201,162,39,.42);
+  --kon:#7A1810; --rose:#D94E2B; --wis:#C9772F;
+  --cta-a:#7A1810; --cta-b:#B3271E; --cta-c:#D94E2B; --cta-d:#7A1810; --cta-ink:#FFF3DC;
+}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--paper);position:relative}
+
+/* 紙の目（極薄ノイズ） */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.05;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+body>*{position:relative;z-index:1}
+strong{color:var(--kaki)}
+em{color:var(--gold-hi)}
+
+/* 見出し・罫線 */
+h2{color:var(--paper);letter-spacing:.1em}
+h2::after{background:linear-gradient(180deg,var(--gold),transparent)}
+h3{color:var(--paper)}
+.chapno,.eyebrow{color:var(--gold)}
+.gline{background:linear-gradient(90deg,transparent,var(--gold),transparent);height:1px;width:72px}
+.orn::before,.orn::after{background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i{background:var(--gold)}
+.vline{background:linear-gradient(180deg,transparent,var(--gold),transparent)}
+.growline{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sign{color:var(--gold-hi)}
+.big{color:var(--paper)}
+.big .g,.peak .l2 em{background:linear-gradient(115deg,#8F6B1F,#C9A227 45%,#F0DCA0 52%,#C9A227 70%,#8F6B1F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big .s{color:var(--mute)}
+.wipe::after{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.gg{background:linear-gradient(115deg,#8F6B1F 0%,#C9A227 28%,#F0DCA0 48%,#C9A227 70%,#8F6B1F 100%);background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.quote{color:var(--paper);border-color:rgba(201,162,39,.5);background:transparent;padding:36px 26px}
+.quote::before,.quote::after{border-color:var(--gold);opacity:.9;width:18px;height:18px}
+.ew{color:var(--gold-hi)}
+.lead-p{color:var(--paper)}
+.whisper{color:var(--mute)}
+.peak .l2{color:var(--paper)}
+.peak .l1,.peak .l3{color:var(--mute)}
+.mk{background:linear-gradient(transparent 62%,var(--marker) 62%,var(--marker) 94%,transparent 94%)}
+.shu{color:var(--momiji-l)}
+
+/* セクション：宵の杜 ＋ 反転の生成り */
+.s-dark{background:var(--bg)}
+.s-ai{background:linear-gradient(180deg,#24130D 0%,var(--bg) 100%)}
+.s-ai-r{background:linear-gradient(180deg,var(--bg) 0%,#24130D 100%)}
+.s-light{background:linear-gradient(180deg,#F7F0E2,#EFE4D0);color:#2A1710}
+.s-light h2,.s-light .big,.s-light h3{color:#7A1810}
+.s-light p{color:#3A2418}
+.s-light .eyebrow,.s-light .chapno{color:#8F6B1F}
+.s-light .gline{background:linear-gradient(90deg,transparent,#8F6B1F,transparent);height:1px;width:72px}
+.s-light .whisper{color:#8B7560}
+.s-light strong{color:#B3271E}
+.s-light .quote{color:#7A1810;border-color:rgba(143,107,31,.5);background:transparent}
+.s-light .quote::before,.s-light .quote::after{border-color:#8F6B1F}
+.s-light .ew{color:#8F6B1F}
+.s-light h2::after{background:linear-gradient(180deg,#8F6B1F,transparent)}
+.s-light .cta .arrow,.s-light .cta .sub{color:#7A1810}
+.s-light .cta .micro{color:#8B7560}
+.s-light .cta .btn{background:linear-gradient(135deg,#7A1810,#B3271E 45%,#D94E2B 52%,#B3271E 60%,#7A1810);color:#FFF3DC;text-shadow:none;box-shadow:0 12px 32px rgba(122,24,16,.3)}
+.s-light .minicta{border-color:rgba(143,107,31,.7);background:transparent;color:#7A1810;box-shadow:none}
+.s-light .minicta .s{color:#8B7560}
+.s-light .steps .st::before{background:#F7F0E2;color:#7A1810;border-color:#8F6B1F}
+.s-light .steps .st::after{background:linear-gradient(180deg,rgba(143,107,31,.5),rgba(143,107,31,.08))}
+.s-light .steps .st h4{color:#7A1810}
+.s-light .steps .st .when{color:#FFF3DC;background:#7A1810;border:none}
+.s-light .steps .st p{color:#3A2418}
+.s-light .shot img{box-shadow:0 12px 34px rgba(122,24,16,.2)}
+.s-light .stat .num{background:linear-gradient(180deg,#C9A227,#8F6B1F 50%,#B3271E 66%,#C9A227);-webkit-background-clip:text;background-clip:text}
+.s-light .stat .unit{-webkit-text-fill-color:#7A1810}
+.s-light .stat .lbl{color:#8B7560}
+
+/* 帯：金の青海波（秋＝実りの波） */
+.band{height:64px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='%23C9A227' stroke-opacity='.30' stroke-width='.9'%3E%3Cpath d='M0 24a12 12 0 0124 0a12 12 0 0124 0'/%3E%3Cpath d='M0 18a12 12 0 0124 0a12 12 0 0124 0'/%3E%3Cpath d='M0 12a12 12 0 0124 0a12 12 0 0124 0'/%3E%3C/g%3E%3C/svg%3E");background-size:48px 24px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 45%,transparent);mask-image:linear-gradient(180deg,transparent,#000 45%,transparent)}
+
+/* 進捗バー・粒子＝舞い落ちる紅葉の光 */
+.prog i{background:linear-gradient(90deg,var(--momiji),var(--kaki),var(--gold-hi));box-shadow:0 0 10px rgba(217,78,43,.5)}
+.particle{background:radial-gradient(circle,rgba(224,138,60,.85) 0%,rgba(224,138,60,0) 70%)}
+
+/* ヒーロー：正方形バナーを金のヘアラインで額装 */
+.hero{background:linear-gradient(180deg,#2A1710 0%,var(--bg) 100%);min-height:auto;padding:20px 0 6px}
+.hero-person{height:auto;width:calc(100% - 40px);max-width:430px;aspect-ratio:1/1;margin:0 auto;border-radius:0;overflow:hidden;box-shadow:0 22px 54px rgba(0,0,0,.55);position:relative}
+.hero-person::before{content:"";position:absolute;inset:9px;border:1px solid rgba(240,220,160,.65);z-index:3;pointer-events:none}
+.hero-person img{object-fit:cover;object-position:center;animation:heroDrift 38s ease-in-out infinite alternate;transform:scale(1.01)}
+.hero-person::after{background:linear-gradient(180deg,transparent 68%,rgba(26,14,10,.35))}
+.hero-flare{display:none}
+.hero-copy{padding:26px 24px 30px}
+.hero-copy .lead{color:var(--gold-hi);letter-spacing:.4em;font-size:12.5px}
+.hero-copy h1{color:var(--paper);letter-spacing:.05em}
+.hero-copy .tag{color:var(--gold-hi);border:1px solid rgba(201,162,39,.7);background:transparent;letter-spacing:.2em;font-size:12px}
+.scrollcue span{color:var(--mute)}
+.scrollcue i{background:linear-gradient(180deg,var(--gold),transparent)}
+
+/* 写真：金ヘアライン */
+.ph{position:relative}
+.ph::after{background:linear-gradient(180deg,rgba(26,14,10,.12),transparent 30%,transparent 70%,rgba(26,14,10,.42))}
+.ph.wide::before{content:"";position:absolute;inset:8px;border:1px solid rgba(240,220,160,.5);z-index:2;pointer-events:none}
+.ph .cap{color:#fff}
+.ph.portrait{background:transparent;padding:0;border:1px solid rgba(201,162,39,.6);box-shadow:0 18px 44px rgba(0,0,0,.45)}
+.ph.portrait::before{inset:8px;border-color:rgba(240,220,160,.6)}
+.ph-full::after{background:linear-gradient(180deg,var(--bg),transparent 22%,transparent 74%,var(--bg))}
+.ph-full img{filter:brightness(.9) saturate(1.05)}
+.ph-full .ov{color:#fff}
+
+/* 限定ボックス：二重の金ヘアライン、リボンは紅葉 */
+.limbox{border:1px solid rgba(201,162,39,.7);background:rgba(42,23,16,.75);box-shadow:0 14px 42px rgba(0,0,0,.4);padding:28px 18px 24px}
+.limbox::before{inset:5px;border:1px solid rgba(201,162,39,.32)}
+.limbox .lt{background:var(--momiji-d);color:var(--gold-hi);letter-spacing:.3em;box-shadow:0 6px 16px rgba(122,24,16,.5)}
+.limbox .lh{color:var(--paper)}
+.limbox .lh .g{color:var(--gold-hi)}
+.limbox .ld{color:var(--mute)}
+.limbox .ld b{color:var(--gold-hi)!important}
+.cd .u b{color:var(--gold-hi);text-shadow:0 0 14px rgba(240,220,160,.3)}
+.cd .u.s b{color:var(--momiji-l)}
+.cd .u i{color:var(--mute)}
+.cd .sep{color:rgba(217,78,43,.7)}
+.cd-expired{color:var(--paper)}
+.limbox .ln2{color:var(--gold-hi)}
+.limbox .ln2 b{color:var(--momiji-l)!important}
+.stock .sl{color:var(--mute)}
+.stock .sl b{color:var(--momiji-l)}
+.stock .bar{background:rgba(255,255,255,.07);border-color:rgba(201,162,39,.45);border-radius:0;height:7px}
+.stock .bar i{background:linear-gradient(90deg,#7A1810,#B3271E 55%,#D94E2B);box-shadow:0 0 12px rgba(217,78,43,.45);border-radius:0}
+.stock .sn{color:var(--mute)}
+
+/* 混雑帯・LINE箱 */
+.crowd{border:1px solid rgba(201,162,39,.5);background:rgba(42,23,16,.7);color:var(--paper)}
+.crowd.hot{border-color:rgba(217,78,43,.55);background:rgba(42,23,16,.78)}
+.crowd b{color:var(--gold-hi)}
+.crowd .ct{color:var(--momiji-l)}
+.crowd .dot{background:var(--shu);box-shadow:0 0 0 0 rgba(217,78,43,.6)}
+@keyframes crowdPulse{0%{box-shadow:0 0 0 0 rgba(217,78,43,.6)}100%{box-shadow:0 0 0 12px rgba(217,78,43,0)}}
+.linebox{border:1px solid rgba(201,162,39,.6);background:rgba(42,23,16,.7);box-shadow:none;position:relative}
+.linebox::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,162,39,.28);pointer-events:none}
+.linebox .lh{color:var(--gold-hi)}
+.linebox .ls{color:var(--mute)}
+
+/* CTA：角を立てる。強＝紅葉塗り＋金ヘアライン、弱＝金ヘアラインのみ */
+.minicta{border:1px solid rgba(201,162,39,.8);background:transparent;color:var(--gold-hi);box-shadow:none;border-radius:0;letter-spacing:.1em}
+.minicta::after{background:linear-gradient(100deg,transparent,rgba(240,220,160,.3),transparent)}
+.minicta .s{color:var(--mute)}
+.cta .arrow{color:var(--gold)}
+.cta .btn{border-radius:0;background:linear-gradient(135deg,#7A1810 0%,#B3271E 45%,#D94E2B 52%,#B3271E 60%,#7A1810 100%);background-size:200% 100%;color:#FFF3DC;letter-spacing:.16em;box-shadow:0 16px 38px rgba(122,24,16,.45),inset 0 0 0 1px rgba(240,220,160,.55),inset 0 0 0 4px #8F1C12,inset 0 0 0 5px rgba(240,220,160,.3);text-shadow:none}
+.cta .btn::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.26),transparent)}
+.cta .sub{color:var(--gold-hi)}
+.cta .micro{color:var(--mute)}
+.sticky{background:linear-gradient(180deg,rgba(26,14,10,.88),rgba(26,14,10,.98));border-top:1px solid rgba(201,162,39,.55)}
+.sticky .lab{color:var(--gold-hi)}
+.sticky .lab .hot{color:var(--momiji-l)}
+.sticky .lab .cdmini{color:var(--gold-hi)}
+.sticky .pricebox .p{background:linear-gradient(180deg,#F0DCA0,#C9A227 50%,#8F6B1F 66%,#F0DCA0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sticky .pricebox .p small{-webkit-text-fill-color:var(--gold-hi)}
+.sticky .pricebox .n{color:var(--mute)}
+.sticky .row a{border-radius:0;color:#FFF3DC;background:linear-gradient(135deg,#7A1810,#B3271E 48%,#7A1810);box-shadow:0 8px 24px rgba(122,24,16,.45),inset 0 0 0 1px rgba(240,220,160,.5);letter-spacing:.14em}
+
+/* カード：金の二重ヘアライン */
+.vs{border:1px solid rgba(201,162,39,.7);background:rgba(42,23,16,.6)}
+.vs .r{border-bottom-color:rgba(201,162,39,.25)}
+.vs .c{color:var(--paper)}
+.vs .c:first-child{border-right-color:rgba(201,162,39,.25);color:var(--mute)}
+.vs .r.hd .c{background:rgba(42,23,16,.9);color:var(--gold-hi)}
+.vs .r.hd .c:last-child{background:var(--momiji-d);color:var(--gold-hi)}
+.vs .r.pr .c .v{color:var(--paper)}
+.vs .r.pr .c:last-child .v{background:linear-gradient(180deg,#F0DCA0,#C9A227 50%,#8F6B1F 66%,#F0DCA0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vs .tick{color:var(--gold-hi)}
+.vs .tick::before{color:var(--gold)}
+.item,.plan{border:1px solid rgba(201,162,39,.65);background:rgba(42,23,16,.72);box-shadow:none;position:relative}
+.item::before,.plan::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,162,39,.25);pointer-events:none;z-index:0}
+.item>*,.plan>*{position:relative;z-index:1}
+.item>.badge,.plan>.badge{position:absolute;z-index:2}
+.item.rec,.plan.rec{border:4px solid transparent;background:linear-gradient(180deg,#32190F,rgba(42,23,16,.9)) padding-box,linear-gradient(135deg,#8F6B1F 0%,#F0DCA0 22%,#C9A227 45%,#FFF1CC 52%,#C9A227 60%,#8F6B1F 100%) border-box;background-size:auto,220% 100%;animation:goldFrame 6s ease-in-out infinite;box-shadow:0 0 0 1px rgba(143,107,31,.4),0 18px 54px rgba(0,0,0,.5),0 0 50px rgba(201,162,39,.35)}
+.item.rec::before,.plan.rec::before{inset:8px;border:1px solid rgba(201,162,39,.7)}
+@keyframes goldFrame{0%,100%{background-position:0 0,0% 0}50%{background-position:0 0,100% 0}}
+@keyframes recGlow{0%{box-shadow:0 0 0 1px rgba(143,107,31,.4),0 18px 54px rgba(0,0,0,.5),0 0 50px rgba(201,162,39,.35)}35%{box-shadow:0 0 0 1px rgba(143,107,31,.55),0 18px 74px rgba(0,0,0,.55),0 0 96px rgba(240,220,160,.8)}100%{box-shadow:0 0 0 1px rgba(143,107,31,.4),0 18px 54px rgba(0,0,0,.5),0 0 50px rgba(201,162,39,.35)}}
+.badge{background:var(--momiji-d);color:var(--gold-hi);letter-spacing:.24em;box-shadow:0 6px 16px rgba(122,24,16,.5)}
+.thumb{margin:-12px -6px 22px;border:1px solid rgba(201,162,39,.45)}
+.rec .thumb{margin:-20px -14px 24px}
+.thumb::after{background:linear-gradient(180deg,transparent 70%,rgba(26,14,10,.3) 100%)}
+.pname{color:var(--gold-hi);letter-spacing:.14em}
+.pterm{color:var(--gold)}
+.was{color:var(--mute)}
+.price{color:var(--paper)}
+.price small{color:var(--gold-hi)}
+.num-gold{background:linear-gradient(180deg,#F0DCA0 0%,#C9A227 46%,#8F6B1F 62%,#F0DCA0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.goal{color:var(--gold-hi);border-color:rgba(201,162,39,.4)}
+.rec .goal{border-color:rgba(201,162,39,.75)}
+.honest{color:var(--mute)}
+.item ul li::before,.plan ul li::before{background:var(--gold)}
+.pbtn{border-radius:0;color:var(--gold-hi);border:1px solid rgba(201,162,39,.85);background:transparent;letter-spacing:.12em}
+.rec .pbtn{color:#FFF3DC;background:linear-gradient(135deg,#7A1810,#B3271E 48%,#7A1810);box-shadow:0 12px 30px rgba(122,24,16,.42),inset 0 0 0 1px rgba(240,220,160,.55);text-shadow:none}
+.pr-stage .was s::after{background:var(--shu)}
+.pr-stage .nanto{color:var(--momiji-l)}
+.pr-stage .off{background:var(--momiji-d);color:var(--gold-hi);border-radius:0;letter-spacing:.14em}
+
+/* 深さ図・チェック・実績 */
+.depth .band-label.f{color:var(--mute)}
+.depth .band-label.d{color:var(--gold-hi)}
+.depth .layer{border-left-color:rgba(201,162,39,.4)}
+.depth .layer .tag{color:var(--mute);border:1px solid rgba(201,162,39,.5);background:transparent;letter-spacing:.24em}
+.depth .layer .nm{color:var(--paper)}
+.depth .layer .sub{color:var(--mute)}
+.depth .layer.deep{background:linear-gradient(90deg,rgba(201,162,39,.12),transparent);border-left-color:var(--momiji)}
+.depth .layer.deep .tag{color:var(--gold-hi);border-color:rgba(201,162,39,.65)}
+.depth .layer.deep .nm{color:var(--gold-hi)}
+.depth .cap2{color:var(--mute)}
+.chk li{border-bottom-color:rgba(201,162,39,.28)}
+.chk li::before{border-color:rgba(201,162,39,.8)}
+.chk li::after{border-color:var(--momiji-l)}
+.chk li.on{background:linear-gradient(90deg,rgba(201,162,39,.1),transparent)}
+.stat .num{background:linear-gradient(180deg,#F0DCA0,#C9A227 50%,#8F6B1F 66%,#F0DCA0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .unit{-webkit-text-fill-color:var(--gold-hi)}
+.stat .lbl{color:var(--mute)}
+.steps .st::before{border-color:rgba(201,162,39,.85);color:var(--gold-hi);background:transparent}
+.steps .st::after{background:linear-gradient(180deg,rgba(201,162,39,.55),rgba(201,162,39,.1))}
+.steps .st h4{color:var(--gold-hi)}
+.steps .st .when{color:var(--gold-hi);border-color:rgba(201,162,39,.55)}
+
+/* 声・警告・FAQ・フッター */
+.shot img{box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.warn{border:1px solid rgba(217,78,43,.45);background:rgba(42,23,16,.7)}
+.warn h3,.warn .eyebrow{color:var(--momiji-l)}
+.faq{border-bottom-color:rgba(201,162,39,.28)}
+.faq summary{color:var(--paper)}
+.faq summary::after{border-color:var(--gold)}
+.faq .ans{color:#D9C8B4}
+footer{border-top-color:rgba(201,162,39,.35)}
+footer p,footer a{color:var(--mute)}
+
+/* 秋の演出：舞い落ちる紅葉（控えめ・5枚だけ） */
+.momiji-fall{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.momiji-fall i{position:absolute;top:-8%;width:14px;height:14px;opacity:0;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C0392B' d='M12 2l1.8 4.2 4.3-1.4-2.3 3.9 4.2 1.9-4.4 1.3 1.5 4.3-3.9-2.4L12 22l-1.2-6.2-3.9 2.4 1.5-4.3L4 12.6l4.2-1.9-2.3-3.9 4.3 1.4z'/%3E%3C/svg%3E");
+  background-size:contain;background-repeat:no-repeat;
+  animation:momijiFall linear infinite}
+.momiji-fall i:nth-child(1){left:8%;width:13px;height:13px;animation-duration:17s;animation-delay:0s}
+.momiji-fall i:nth-child(2){left:28%;width:10px;height:10px;animation-duration:22s;animation-delay:4s;filter:hue-rotate(18deg)}
+.momiji-fall i:nth-child(3){left:52%;width:15px;height:15px;animation-duration:19s;animation-delay:9s;filter:hue-rotate(-10deg)}
+.momiji-fall i:nth-child(4){left:73%;width:11px;height:11px;animation-duration:25s;animation-delay:2s;filter:hue-rotate(25deg)}
+.momiji-fall i:nth-child(5){left:90%;width:12px;height:12px;animation-duration:20s;animation-delay:12s}
+@keyframes momijiFall{
+  0%{transform:translateY(-10vh) rotate(0deg);opacity:0}
+  8%{opacity:.5}
+  85%{opacity:.4}
+  100%{transform:translateY(112vh) rotate(420deg);opacity:0}
+}
+@media (prefers-reduced-motion:reduce){.momiji-fall{display:none}}
