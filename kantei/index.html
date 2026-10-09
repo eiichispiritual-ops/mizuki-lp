@@ -4,708 +4,89 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A1622">
 <title>神言降ろしの本鑑定｜無料鑑定を受け取ったあなたへ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;700;800&family=Cormorant+Garamond:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lp.css?v=202609102219">
 <style>
+/* ===== アカウント別トークン：みづき／本鑑定（藍×金） ===== */
 :root{
-  --pad:27px;
-  --sumi:#0A1622; --ai:#102437; --ai2:#0D1D2E;
+  /* 表示速度（2026-10-09）: 本文ゴシックのWebフォントを廃止しHiragino Sansへ。約1MB削減。
+     見出しの明朝（Shippori Mincho B1）は世界観の核なので維持する。 */
+  --sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",system-ui,sans-serif;
+  --bg:#0A1622; --bg2:#102437; --bg3:#0D1D2E;
   --gold:#B8964A; --gold-hi:#EBD9A8; --gold-lo:#8A6E32;
-  --shu:#B5432E; --paper:#F2EFE7; --mute:#7E94AA;
-  --maxw:620px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-html,body{max-width:100%;overflow-x:clip}
-body{
-  background:var(--sumi);color:var(--paper);
-  font-family:"Noto Sans JP","Hiragino Sans",YuGothic,sans-serif;
-  font-size:16.5px;line-height:1.9;letter-spacing:.015em;
-  font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;
-  overflow-x:clip;padding-bottom:96px;max-width:100%;
-}
-img{max-width:100%;display:block;height:auto}
-p{margin-bottom:1.85em}
-p:last-child{margin-bottom:0}
-strong{color:#E2725B;font-weight:700}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
-.lat{font-family:"Cormorant Garamond",serif;letter-spacing:.3em}
-
-.gg{
-  background:linear-gradient(115deg,#F7E9C4 0%,#DCBE85 28%,#A8874E 48%,#DCBE85 70%,#F7E9C4 100%);
-  background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:sheen 8s ease-in-out infinite;
-}
-@keyframes sheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
-
-.rv{opacity:0;transform:translateY(30px);transition:opacity 1.15s cubic-bezier(.22,.61,.36,1),transform 1.15s cubic-bezier(.22,.61,.36,1)}
-.rv.on{opacity:1;transform:none}
-.rv-s{opacity:0;transform:scale(1.06);transition:opacity 1.5s ease,transform 1.9s cubic-bezier(.22,.61,.36,1)}
-.rv-s.on{opacity:1;transform:none}
-
-section{padding:58px 0;position:relative}
-.s-dark{background:var(--sumi)}
-.s-ai{background:linear-gradient(180deg,var(--ai) 0%,var(--sumi) 100%)}
-.s-ai-r{background:linear-gradient(180deg,var(--sumi) 0%,var(--ai2) 100%)}
-
-.eyebrow{text-align:center;font-size:10px;letter-spacing:.62em;color:var(--gold);margin-bottom:16px;font-family:"Cormorant Garamond",serif;text-transform:uppercase}
-h2{font-family:"Shippori Mincho B1",serif;font-size:33px;font-weight:800;text-align:center;letter-spacing:.14em;line-height:1.68;margin-bottom:8px;color:var(--paper)}
-h2.sm{font-size:22px}
-h3{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:700;letter-spacing:.1em;line-height:1.9;margin-bottom:18px;color:var(--gold-hi)}
-.gline{width:56px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px auto 32px}
-.orn{display:flex;align-items:center;gap:13px;justify-content:center;margin:34px auto}
-.orn::before,.orn::after{content:"";width:64px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.orn::after{background:linear-gradient(90deg,var(--gold),transparent)}
-.orn i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 12px rgba(201,162,75,.75)}
-
-.band{
-  height:76px;
-  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60'%3E%3Cg fill='none' stroke='%23C9A24B' stroke-opacity='.11' stroke-width='1'%3E%3Ccircle cx='0' cy='60' r='56'/%3E%3Ccircle cx='0' cy='60' r='42'/%3E%3Ccircle cx='0' cy='60' r='28'/%3E%3Ccircle cx='60' cy='60' r='56'/%3E%3Ccircle cx='60' cy='60' r='42'/%3E%3Ccircle cx='60' cy='60' r='28'/%3E%3Ccircle cx='120' cy='60' r='56'/%3E%3Ccircle cx='120' cy='60' r='42'/%3E%3Ccircle cx='120' cy='60' r='28'/%3E%3Ccircle cx='30' cy='30' r='56'/%3E%3Ccircle cx='30' cy='30' r='42'/%3E%3Ccircle cx='90' cy='30' r='56'/%3E%3Ccircle cx='90' cy='30' r='42'/%3E%3C/g%3E%3C/svg%3E");
-  background-size:112px 56px;
-  -webkit-mask-image:linear-gradient(180deg,transparent,#000 45%,transparent);
-  mask-image:linear-gradient(180deg,transparent,#000 45%,transparent);
-}
-
-.prog{position:fixed;top:0;left:0;height:2px;width:100%;z-index:60;pointer-events:none}
-.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi));box-shadow:0 0 10px rgba(245,223,160,.6);transition:width .1s linear}
-
-.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
-.particle{position:absolute;bottom:-12px;width:var(--size);height:var(--size);background:radial-gradient(circle,var(--gold-hi) 0%,rgba(245,223,160,0) 70%);border-radius:50%;animation:floatUp var(--duration) linear var(--delay) infinite;will-change:transform,opacity}
-@keyframes floatUp{0%{transform:translate3d(0,0,0);opacity:0}12%{opacity:.75}88%{opacity:.35}100%{transform:translate3d(0,-108vh,0);opacity:0}}
-
-
-
-/* ---------- ヒーロー：写真上／文字下（重ねない） ---------- */
-.hero{
-  min-height:100svh;display:flex;flex-direction:column;
-  justify-content:flex-start;padding-bottom:0;position:relative;overflow:hidden;
-  background:var(--sumi);
-}
-.hero-person{position:relative;width:100%;height:58svh;overflow:hidden;flex:none}
-.hero-person img{
-  width:100%;height:100%;object-fit:cover;object-position:38% 26%;
-  transform:scale(1.02);animation:heroDrift 34s ease-in-out infinite alternate;
-}
-@keyframes heroDrift{from{transform:scale(1.02)}to{transform:scale(1.08)}}
-.hero-person::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(24,21,40,.18) 0%,transparent 24%,transparent 62%,rgba(24,21,40,.86) 92%,var(--sumi) 100%);
-}
-.hero-copy{
-  position:relative;z-index:3;flex:1;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:6px 26px calc(4svh + 92px);text-align:center;
-}
-.hero-copy .lead{
-  font-size:13px;letter-spacing:.34em;color:var(--gold);
-  font-family:"Shippori Mincho B1",serif;margin-bottom:16px;
-}
-.hero-copy h1{
-  font-family:"Shippori Mincho B1",serif;
-  font-size:clamp(30px,8.8vw,42px);font-weight:800;
-  line-height:1.62;letter-spacing:.06em;margin-bottom:20px;
-}
-.hero-copy .tag{
-  display:inline-block;font-size:12px;letter-spacing:.14em;color:var(--gold-hi);
-  border:1px solid rgba(201,162,75,.5);padding:10px 18px;
-  background:rgba(24,21,40,.55);line-height:1.85;
-}
-.scrollcue{margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.scrollcue span{font-size:9.5px;letter-spacing:.42em;color:var(--mute);font-family:"Cormorant Garamond",serif}
-.scrollcue i{display:block;width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 2.4s ease-in-out infinite}
-@keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.4}50%{transform:scaleY(1);transform-origin:top;opacity:1}}
-
-.quote{font-family:"Shippori Mincho B1",serif;margin:44px 0;padding:34px 28px;border-top:1px solid rgba(201,162,75,.32);border-bottom:1px solid rgba(201,162,75,.32);background:linear-gradient(180deg,rgba(201,162,75,.05),transparent);text-align:center;font-size:18px;line-height:2.15;color:var(--gold-hi)}
-.quote p{margin-bottom:1.2em}
-.whisper{font-size:14.5px;color:var(--mute);text-align:center;margin:38px 0;line-height:2.25}
-.big{font-family:"Shippori Mincho B1",serif;font-size:clamp(30px,9vw,44px);font-weight:800;line-height:1.55;letter-spacing:.01em;text-align:center;margin:44px 0;color:var(--paper)}
-
-.ph{margin:52px 0;position:relative;overflow:hidden}
-.ph img{width:100%;filter:brightness(.94) saturate(.96)}
-.ph.tall img{aspect-ratio:3/4;object-fit:cover}
-.ph.portrait{max-width:300px;margin:46px auto}
-
-/* ---------- 深さの図解 ---------- */
-.depth{margin:46px 0;position:relative}
-.depth .layer{
-  position:relative;padding:20px 18px 20px 96px;
-  border-left:1px solid rgba(201,162,75,.28);
-  margin-left:8px;
-}
-.depth .layer .tag{
-  position:absolute;left:-8px;top:20px;
-  width:auto;min-width:76px;text-align:center;
-  font-size:10.5px;letter-spacing:.14em;padding:4px 8px;
-  background:var(--sumi);color:var(--mute);
-  border:1px solid rgba(201,162,75,.3);
-  transform:translateX(-50%) rotate(0deg);
-  left:0;
-}
-.depth .layer .nm{font-size:15.5px;color:var(--paper);line-height:1.9;margin-bottom:4px}
-.depth .layer .sub{font-size:13.5px;color:var(--mute);line-height:1.9}
-.depth .layer.free{opacity:.95}
-.depth .layer.deep{background:linear-gradient(90deg,rgba(201,162,75,.09),transparent)}
-.depth .layer.deep .nm{color:var(--gold-hi)}
-.depth .cap2{text-align:center;font-size:12.5px;color:var(--mute);margin-top:20px;letter-spacing:.1em}
-.depth .band-label{
-  display:flex;align-items:center;gap:10px;margin:4px 0 10px 8px;
-  font-size:11.5px;letter-spacing:.2em;
-}
-.depth .band-label.f{color:var(--mute)}
-.depth .band-label.d{color:var(--gold)}
-.depth .band-label::before{content:"";width:22px;height:1px;background:currentColor}
-.ph.portrait img{aspect-ratio:3/4;object-fit:cover;object-position:center 20%}
-.ph.wide img{aspect-ratio:16/10;object-fit:cover}
-.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,20,.3),transparent 30%,transparent 70%,rgba(15,13,20,.55));pointer-events:none}
-.ph .cap{position:absolute;left:0;right:0;bottom:18px;text-align:center;z-index:2;font-size:12.5px;letter-spacing:.2em;color:var(--paper);text-shadow:0 2px 10px rgba(0,0,0,.9)}
-.ph-full{position:relative;overflow:hidden;margin:56px 0;width:100%}
-.ph-full img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(.84) saturate(.9)}
-.ph-full::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--sumi),transparent 22%,transparent 74%,var(--sumi));pointer-events:none}
-.ph-full .ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;padding:0 32px;text-align:center;font-size:clamp(19px,5.2vw,24px);font-weight:700;line-height:2;letter-spacing:.1em;text-shadow:0 3px 18px rgba(0,0,0,.9)}
-
-/* 共感チェック */
-.chk{margin:40px 0;padding:0;list-style:none}
-.chk li{position:relative;padding:16px 8px 16px 40px;border-bottom:1px solid rgba(201,162,75,.14);font-size:15.5px;line-height:1.95}
-.chk li::before{content:"";position:absolute;left:6px;top:22px;width:15px;height:15px;border:1px solid rgba(201,162,75,.6)}
-.chk li::after{content:"";position:absolute;left:9px;top:26px;width:11px;height:6px;border-left:1.5px solid var(--gold-hi);border-bottom:1.5px solid var(--gold-hi);transform:rotate(-45deg) scale(0);transform-origin:center;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
-.chk li.on::after{transform:rotate(-45deg) scale(1)}
-
-/* 対比表 */
-.cmp{margin:46px 0;border:1px solid rgba(201,162,75,.26)}
-.cmp .row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(201,162,75,.16)}
-.cmp .row:last-child{border-bottom:none}
-.cmp .row.hd{background:rgba(201,162,75,.08)}
-.cmp .c{padding:18px 14px;font-size:14px;line-height:1.9;text-align:center}
-.cmp .c:first-child{border-right:1px solid rgba(201,162,75,.16);color:var(--mute)}
-.cmp .row.hd .c{font-weight:700;font-size:14.5px;letter-spacing:.1em;color:var(--paper)}
-.cmp .row.hd .c:last-child{color:var(--gold-hi)}
-
-/* 商品カード */
-.item{margin:26px 0;padding:34px 26px 30px;border:1px solid rgba(201,162,75,.26);background:linear-gradient(180deg,rgba(26,24,48,.5),rgba(15,13,20,.25));position:relative}
-.item.rec{border:2px solid var(--gold);background:linear-gradient(180deg,rgba(201,162,75,.16),rgba(26,24,48,.5));box-shadow:0 0 60px rgba(201,162,75,.26),inset 0 0 70px rgba(201,162,75,.07);margin:38px -8px;padding:44px 30px 36px}
-.item .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(100deg,var(--gold-lo),var(--gold-hi),var(--gold-lo));color:#14110A;font-size:11.5px;font-weight:700;letter-spacing:.2em;padding:5px 20px;white-space:nowrap}
-.item .thumb{margin:-10px -6px 20px;position:relative;overflow:hidden}
-.item .thumb img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
-.item .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(24,21,40,.55) 100%);pointer-events:none}
-.item.rec .thumb{margin:-18px -14px 22px}
-.item .pname{font-size:19px;font-weight:700;letter-spacing:.12em;text-align:center;margin-bottom:16px;color:var(--gold-hi)}
-.item.rec .pname{font-size:21px}
-.item .was{text-align:center;font-size:14px;color:var(--mute);margin-bottom:2px}
-.item .was s{text-decoration:line-through;text-decoration-color:rgba(181,67,46,.7)}
-.item .price{text-align:center;font-size:29px;font-weight:800;letter-spacing:.04em;margin-bottom:6px;font-family:"Cormorant Garamond",serif}
-.item.rec .price{font-size:38px}
-.item .price small{font-size:15px;letter-spacing:.1em;margin-left:3px;font-family:"Shippori Mincho B1",serif}
-.item .goal{text-align:center;font-size:15px;color:var(--gold-hi);letter-spacing:.09em;margin:20px 0;padding:15px 0;border-top:1px solid rgba(201,162,75,.22);border-bottom:1px solid rgba(201,162,75,.22);line-height:1.9}
-.item.rec .goal{font-size:16.5px;border-color:rgba(201,162,75,.5)}
-.item p{font-size:15px;line-height:2.0;margin-bottom:1.4em}
-.item ul{list-style:none;margin:18px 0}
-.item ul li{position:relative;padding-left:20px;font-size:14.5px;line-height:2;margin-bottom:8px}
-.item ul li::before{content:"";position:absolute;left:2px;top:14px;width:5px;height:5px;background:var(--gold);transform:rotate(45deg)}
-.item .pbtn{display:block;margin-top:24px;text-decoration:none;text-align:center;padding:16px 14px;font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--gold-hi);border:1px solid rgba(201,162,75,.55);background:rgba(201,162,75,.06);transition:background .3s ease}
-.item .pbtn:hover{background:rgba(201,162,75,.16)}
-.item.rec .pbtn{color:#14110A;border:none;background:linear-gradient(100deg,#8A6E32,#D9BC76 45%,#F5DFA0 52%,#D9BC76 60%,#8A6E32);background-size:220% 100%;animation:btnSheen 5.5s ease-in-out infinite;font-size:16px;padding:19px 14px}
-@keyframes btnSheen{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
-
-.cta{display:block;margin:44px auto;max-width:400px;text-decoration:none}
-.cta .btn{display:block;text-align:center;padding:21px 20px;background:linear-gradient(100deg,#8A6E32,#D9BC76 45%,#F5DFA0 52%,#D9BC76 60%,#8A6E32);background-size:220% 100%;color:#14110A;font-weight:800;font-size:16.5px;letter-spacing:.18em;box-shadow:0 10px 34px rgba(201,162,75,.24);animation:btnSheen 5.5s ease-in-out infinite}
-.cta .sub{text-align:center;font-size:12px;color:var(--mute);margin-top:13px;letter-spacing:.14em;display:block}
-
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:11px 16px calc(11px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(15,13,20,.72),rgba(15,13,20,.97));backdrop-filter:blur(14px);border-top:1px solid rgba(201,162,75,.24);transform:translateY(105%);transition:transform .55s cubic-bezier(.22,.61,.36,1)}
-.sticky.on{transform:none}
-.sticky a{display:block;max-width:440px;margin:0 auto;text-decoration:none;text-align:center;padding:15px;font-weight:800;font-size:15px;letter-spacing:.16em;color:#14110A;background:linear-gradient(100deg,#8A6E32,#E8CE8C 50%,#8A6E32)}
-
-.voice{margin:24px 0;padding:26px 24px;background:rgba(26,24,48,.42);border-left:2px solid rgba(201,162,75,.5);position:relative}
-.voice::before{content:"\201C";position:absolute;top:6px;right:16px;font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1;color:rgba(201,162,75,.22)}
-.voice .meta{font-size:12px;color:var(--gold);letter-spacing:.16em;margin-bottom:14px}
-.voice p{font-size:15px;line-height:2.15;margin-bottom:0;color:#E8E3DA}
-
-.warn{margin:44px 0;padding:34px 27px;border:1px solid rgba(181,67,46,.42);background:linear-gradient(180deg,rgba(181,67,46,.09),rgba(15,13,20,.3))}
-.warn h3{color:#E8A392;text-align:center}
-
-.faq{border-bottom:1px solid rgba(201,162,75,.16)}
-.faq summary{padding:22px 34px 22px 4px;cursor:pointer;list-style:none;font-size:15.5px;font-weight:600;line-height:1.9;position:relative;color:var(--paper)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:9px;height:9px;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:translateY(-70%) rotate(45deg);transition:transform .35s ease}
-.faq[open] summary::after{transform:translateY(-30%) rotate(225deg)}
-.faq .ans{padding:0 4px 26px;font-size:15px;line-height:2.15;color:#D8D3CA}
-
-/* ---------- 受け取りまでの流れ ---------- */
-.steps{margin:44px 0;counter-reset:st}
-.steps .st{
-  position:relative;padding:0 0 34px 62px;
-}
-.steps .st::before{
-  counter-increment:st;content:counter(st);
-  position:absolute;left:0;top:-2px;
-  width:38px;height:38px;border-radius:50%;
-  border:1px solid rgba(201,162,75,.6);
-  display:flex;align-items:center;justify-content:center;
-  font-family:"Cormorant Garamond",serif;font-size:16px;color:var(--gold-hi);
-  background:rgba(201,162,75,.07);
-}
-.steps .st::after{
-  content:"";position:absolute;left:19px;top:44px;bottom:6px;width:1px;
-  background:linear-gradient(180deg,rgba(201,162,75,.45),rgba(201,162,75,.08));
-}
-.steps .st:last-child{padding-bottom:0}
-.steps .st:last-child::after{display:none}
-.steps .st h4{
-  font-size:16.5px;font-weight:700;color:var(--gold-hi);
-  letter-spacing:.08em;margin-bottom:10px;line-height:1.8;
-}
-.steps .st p{font-size:15px;line-height:2.05;margin-bottom:0;color:#DDD8CE}
-.steps .st .when{
-  display:inline-block;font-size:11.5px;letter-spacing:.16em;
-  color:var(--gold);border:1px solid rgba(201,162,75,.35);
-  padding:3px 11px;margin-bottom:11px;
-}
-
-.stat{text-align:center;margin:38px 0}
-.stat .num{font-family:"Cormorant Garamond",serif;font-size:clamp(52px,15vw,74px);font-weight:600;line-height:1;letter-spacing:.02em}
-.stat .unit{font-size:20px;margin-left:6px;font-family:"Shippori Mincho B1",serif}
-.stat .lbl{font-size:13.5px;letter-spacing:.24em;color:var(--mute);margin-top:16px}
-.vline{width:1px;height:44px;margin:0 auto;background:linear-gradient(180deg,transparent,var(--gold),transparent)}
-
-.sign{text-align:right;font-size:17px;letter-spacing:.16em;color:var(--gold-hi);margin-top:38px}
-footer{padding:56px 0 34px;text-align:center;border-top:1px solid rgba(201,162,75,.14)}
-footer p{font-size:12px;color:var(--mute);letter-spacing:.1em;margin-bottom:.9em;line-height:2}
-footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:14px 8px;min-height:44px}
-
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .rv,.rv-s{opacity:1;transform:none}
-  .particle{display:none}
-  .chk li::after{transform:rotate(-45deg) scale(1)}
-}
-@media (min-width:700px){
-  body{font-size:17px}
-  section{padding:112px 0}
-  
-}
-
-/* ===== 強調表現（ジャンプ率・アクセント） ===== */
-:root{
-  --pad:27px; --shu-hi:#E2725B; --marker:rgba(201,162,75,.28); }
-
-/* 数字・キーワードの巨大化 */
-.jump{
-  display:inline-block;
-  font-size:1.9em;line-height:1.2;font-weight:800;
-  color:var(--gold-hi);letter-spacing:.02em;
-  text-shadow:0 0 24px rgba(245,223,160,.35);
-  vertical-align:-.06em;margin:0 .04em;
-}
-.jump-l{font-size:2.6em}
-/* 朱のアクセント（感情のピークだけ） */
-.shu{color:var(--shu-hi);font-weight:700}
-/* 蛍光マーカー */
-.mk{
-  background:linear-gradient(transparent 62%, var(--marker) 62%, var(--marker) 94%, transparent 94%);
-  padding:0 .08em;font-weight:600;
-}
-/* 反転カプセル（最重要ワード） */
-.cap{
-  display:inline-block;background:var(--gold-hi);color:#14110A;
-  font-weight:800;padding:.1em .6em;border-radius:999px;
-  margin:0 .2em;letter-spacing:.04em;font-size:.94em;
-}
-/* 箇条書き強調ブロック */
-.bullets{
-  margin:40px -6px;padding:30px 24px;
-  background:linear-gradient(160deg,rgba(36,31,61,.92),rgba(20,17,34,.86));
-  border:1px solid rgba(201,162,75,.24);
-  list-style:none;
-}
-.bullets li{
-  position:relative;padding:12px 0 12px 34px;
-  font-size:16.5px;line-height:1.95;
-}
-.bullets li+li{border-top:1px solid rgba(201,162,75,.12)}
-.bullets li::before{
-  content:"";position:absolute;left:6px;top:22px;
-  width:9px;height:9px;background:var(--gold);
-  transform:rotate(45deg);box-shadow:0 0 10px rgba(201,162,75,.7);
-}
-/* 期間・限定の上帯 */
-.limtag{
-  display:block;text-align:center;font-size:13px;letter-spacing:.2em;
-  color:var(--gold-hi);margin-bottom:12px;font-weight:600;
-}
-.limtag::before,.limtag::after{content:"—";margin:0 .6em;color:var(--gold);opacity:.6}
-
-
-/* ===== 参考LP準拠：明暗コントラスト設計 ===== */
-:root{
-  --pad:27px;
-  --kon:#0B3050;        /* 濃紺 */
-  --kon-d:#0E1840;
-  --ink-l:#2E3140;      /* 白背景での文字（黒でなくグレー） */
-  --ink-l2:#5A5E70;
-  --rose:#C0456B;       /* 数字の暖色 */
-  --wis:#6B5BA8;        /* 数字の寒色 */
-  --cream:#F7F4EC;      /* 白セクション背景 */
-}
-
-/* 白背景セクション（明） */
-.s-light{background:var(--cream);color:var(--ink-l)}
-.s-light h2{color:var(--ink-l)}
-.s-light h3{color:var(--kon)}
-.s-light p{color:var(--ink-l)}
-.s-light .eyebrow{color:var(--kon)}
-.s-light .gline{background:linear-gradient(90deg,transparent,var(--rose),var(--wis),transparent);height:2px;width:120px}
-.s-light .whisper{color:var(--ink-l2)}
-
-/* 紺帯（見出し・煽り） */
-.konban{
-  background:linear-gradient(160deg,var(--kon) 0%,var(--kon-d) 100%);
-  padding:52px 0 62px;position:relative;color:#fff;
-  clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),52% 100%,48% 100%,0 calc(100% - 26px));
-}
-.konban h2{color:#fff;margin-bottom:0}
-.konban .hl{color:#F5D76E}
-.konban p{color:rgba(255,255,255,.88)}
-
-/* 数字の巨大グラデ表示 */
-.num-big{
-  font-size:2.7em;font-weight:800;line-height:1;
-  background:linear-gradient(100deg,var(--rose),var(--wis));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  letter-spacing:-.01em;margin:0 .04em;vertical-align:-.08em;
-  display:inline-block;
-}
-.num-gold{
-  font-size:2.7em;font-weight:800;line-height:1;display:inline-block;
-  background:linear-gradient(180deg,#FBEFC4 0%,#D9B45C 46%,#A8813A 62%,#F2DFA6 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));
-  margin:0 .04em;vertical-align:-.08em;
-}
-
-/* グラデ帯ラベル */
-.tapelabel{
-  display:inline-block;padding:7px 18px;color:#fff;font-weight:700;
-  font-size:15px;letter-spacing:.08em;
-  background:linear-gradient(100deg,var(--rose),var(--wis));
-}
-/* 金リボン */
-.ribbon{
-  display:inline-block;position:relative;
-  background:linear-gradient(180deg,#E3C87A,#C9A24B);
-  color:#14110A;font-weight:800;font-size:14.5px;letter-spacing:.12em;
-  padding:8px 26px;margin-bottom:18px;
-}
-.ribbon::before,.ribbon::after{
-  content:"";position:absolute;top:0;bottom:0;width:12px;
-  background:linear-gradient(180deg,#C9A24B,#9A7A33);
-}
-.ribbon::before{left:-12px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,30% 50%)}
-.ribbon::after{right:-12px;clip-path:polygon(0 0,100% 0,70% 50%,100% 100%,0 100%)}
-
-/* グラデ区切り線 */
-.gradline{height:2px;background:linear-gradient(90deg,var(--rose),var(--wis));margin:18px 0;border:0}
-
-/* 白カード（声・実績） */
-.wcard{
-  background:#fff;padding:26px 22px;margin:20px 0;
-  box-shadow:0 6px 26px rgba(20,17,34,.10);
-  display:flex;gap:18px;align-items:flex-start;
-}
-.wcard .av{
-  width:82px;height:82px;border-radius:50%;object-fit:cover;flex:none;
-  background:#EAE7E0;
-}
-.wcard .bd{flex:1;min-width:0}
-.wcard .hd{font-size:19px;font-weight:800;color:var(--ink-l);line-height:1.5;margin-bottom:8px}
-.wcard .who{font-size:12.5px;color:var(--ink-l2);margin-top:8px;text-align:center}
-.wcard p{font-size:14px;line-height:1.95;color:var(--ink-l);margin:0}
-@media (max-width:430px){
-  .wcard{flex-direction:column;align-items:center;text-align:center}
-  .wcard .bd{text-align:left}
-}
-
-
-/* 白セクション内の要素上書き */
-.s-light .steps .st::before{background:#fff;color:var(--kon);border-color:var(--kon)}
-.s-light .steps .st{border-left-color:rgba(22,37,92,.22)}
-.s-light .steps .st::after{background:linear-gradient(180deg,rgba(22,37,92,.4),rgba(22,37,92,.06))}
-.s-light .steps .st h4{color:var(--kon)}
-.s-light .steps .st p{color:var(--ink-l)}
-.s-light .steps .st .when{color:#fff;background:var(--kon);border:none}
-.s-light .voice{background:#fff;border-left:3px solid var(--rose);box-shadow:0 4px 20px rgba(20,17,34,.08)}
-.s-light .voice p{color:var(--ink-l)}
-.s-light .voice .meta{color:var(--wis);font-weight:700}
-.s-light .voice::before{color:rgba(107,91,168,.18)}
-.s-light strong{color:var(--rose)}
-
-/* ===== スマホ購入最大化：CTA ===== */
-.cta{display:block;margin:52px auto;max-width:420px;text-decoration:none;position:relative}
-.cta .btn{
-  display:block;text-align:center;
-  padding:26px 18px;
-  background:linear-gradient(135deg,#B8862F 0%,#E8C877 22%,#FFF3CC 46%,#E8C877 62%,#A87828 100%);
-  background-size:200% 100%;
-  color:#1A1206;font-weight:900;font-size:19px;letter-spacing:.1em;
-  border-radius:999px;
-  box-shadow:0 12px 32px rgba(201,162,75,.42), 0 2px 0 rgba(255,255,255,.5) inset, 0 -3px 0 rgba(120,86,26,.35) inset;
-  animation:ctaShine 3.4s ease-in-out infinite, ctaPulse 2.6s ease-in-out infinite;
-  position:relative;overflow:hidden;
-}
-.cta .btn::after{
-  content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);
-  animation:ctaSweep 3.6s ease-in-out infinite;
-}
-@keyframes ctaShine{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
-@keyframes ctaPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.028)}}
-@keyframes ctaSweep{0%{left:-60%}55%{left:120%}100%{left:120%}}
-.cta .arrow{
-  display:block;text-align:center;color:var(--gold-hi);font-size:22px;line-height:1;
-  margin-bottom:8px;animation:bob 1.5s ease-in-out infinite;
-}
-@keyframes bob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(6px);opacity:1}}
-.cta .sub{text-align:center;font-size:13px;color:var(--gold-hi);margin-top:14px;letter-spacing:.1em;display:block;font-weight:600}
-.cta .micro{text-align:center;font-size:11.5px;color:var(--mute);margin-top:7px;display:block}
-
-/* 追従CTA：常時見える強いバー */
-.sticky{
-  position:fixed;left:0;right:0;bottom:0;z-index:60;
-  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-  background:linear-gradient(180deg,rgba(15,13,20,.55),rgba(15,13,20,.98));
-  backdrop-filter:blur(16px);
-  border-top:1px solid rgba(201,162,75,.4);
-  transform:translateY(105%);transition:transform .5s cubic-bezier(.22,.61,.36,1);
-}
-.sticky.on{transform:none}
-.sticky .lab{
-  display:block;text-align:center;font-size:11px;letter-spacing:.14em;
-  color:var(--gold-hi);margin-bottom:7px;font-weight:600;
-}
-.sticky a{
-  display:block;max-width:440px;margin:0 auto;text-decoration:none;text-align:center;
-  padding:17px;font-weight:900;font-size:17px;letter-spacing:.1em;color:#1A1206;
-  background:linear-gradient(135deg,#B8862F,#F0D68F 48%,#A87828);
-  border-radius:999px;
-  box-shadow:0 6px 20px rgba(201,162,75,.4), 0 2px 0 rgba(255,255,255,.45) inset;
-  animation:ctaPulse 2.6s ease-in-out infinite;
-}
-/* プランカード内ボタンも大きく */
-.plan .pbtn,.item .pbtn{
-  display:block;margin-top:26px;text-decoration:none;text-align:center;
-  padding:21px 14px;font-weight:800;font-size:17px;letter-spacing:.08em;
-  color:var(--gold-hi);border:2px solid rgba(201,162,75,.6);
-  background:rgba(201,162,75,.08);border-radius:999px;
-}
-.plan.rec .pbtn,.item.rec .pbtn{
-  color:#1A1206;border:none;
-  background:linear-gradient(135deg,#B8862F,#F0D68F 48%,#A87828);
-  background-size:200% 100%;
-  animation:ctaShine 3.4s ease-in-out infinite, ctaPulse 2.6s ease-in-out infinite;
-  font-size:18.5px;padding:24px 14px;font-weight:900;
-  box-shadow:0 10px 26px rgba(201,162,75,.36), 0 2px 0 rgba(255,255,255,.45) inset;
-}
-
-/* 文中ミニCTA */
-.minicta{
-  display:block;margin:38px auto;max-width:400px;text-decoration:none;text-align:center;
-  padding:17px 16px;border:1.5px solid rgba(201,162,75,.55);
-  background:linear-gradient(180deg,rgba(201,162,75,.14),rgba(201,162,75,.05));
-  color:var(--gold-hi);font-weight:800;font-size:15.5px;letter-spacing:.06em;
-  border-radius:999px;position:relative;overflow:hidden;
-}
-.minicta::after{
-  content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);
-  animation:ctaSweep 5s ease-in-out infinite;
-}
-.minicta .s{display:block;font-size:11.5px;color:var(--mute);font-weight:400;margin-top:5px;letter-spacing:.08em}
-
-.voice .vhd{font-family:"Shippori Mincho B1",serif;font-size:19px;font-weight:800;line-height:1.6;color:var(--rose);margin-bottom:14px;letter-spacing:.02em}
-.s-light .voice .vhd{color:var(--rose)}
-
-/* 追従バー：価格を常時表示（白蛇型） */
-.sticky .row{display:flex;align-items:center;gap:11px;max-width:460px;margin:0 auto}
-.sticky .pricebox{flex:none;text-align:left;line-height:1.25}
-.sticky .pricebox .p{
-  font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600;
-  background:linear-gradient(180deg,#FBEFC4,#D9B45C 50%,#A8813A 66%,#F2DFA6);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.sticky .pricebox .p small{font-family:"Shippori Mincho B1",serif;font-size:12px;-webkit-text-fill-color:var(--gold-hi);margin-left:2px}
-.sticky .pricebox .n{font-size:10.5px;color:var(--mute);letter-spacing:.06em;white-space:nowrap}
-.sticky .row a{flex:1;margin:0;padding:16px 10px;font-size:15.5px}
-@media (max-width:360px){ .sticky .pricebox .p{font-size:21px} .sticky .row a{font-size:14px} }
-
-/* 冒頭の価格サマリー */
-.pricepeek{
-  margin:0 auto;padding:26px 22px 24px;max-width:var(--maxw);
-  border-top:1px solid rgba(201,162,75,.28);border-bottom:1px solid rgba(201,162,75,.28);
-  background:linear-gradient(180deg,rgba(201,162,75,.07),transparent);
-  text-align:center;
-}
-.pricepeek .ttl{font-size:12px;letter-spacing:.24em;color:var(--gold);margin-bottom:14px}
-.pricepeek .items{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.pricepeek .it{min-width:132px;flex:1 1 132px;max-width:190px;padding:12px 8px;border:1px solid rgba(201,162,75,.24);background:rgba(0,0,0,.18)}
-.pricepeek .it.rec{border-color:rgba(201,162,75,.75);background:rgba(201,162,75,.1)}
-.pricepeek .it .n{font-size:12.5px;color:var(--paper);margin-bottom:7px;line-height:1.5}
-.pricepeek .it .v{font-family:"Cormorant Garamond",serif;font-size:27px;font-weight:600;line-height:1;
-  background:linear-gradient(180deg,#FBEFC4,#D9B45C 50%,#A8813A 66%,#F2DFA6);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-.pricepeek .it .v small{font-family:"Shippori Mincho B1",serif;font-size:12px;-webkit-text-fill-color:var(--gold-hi);margin-left:2px}
-.pricepeek .it .b{display:inline-block;font-size:10px;letter-spacing:.1em;color:#1A1206;background:linear-gradient(100deg,#C9A24B,#F0D68F);padding:2px 8px;margin-top:8px}
-.pricepeek .note{font-size:12px;color:var(--mute);margin-top:14px;line-height:1.9}
-
-h2{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
-.big{word-break:keep-all;overflow-wrap:break-word}
-
-/* CTA直前の感情ピーク */
-.peak{
-  text-align:center;margin:52px auto 30px;max-width:520px;
-  font-family:"Shippori Mincho B1",serif;
-}
-.peak .l1{font-size:15px;color:var(--mute);letter-spacing:.14em;margin-bottom:16px}
-.peak .l2{
-  font-size:clamp(29px,8.6vw,40px);font-weight:800;line-height:1.5;
-  letter-spacing:.02em;color:var(--paper);
-}
-.peak .l2 em{
-  font-style:normal;
-  background:linear-gradient(180deg,#FBEFC4,#D9B45C 52%,#A8813A 68%,#F2DFA6);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.peak .l3{font-size:14.5px;color:var(--mute);margin-top:18px;line-height:1.95}
-
-/* 2プラン比較表 */
-.vs{margin:34px 0 8px;border:1px solid rgba(201,162,75,.3);overflow:hidden}
-.vs .r{display:grid;grid-template-columns:1fr 1.15fr;border-bottom:1px solid rgba(201,162,75,.16)}
-.vs .r:last-child{border-bottom:none}
-.vs .c{padding:14px 11px;font-size:13.2px;line-height:1.75;text-align:center}
-.vs .c:first-child{border-right:1px solid rgba(201,162,75,.16);color:var(--mute)}
-.vs .r.hd .c{background:rgba(0,0,0,.25);font-weight:800;font-size:14px;color:var(--paper);padding:15px 10px;font-family:"Shippori Mincho B1",serif}
-.vs .r.hd .c:last-child{background:rgba(201,162,75,.16);color:var(--gold-hi)}
-.vs .r.pr .c{padding:16px 10px}
-.vs .r.pr .c .v{font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600;color:var(--paper)}
-.vs .r.pr .c:last-child .v{font-size:29px;
-  background:linear-gradient(180deg,#FBEFC4,#D9B45C 50%,#A8813A 66%,#F2DFA6);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-.vs .r .c:last-child{color:var(--paper)}
-.vs .tick{color:var(--gold-hi);font-weight:700}
-.vs .dash{color:var(--mute);opacity:.5}
-
-/* ===== クリエイティブ強化 ===== */
-/* ① 見出しに細い縦線を落とす（余韻の演出） */
-h2{position:relative}
-h2::after{
-  content:"";position:absolute;left:50%;bottom:-26px;
-  width:1px;height:0;background:linear-gradient(180deg,var(--gold),transparent);
-  transform:translateX(-50%);transition:height 1.4s cubic-bezier(.22,.61,.36,1) .35s;
-}
-.rv.on h2::after,section.on h2::after,h2.rv.on::after{height:26px}
-
-/* ② 全面写真に「呼吸」（極ゆっくりのスケール） */
-.ph-full img,.ph img{transition:transform 1.6s cubic-bezier(.22,.61,.36,1)}
-.ph-full:hover img{transform:scale(1.03)}
-
-/* ③ 引用ブロックに鉤括弧の意匠 */
-.quote{position:relative}
-.quote::before,.quote::after{
-  content:"";position:absolute;width:16px;height:16px;opacity:.55;
-}
-.quote::before{top:10px;left:10px;border-top:1px solid var(--gold);border-left:1px solid var(--gold)}
-.quote::after{bottom:10px;right:10px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold)}
-
-/* ④ .big の一文字目を少し大きく（版面の抑揚） */
-.big{text-wrap:balance}
-
-/* ⑤ 章番号（和数字）で構造を可視化 */
-.chapno{
-  display:block;text-align:center;font-family:"Cormorant Garamond",serif;
-  font-size:11px;letter-spacing:.5em;color:var(--gold);opacity:.75;margin-bottom:10px;
-}
-
-/* ⑥ セクション境界に極細の金線＋中央の菱形 */
-.divider{display:flex;align-items:center;justify-content:center;gap:0;margin:0;height:1px;position:relative}
-.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,75,.34))}
-.divider::after{background:linear-gradient(90deg,rgba(201,162,75,.34),transparent)}
-.divider i{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);margin:0 12px;flex:none;box-shadow:0 0 8px rgba(201,162,75,.6)}
-
-/* ⑦ 本文の最初の一文だけ少し大きく（リード文効果） */
-.lead-p{font-size:17.5px;line-height:2.0;color:var(--paper)}
-
-/* ⑧ 数字に下線の光 */
-.num-gold{position:relative;display:inline-block}
-
-/* ⑨ 画像の角にわずかな金の縁（額装感） */
-.ph.portrait{position:relative;padding:9px;background:linear-gradient(160deg,rgba(201,162,75,.30),rgba(201,162,75,.06))}
-.ph.portrait::before{content:"";position:absolute;inset:9px;border:1px solid rgba(201,162,75,.28);z-index:2;pointer-events:none}
-
-/* ⑩ スクロールで金線が伸びる区切り */
-.growline{height:1px;width:0;margin:44px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width 1.8s cubic-bezier(.22,.61,.36,1)}
-.growline.on{width:78%}
-
-/* 狭幅端末（〜380px）での文字溢れ対策 */
-@media (max-width:380px){
-  .plan .price,.item .price{font-size:26px}
-  .plan.rec .price,.item.rec .price{font-size:32px}
-  .num-gold{font-size:2.2em}
-  .peak .l2{font-size:26px}
-  h2{font-size:29px;letter-spacing:.1em}
-  .big{font-size:27px}
-  .pricepeek .it .v{font-size:24px}
-  .sticky .pricebox .p{font-size:21px}
+  --paper:#F2EFE7; --mute:#8FA3B6; --shu:#E8836B;
+  --kon:#0B3050; --rose:#C0456B; --wis:#6B5BA8;
 }
 </style>
 </head>
-<body>
+<!-- 限定料金：初回閲覧から72時間（無料鑑定の受け取り＝LP初見とみなす）。運用側でSTORESの価格を戻す前提 -->
+<body data-deadline-key="mizuki_kantei" data-deadline-hours="72">
 
 <div class="prog" aria-hidden="true"><i id="progbar"></i></div>
 
-<!-- HERO -->
+<!-- ============ HERO ============ -->
 <header class="hero">
   <div class="hero-person">
-    <img src="../img/k_hero.jpg" alt="堂内で祈るみづき">
+    <img src="../img/k_hero.jpg" alt="堂内で祈るみづき" fetchpriority="high">
+    <div class="hero-flare" aria-hidden="true"></div>
   </div>
   <div class="particles" aria-hidden="true" id="particles"></div>
-  <div class="hero-copy rv">
-    <div class="lead">神言降ろしの本鑑定</div>
-    <h1>あの鑑定で、<br>視えたのは<br><span class="gg">半分だけです</span></h1>
-    <div class="tag">無料鑑定を受け取った方へ</div>
-    <div class="scrollcue"><span class="lat">SCROLL</span><i></i></div>
+  <div class="hero-copy">
+    <div class="lead rv">神言降ろしの本鑑定</div>
+    <h1 class="lines"><span class="ln">あの鑑定で、</span><br><span class="ln">視えたのは</span><br><span class="ln gg">半分だけです</span></h1>
+    <div class="tag rv">無料鑑定を受け取った方へ</div>
+    <div class="scrollcue rv"><span class="lat">SCROLL</span><i></i></div>
   </div>
 </header>
 
-<div class="pricepeek rv">
-  <div class="ttl">本鑑定について</div>
-  <div class="items">
-    <div class="it"><div class="n">月読の章</div><div class="v">4,980<small>円</small></div></div>
-    <div class="it rec"><div class="n">神言降ろしの本鑑定</div><div class="v">9,980<small>円</small></div><span class="b">迷うならこちら</span></div>
+<!-- 3日間限定料金（冒頭） -->
+<div class="limited">
+  <div class="limbox rv">
+    <span class="lt">3日間限定</span>
+    <div class="lh">無料鑑定を受け取った<br>方だけ、<br><span class="g">3日間だけの料金</span>です</div>
+    <div class="ld">神言降ろしの本鑑定　通常 19,800円 →　<b style="color:var(--gold-hi)">9,980円</b><br>月読の章　通常 7,980円 →　<b style="color:var(--gold-hi)">4,980円</b></div>
+    <div class="cd" aria-label="残り時間">
+      <div class="u"><b data-d>-</b><i>日</i></div><div class="sep">:</div>
+      <div class="u"><b data-h>--</b><i>時間</i></div><div class="sep">:</div>
+      <div class="u"><b data-m>--</b><i>分</i></div><div class="sep">:</div>
+      <div class="u s"><b data-s>--</b><i>秒</i></div>
+    </div>
+    <div class="cd-expired">この料金でのご案内は終了しました。<br>ご希望の方は、LINEにそのままお送りください。</div>
+    <div class="ln2">3日間を過ぎると、通常料金に戻ります</div>
+    <div class="stock">
+      <div class="sl"><span>今月お受けできる鑑定枠</span><b>残りわずか</b></div>
+      <div class="bar"><i style="--fill:93%"></i></div>
+      <div class="sn">お一人ずつ視ているため、枠が埋まり次第、順番待ちになります</div>
+    </div>
   </div>
-  <div class="note">お申し込みは1分。<br>ご質問にお答えいただいてから、二〜三日でお届けします。</div>
 </div>
 
-<a class="minicta rv" href="#item" style="margin-top:26px">鑑定の内容を見る<span class="s">4,980円 / 9,980円・お申し込みは1分</span></a>
+<a class="minicta rv" href="#item" style="margin-top:26px">限定料金で鑑定を見る<span class="s">お申し込みは1分</span></a>
 
 
-<!-- S1 涙の意味 -->
+<!-- ============ I 涙の意味 ============ -->
 <section class="s-ai">
   <div class="wrap">
     <div class="chapno">I</div>
-    <div class="eyebrow rv lat">What you felt</div>
-    <h2 class="rv">あの感覚には、<br>意味があります</h2>
+    <div class="eyebrow lat">What you felt</div>
+    <h2 class="lines"><span class="ln">あの感覚には、</span><br><span class="ln">意味があります</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <p>あの無料鑑定、書いたのは私です。</p>
+    <div class="stag">
+      <p class="lead-p">あの無料鑑定、書いたのは私です。</p>
       <p>送ってくださった言葉を、一つずつ読みながら書きました。</p>
-      <p>読んでいる時、どこかで手が止まりませんでしたか。</p>
+      <p>読んでいる時、どこかで<span class="ew">手が止まりませんでしたか。</span></p>
       <p>胸のあたりが、ざわっとした。<br>「あ、それだ」と思った。<br>少し怖いけれど、本当はわかっていた気がした。</p>
-      <div class="big">あれ、<br>偶然じゃないんです。</div>
     </div>
+    <div class="big rv-b">あれ、<br><span class="wipe">偶然じゃないんです。</span></div>
 
-    <div class="quote rv">
-      <p>手が止まった場所は、<br>あなたの人生がずっと<br>詰まっていた場所です。</p>
-      <p>胸がざわついた場所は、<br>神様からのメッセージが<br>触れた場所だからです。</p>
+    <div class="quote stag">
+      <p>手が止まった場所は、<br>あなたの人生がずっと<br>詰まっていた場所。</p>
+      <p>胸がざわついた場所は、<br>神様からのメッセージが<br>触れた場所です。</p>
     </div>
 
     <div class="rv">
@@ -717,139 +98,135 @@ h2::after{
       <div class="lbl">これまでに視てきた方の数</div>
     </div>
     <div class="vline" aria-hidden="true"></div>
+
+    <a class="minicta rv" href="#item">その先を、視にいく<span class="s">本鑑定の内容を見る</span></a>
   </div>
 </section>
 
 <div class="band" aria-hidden="true"></div>
 
-<!-- S2 当てものではない -->
+<!-- ============ II 当てものではない ============ -->
 <section class="s-dark">
   <div class="wrap">
     <div class="chapno">II</div>
-    <div class="eyebrow rv lat">Not fortune-telling</div>
-    <h2 class="rv">鑑定は、<br>当てものではありません</h2>
+    <div class="eyebrow lat">Not fortune-telling</div>
+    <h2 class="lines"><span class="ln">鑑定は、</span><br><span class="ln">当てものではありません</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <p>鑑定を、当てものだとは思っていません。</p>
-      <p>未来を言い当てて、すごいでしょと言いたいわけじゃない。<br>怖いことを言って、言う通りにさせたいわけでもない。</p>
-      <p>私が届けたいのは、<strong>神様からの本当のメッセージ</strong>です。</p>
+    <div class="stag">
+      <p class="lead-p">未来を言い当てて、すごいでしょと言いたいわけじゃない。<br>怖いことを言って、言う通りにさせたいわけでもない。</p>
+      <p>私が届けたいのは、<span class="ew">神様からの本当のメッセージ</span>です。</p>
     </div>
 
-    <div class="ph-full rv-s">
-      <img src="../img/k_wide.jpg" alt="インドの聖地にて">
-      <div class="ov">見捨てられたわけでは、<br>ありません。</div>
+    <div class="ph-full px rv-s">
+      <img src="../img/k_wide.jpg" alt="インドの聖地にて" loading="lazy" decoding="async">
+      <div class="ov rv-b">見捨てられたわけでは、<br>ありません。</div>
     </div>
 
-    <div class="rv">
-      <p>これまで20,000名以上を視てきて、<br>ほとんどの方が同じことを言います。</p>
-      <p>「私の努力が足りないから」<br>「私に価値がないから」<br>「私だけ、見放されたんだ」</p>
-      <p>違います。</p>
-      <p>あなたに価値がないわけでもありません。<br><strong>ただ、届いているサインに気づけなくなっているだけです。</strong></p>
+    <div class="stag">
+      <p>20,000名以上を視てきて、<br>ほとんどの方が同じことを言います。</p>
+      <p><span class="shu">「私の努力が足りないから」</span><br><span class="shu">「私に価値がないから」</span><br><span class="shu">「私だけ、見放されたんだ」</span></p>
     </div>
+    <div class="big rv-b">違います。</div>
+    <div class="rv">
+      <p><strong>届いているサインに、気づけなくなっているだけです。</strong></p>
+    </div>
+
+    <a class="minicta rv" href="#item">届いているサインを、受け取る<span class="s">3日間限定 4,980円 / 9,980円</span></a>
   </div>
 </section>
 
-<!-- S3 無料と本鑑定の差 -->
+<!-- ============ III 無料と本鑑定の差 ============ -->
 <section class="s-ai-r">
   <div class="wrap">
     <div class="chapno">III</div>
-    <div class="eyebrow rv lat">The difference</div>
-    <h2 class="rv">無料鑑定で<br>視えたもの、<br>視えなかったもの</h2>
+    <div class="eyebrow lat">The difference</div>
+    <h2 class="lines"><span class="ln">無料鑑定で</span><br><span class="ln">視えたもの、</span><br><span class="ln">視えなかったもの</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <p>無料鑑定でお伝えしたのは、<strong>今あなたに何が起きているか</strong>。それだけです。</p>
-      <p>それでも、心が軽くなった方は多いです。</p>
+    <div class="stag">
+      <p class="lead-p">無料鑑定でお伝えしたのは、<span class="ew">今あなたに何が起きているか</span>。それだけです。</p>
+      <p>それでも、心が軽くなった方は多い。</p>
       <p>でも、ひとつだけ。</p>
       <p>「軽くなったのに、なぜかまた戻る」<br>そう感じたこと、ありませんか。</p>
+      <p>逆に、無料鑑定がピンと来なかった方。それも同じです。<br>表層しか視ていないので、まだ本当の場所に届いていないだけです。</p>
+      <p>「自分が何をしたいのか分からない」——そう書かれる方も、本当に多いです。<br>それも、詰まりのしわざです。</p>
     </div>
 
-    <div class="big rv">楽になったことと、<br>現実が変わることは、<br>別です。</div>
+    <div class="big rv-b"><span class="s">楽になったことと、</span>現実が変わることは、<br><span class="wipe">別です。</span></div>
 
-    <div class="rv">
+    <div class="stag">
       <p><span class="mk">当たっていた。</span><br><span class="mk">胸が軽くなった。</span><br><span class="mk">少し、泣きそうになった。</span></p>
-      <p>それだけで終わると、数日後、<strong>また同じ日常に戻ります。</strong></p>
-      <p>なぜなら、人生が詰まっていた<strong>根本のパターン</strong>は、気づいただけでは変わりきらないからです。</p>
+      <p>そこで終わると、数日後、<strong>また同じ日常に戻ります。</strong></p>
+      <p>人生が詰まっていた<span class="ew">根本のパターン</span>は、気づいただけでは変わりきらないからです。</p>
     </div>
 
-    <div class="depth rv">
+    <div class="depth stag">
       <div class="band-label f">無料鑑定で視えたところ</div>
-
       <div class="layer free">
-        <div class="tag">表層</div>
+        <span class="tag">表層</span>
         <div class="nm">今、何が起きているか</div>
         <div class="sub">目の前で起きていること。今の流れ。</div>
       </div>
-
       <div class="layer free">
-        <div class="tag">その下</div>
+        <span class="tag">その下</span>
         <div class="nm">何に苦しんでいるか</div>
         <div class="sub">言葉にできている悩み。</div>
       </div>
-
-      <div class="band-label d" style="margin-top:22px">ここから先が、本鑑定</div>
-
+      <div class="band-label d">ここから先が、本鑑定</div>
       <div class="layer deep">
-        <div class="tag">深層</div>
+        <span class="tag">深層</span>
         <div class="nm">なぜ、それが起きたのか</div>
         <div class="sub">出来事の理由。今この時期に来た意味。</div>
       </div>
-
       <div class="layer deep">
-        <div class="tag">根っこ</div>
+        <span class="tag">根っこ</span>
         <div class="nm">なぜ、繰り返してきたのか</div>
         <div class="sub">同じ場所で何度も躓く、その仕組み。</div>
       </div>
-
       <div class="layer deep">
-        <div class="tag">魂</div>
+        <span class="tag">魂</span>
         <div class="nm">本来、持っている力</div>
         <div class="sub">まだ使えていないもの。ブレーキになっているもの。</div>
       </div>
-
       <div class="layer deep">
-        <div class="tag">これから</div>
+        <span class="tag">これから</span>
         <div class="nm">どの順番で整えるか</div>
         <div class="sub">一年の流れと、今やるべきこと。</div>
       </div>
-
       <div class="cap2">同じ場所を、6つの層で視ています</div>
     </div>
 
-    <a class="minicta rv" href="#item">二つの鑑定を見てみる<span class="s">どちらを選ぶかの目安もあります</span></a>
-
-    <div class="quote rv">
+    <div class="quote stag">
       <p>無料鑑定は、<br>扉の前に立つためのもの。</p>
-      <p>本鑑定は、その扉を開けて、<br>本当に人生を<br>動かしていくためのものです。</p>
+      <p>本鑑定は、その扉を開けて、<br>人生を動かしていくためのものです。</p>
     </div>
 
     <a class="cta rv" href="#item">
       <span class="arrow">▼</span>
       <span class="btn">本鑑定を受け取る</span>
       <span class="sub">▶ 二つの鑑定から選ぶ</span>
-      <span class="micro">お申し込みは1分で終わります</span>
+      <span class="micro">3日間限定料金・お申し込みは1分</span>
     </a>
   </div>
 </section>
 
-<div class="wrap"><div class="growline rv"></div></div>
+<div class="wrap"><div class="growline"></div></div>
 
-<!-- S4 迷っている方へ -->
+<!-- ============ IV 迷っている方へ ============ -->
 <section class="s-dark">
   <div class="wrap">
     <div class="chapno">IV</div>
-    <div class="eyebrow rv lat">If you hesitate</div>
-    <h2 class="rv">迷っている方へ</h2>
+    <div class="eyebrow lat">If you hesitate</div>
+    <h2 class="lines"><span class="ln">迷っている方へ</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <p>「またお金を使って、何も変わらなかったらどうしよう」</p>
-      <p>そう思っていませんか。<br>その気持ち、自然です。</p>
-      <p>お金を払ってまで見てもらうのは、少し怖いですよね。</p>
+    <div class="stag">
+      <p class="lead-p">「またお金を使って、何も変わらなかったらどうしよう」</p>
+      <p>その気持ち、自然です。<br>お金を払ってまで見てもらうのは、少し怖いですよね。</p>
     </div>
 
-    <ul class="chk rv" id="chk">
+    <ul class="chk rv">
       <li>今まで占いにお金を使って、何も変わらなかったことがある</li>
       <li>期待した分だけ、後で落ち込むのが怖い</li>
       <li>自分にそこまでお金を使っていいのか、わからない</li>
@@ -857,35 +234,53 @@ h2::after{
       <li>知ってしまうのが、少し怖い</li>
     </ul>
 
-    <div class="ph wide rv-s">
-      <img src="../img/window_01.jpg" alt="障子越しの光">
+    <div class="ph wide px rv-s">
+      <img src="../img/window_01.jpg" alt="障子越しの光" loading="lazy" decoding="async">
     </div>
 
-    <div class="rv">
-      <p>それ、弱いからじゃないんです。</p>
-      <p><strong>今まで何度も期待して、何度も自分を責めてきたからです。</strong></p>
-      <p>急かしません。</p>
-      <p>ただ、今届いているサインを、日常に埋もれさせないためのものです。</p>
-
-    <a class="minicta rv" href="#item">二つの鑑定を見てみる<span class="s">どちらを選ぶかの目安もあります</span></a>
+    <div class="stag">
+      <p>それ、<span class="ew">弱いからじゃないんです。</span></p>
+      <p><strong>何度も期待して、何度も自分を責めてきたからです。</strong></p>
+      <p>急かしません。<br>ただ、今届いているサインを、日常に埋もれさせないでほしいだけです。</p>
     </div>
+
+    <a class="minicta rv" href="#item">どちらの鑑定が合うか、見てみる<span class="s">選び方の目安があります</span></a>
   </div>
 </section>
 
-<!-- S5 商品 -->
-<section class="s-ai" id="item">
+<!-- ============ V 商品 ============ -->
+
+<!-- voices-pre: 価格の直前に社会的証明を置く（2026-10-09 PDCA） -->
+<div class="wrap">
+  <div class="rv"><p class="tc">届いた声を、少しだけ。</p></div>
+  <figure class="shot rv"><img src="../img/voices/k_01.jpg" alt="受け取った方の感想" loading="lazy" decoding="async"></figure>
+  <figure class="shot rv"><img src="../img/voices/k_02.jpg" alt="受け取った方の感想" loading="lazy" decoding="async"></figure>
+</div>
+<section class="s-ai" id="item" data-sticky-hide>
   <div class="wrap">
     <div class="chapno">V</div>
-    <div class="eyebrow rv lat">Two ways</div>
-    <h2 class="rv">二つの鑑定</h2>
+    <div class="eyebrow lat">Two ways</div>
+    <h2 class="lines"><span class="ln">二つの鑑定</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <p style="text-align:center">どちらを選んでいただいても、<br>一人ずつ、丁寧に視ていきます。</p>
-      <p style="text-align:center">違うのは、<strong>どこまで深く降ろすか</strong>です。</p>
+    <div class="stag">
+      <p class="tc">どちらを選んでいただいても、<br>一人ずつ、丁寧に視ていきます。</p>
+      <p class="tc">違うのは、<span class="ew">どこまで深く降ろすか</span>です。</p>
     </div>
 
-    <div class="vs rv">
+    <div class="crowd hot rv">
+      <span class="dot"></span>
+      <div>
+        <div class="ct">ただいま、大変混み合っています</div>
+        無料鑑定を受け取った方からのお申し込みが続いており、<b>今月の枠は残りわずか</b>です。お一人ずつ視ているため、埋まり次第、順番待ちとなります。
+        <div class="stock">
+          <div class="sl"><span>今月の鑑定枠</span><b>売り切れ間近</b></div>
+          <div class="bar"><i style="--fill:93%"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vs stag">
       <div class="r hd"><div class="c">月読の章</div><div class="c">神言降ろしの本鑑定</div></div>
       <div class="r pr"><div class="c"><span class="v">4,980</span>円</div><div class="c"><span class="v">9,980</span>円</div></div>
       <div class="r"><div class="c">今の流れ・揺れ</div><div class="c">今の流れ・揺れ</div></div>
@@ -896,30 +291,39 @@ h2::after{
       <div class="r"><div class="c dash">—</div><div class="c tick">神様から届いた神言</div></div>
       <div class="r"><div class="c">今を軽くしたい方</div><div class="c">根っこから知りたい方</div></div>
     </div>
+
     <!-- 月読の章 -->
     <div class="item rv">
-      <div class="thumb"><img src="../img/thumb_tsukuyomi.jpg" alt="月読の章"></div>
+      <div class="thumb"><img src="../img/thumb_tsukuyomi.jpg" alt="月読の章" loading="lazy" decoding="async"></div>
       <div class="pname">月読の章</div>
-      <div class="was"><s>通常価格 7,980円</s></div>
-      <div class="price"><span class="num-gold">4,980</span><small>円</small></div>
+      <div class="pr-stage">
+        <div class="was">通常価格 <s>7,980円</s></div>
+        <div class="nanto">3日間限定で、なんと</div>
+        <div class="price"><span class="num-gold">4,980</span><small>円</small></div>
+        <span class="off"><b>3,000</b>円お得</span>
+      </div>
       <div class="goal">今の流れを、<br>整えるところまで</div>
-      <p>今の人間関係の流れや、心が揺れている場所。<br>落ち着きを取り戻すために、何から整えればいいのか。</p>
+      <p>今の人間関係やお金、仕事の流れ、家族の空気。心が揺れている場所。<br>落ち着きを取り戻すために、何から整えればいいのか。</p>
       <ul>
         <li>今のあなたの流れに起きていること</li>
         <li>心が揺れている本当の場所</li>
         <li>整える順番</li>
       </ul>
-      <p style="color:var(--mute);font-size:14.5px">今の苦しさを、まず軽くしたい方へ。</p>
-      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/6a1d7e1352c94a29de6035ea" target="_blank" rel="noopener">月読の章を受け取る</a>
+      <p class="honest">今の苦しさを、まず軽くしたい方へ。</p>
+      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/6a1d7e1352c94a29de6035ea" target="_blank" rel="noopener">月読の章を受け取る<span class="s">限定料金 4,980円</span></a>
     </div>
 
-    <!-- 神言降ろし -->
-    <div class="item rec rv">
+    <!-- 神言降ろし（推奨） -->
+    <div class="item rec">
       <div class="badge">迷っているなら、こちらです</div>
-      <div class="thumb"><img src="../img/thumb_shingon.jpg" alt="神言降ろしの本鑑定"></div>
+      <div class="thumb"><img src="../img/thumb_shingon.jpg" alt="神言降ろしの本鑑定" loading="lazy" decoding="async"></div>
       <div class="pname">神言降ろしの本鑑定</div>
-      <div class="was"><s>通常価格 19,800円</s></div>
-      <div class="price"><span class="num-gold">9,980</span><small style="color:var(--gold-hi)">円</small></div>
+      <div class="pr-stage">
+        <div class="was">通常価格 <s>19,800円</s></div>
+        <div class="nanto">3日間限定で、なんと</div>
+        <div class="price"><span class="num-gold">9,980</span><small>円</small></div>
+        <span class="off">半額　<b>9,820</b>円お得</span>
+      </div>
       <div class="goal">なぜ繰り返すのか、<br>根っこまで</div>
       <p>今起きていることだけでなく、<strong>なぜそれが起きたのか</strong>を、魂の深いところから視ていきます。</p>
       <ul>
@@ -932,60 +336,57 @@ h2::after{
         <li>神様から届いた神言</li>
       </ul>
       <p>同じところで何度も躓いている自覚がある方は、こちらの方が深く整理しやすい流れが出ています。</p>
-      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/6a1d8212a4c9724b477427d2" target="_blank" rel="noopener">神言降ろしの本鑑定を受け取る</a>
+      <a class="pbtn" href="https://pmsdqb4c2p0emj0yagvc.stores.jp/items/6a1d8212a4c9724b477427d2" target="_blank" rel="noopener">神言降ろしを受け取る<span class="s">限定料金 9,980円</span></a>
     </div>
 
     <div class="whisper rv">
-      高いものを選べば良い、<br>ということではありません。<br><br>
-      今の自分に必要な深さで、<br>大丈夫です。
+      高いものを選べば良い、<br>ということではありません。<br>今の自分に必要な深さで、大丈夫です。
     </div>
 
-    <div class="quote rv">
+    <div class="quote stag">
       <p>鑑定は、お一人ずつ<br>視て、書いています。</p>
-      <p>そのため、<br>お受けできる数に限りがあり、<br>お待ちいただくことがあります。</p>
-      <p>今届いているサインは、<br>今のあなたに<br>向けられたものです。</p>
+      <p>お受けできる数に、<br>限りがあります。</p>
     </div>
 
-    <div class="ph wide rv-s">
-      <img src="../img/hands_02.jpg" alt="湯呑みを持つ手">
-      <div class="cap">迷ったら、そのままLINEに送ってください</div>
+    <div class="linebox rv">
+      <div class="lh">どちらにするか迷ったら</div>
+      <p>今の状況を、そのままLINEへ。<br>どちらが合うか、私からお返事します。</p>
+      <div class="ls">お支払いで止まった時も、同じくLINEへ</div>
+    </div>
+
+    <div class="ph wide px rv-s">
+      <img src="../img/hands_02.jpg" alt="湯呑みを持つ手" loading="lazy" decoding="async">
+      <div class="cap">迷ったら、そのままLINEに</div>
     </div>
   </div>
 </section>
 
 <div class="band" aria-hidden="true"></div>
 
-<!-- S5.5 受け取りまでの流れ -->
+<!-- ============ VI 受け取りまでの流れ（明） ============ -->
 <section class="s-light">
   <div class="wrap">
     <div class="chapno">VI</div>
-    <div class="eyebrow rv lat">The flow</div>
-    <h2 class="rv">受け取るまでの流れ</h2>
+    <div class="eyebrow lat">The flow</div>
+    <h2 class="lines"><span class="ln">受け取るまでの流れ</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <p style="text-align:center">申し込んだあと、どうなるのか。<br>先にお伝えしておきますね。</p>
-    </div>
-
-    <div class="steps rv">
+    <div class="steps stag">
       <div class="st">
         <span class="when">お申し込み</span>
         <h4>ご購入いただく</h4>
         <p>お名前と、購入画面のスクリーンショットをLINEに送ってください。ここで一度、私が確認します。</p>
       </div>
-
       <div class="st">
         <span class="when">確認がとれたら</span>
         <h4>二度目の質問をお送りします</h4>
-        <p>ここが、いちばん大事なところ。<br>無料鑑定のときより、ずっと深いことをお聞きします。今いちばんしんどい瞬間。認めるのが怖かったこと。夜にふっと出てくる気持ち。<br>上手に書こうとしなくて大丈夫。思いついたままの言葉で構いません。</p>
+        <p>ここが、いちばん大事なところ。<br>今いちばんしんどい瞬間。認めるのが怖かったこと。夜にふっと出てくる気持ち。<br>上手に書こうとしなくて大丈夫。思いついたままの言葉で構いません。</p>
       </div>
-
       <div class="st">
         <span class="when">お返事をいただいてから</span>
         <h4>その言葉ごと、深く視ます</h4>
         <p>いただいた言葉を一つずつ受け取りながら、なぜ今この流れが来ているのかを視ていきます。<br>ここに時間をかけたいので、<strong>二〜三日</strong>いただいています。</p>
       </div>
-
       <div class="st">
         <span class="when">仕上がったら</span>
         <h4>本格鑑定書をお届けします</h4>
@@ -994,123 +395,131 @@ h2::after{
     </div>
 
     <div class="whisper rv">
-      申し込んで、はい終わり、<br>ではありません。<br><br>
-      あなたの言葉を聞いてから、<br>書きはじめます。
+      申し込んで、はい終わり、ではありません。<br>
+      あなたの言葉を聞いてから、書きはじめます。
     </div>
+
+    <a class="cta rv" href="#item">
+      <span class="arrow">▼</span>
+      <span class="btn">鑑定を選ぶ</span>
+      <span class="sub">▶ 3日間限定 4,980円 / 9,980円</span>
+    </a>
   </div>
 </section>
 
-<div class="wrap"><div class="growline rv"></div></div>
+<div class="wrap"><div class="growline"></div></div>
 
-<!-- S6 感想 -->
+<!-- ============ VII 声（明） ============ -->
 <section class="s-light">
   <div class="wrap">
     <div class="chapno">VII</div>
-    <div class="eyebrow rv lat">Voices</div>
-    <h2 class="rv">受け取った方たちのこと</h2>
+    <div class="eyebrow lat">Voices</div>
+    <h2 class="lines"><span class="ln">受け取った方たちのこと</span></h2>
     <div class="gline"></div>
 
-    <div class="wcard rv">
-      <div class="bd">
-        <div class="hd">母と祖母も、<br>同じでした。</div>
-        <hr class="gradline">
-        <p>同じお金の苦労をしていたことを言われて、言葉が出ませんでした。自分の代だけの問題だと思っていたので、そこから視てもらえるとは思っていませんでした。</p>
-        <div class="who">50代 女性</div>
-      </div>
-    </div>
+    <div class="rv"><p class="tc">届いたLINEを、そのまま載せています。</p></div>
 
-    <div class="voice rv">
-      <div class="meta">40代 女性</div>
-      <div class="vhd">体質だと、<br>諦めていました。</div>
-      <p>満月の前だけ眠れなくなる理由が、はじめてわかりました。体質だと思って諦めていたことに、ちゃんと理由があった！　と知って、少し自分を許せました。</p>
-    </div>
+    <!-- 実際の感想スクショ（無加工・原寸比率のまま） -->
+    
+    
+    <figure class="shot rv"><img src="../img/voices/k_03.jpg" alt="受け取った方の感想" loading="lazy" decoding="async"></figure>
 
-    <div class="voice rv">
-      <div class="meta">60代 女性</div>
-      <div class="vhd">誰にも言えなかったことを、<br>言い当てられました。</div>
-      <p>鑑定文の中の一文を、何度も読み返して泣きました。誰にも言えなかったことを、言い当てられたというより、わかってもらえた感じがしました。</p>
-    </div>
+    <a class="minicta rv" href="#item">私も、視てもらう<span class="s">二つの鑑定から選ぶ</span></a>
+
+    <figure class="shot rv"><img src="../img/voices/k_04.jpg" alt="受け取った方の感想" loading="lazy" decoding="async"></figure>
+    <figure class="shot rv"><img src="../img/voices/k_05.jpg" alt="受け取った方の感想" loading="lazy" decoding="async"></figure>
+    <figure class="shot rv"><img src="../img/voices/k_06.jpg" alt="受け取った方の感想" loading="lazy" decoding="async"></figure>
+
+    <a class="minicta rv" href="#item">鑑定を選ぶ<span class="s">月読の章 4,980円 / 神言降ろし 9,980円</span></a>
   </div>
 </section>
 
-<!-- S7 来ないでほしい方 -->
+<!-- ============ VIII 来ないでほしい方 ============ -->
 <section class="s-ai-r">
   <div class="wrap">
-    <div class="warn rv">
-      <div class="eyebrow lat" style="color:#E8A392">Please do not</div>
+    <div class="warn stag">
+      <div class="eyebrow lat">Please do not</div>
       <h3>申し込まないでほしい方が、<br>います</h3>
       <p>今、生活が苦しくて、このお金を出すために何かを削らなければならない方。</p>
       <p><strong>今回は、見送ってください。</strong></p>
-      <p>暮らしを削ってまで受けるものじゃないんです。</p>
       <p>無料鑑定でお伝えしたことを、何度でも読み返してください。<br>そこに書いたことは、本当のことです。</p>
       <p>状況が変わった時に、また来てくださったらいい。<br><strong>その時、私はここにいます。</strong></p>
     </div>
+
+    <div class="big rv-b" style="margin-top:46px">暮らしを壊さずに<br>来られる方へ。</div>
+    <a class="minicta rv" href="#item">限定料金のうちに、鑑定を選ぶ<span class="s">3日間を過ぎると通常料金に戻ります</span></a>
   </div>
 </section>
 
-<!-- S8 FAQ -->
+<!-- ============ IX FAQ ============ -->
 <section class="s-dark">
   <div class="wrap">
-    <a class="minicta rv" href="#item" style="margin-bottom:44px">鑑定を申し込む<span class="s">月読の章 4,980円 / 神言降ろし 9,980円</span></a>
-
-    <div class="chapno">VIII</div>
-    <div class="eyebrow rv lat">Questions</div>
-    <h2 class="rv sm">よくあるご質問</h2>
+    <div class="chapno">IX</div>
+    <div class="eyebrow lat">Questions</div>
+    <h2 class="sm lines"><span class="ln">よくあるご質問</span></h2>
     <div class="gline"></div>
 
-    <div class="rv">
-      <details class="faq"><summary>どれくらいで届きますか。</summary>
-        <div class="ans">お申し込みのあと、鑑定前に聞かせてほしいことをLINEでお送りします。ご回答をいただいてから、二〜三日ほどで仕上げてお届けします。</div>
-      </details>
+    <div class="stag">
       <details class="faq"><summary>怖いことを言われませんか。</summary>
         <div class="ans">言いません。私は、怖がらせて動かす鑑定はしません。ただ、見ないままだと同じことを繰り返しやすい部分については、正直にお伝えします。</div>
+      </details>
+      <details class="faq"><summary>当たっていなかったらどうしよう、と思ってしまいます。</summary>
+        <div class="ans">鑑定は、当てものではありません。読んだときに「ざわっとした場所」を、あなた自身が見つけるためのものです。ひとつでも心に残る場所があれば、それが今のあなたに必要なところです。</div>
       </details>
       <details class="faq"><summary>月読の章と神言降ろし、どちらを選べばいいですか。</summary>
         <div class="ans">今の苦しさをまず軽くしたい方は月読の章を。同じことを何度も繰り返している自覚がある方、根っこから知りたい方は神言降ろしの本鑑定をおすすめしています。</div>
       </details>
-      <details class="faq"><summary>質問に上手く答えられる自信がありません。</summary>
-        <div class="ans">大丈夫です。長く書かなくて構いません。思いついたままの言葉で送ってください。上手にまとめようとしなくて大丈夫です。</div>
+      <details class="faq"><summary>家族に知られませんか。</summary>
+        <div class="ans">知られません。鑑定書はこのLINEにだけ届きます。郵送物も、家に届くものも一切ありません。読む時間も場所も、あなたが決めてください。</div>
       </details>
-      <details class="faq"><summary>当たっていなかったらどうしよう、と思ってしまいます。</summary>
-        <div class="ans">鑑定は、当てものではありません。読んだときに「ざわっとした場所」を、あなた自身が見つけるためのものです。全部が腑に落ちなくても、ひとつでも心に残る場所があれば、それが今のあなたに必要なところです。</div>
+      <details class="faq"><summary>どれくらいで届きますか。</summary>
+        <div class="ans">お申し込みのあと、鑑定前に聞かせてほしいことをLINEでお送りします。ご回答をいただいてから、二〜三日ほどで仕上げてお届けします。</div>
+      </details>
+      <details class="faq"><summary>3日間を過ぎたら、もう受けられませんか。</summary>
+        <div class="ans">受けられます。ただし通常料金に戻ります。無料鑑定を受け取った直後がいちばん心が動いている時なので、この料金は3日間だけにしています。</div>
+      </details>
+      <details class="faq"><summary>質問に上手く答えられる自信がありません。</summary>
+        <div class="ans">大丈夫です。長く書かなくて構いません。思いついたままの言葉で送ってください。</div>
       </details>
       <details class="faq"><summary>お守りの石など、あとから何か購入する必要はありますか。</summary>
-        <div class="ans">ありません。鑑定の中で、石や道具の購入をお願いすることはありません。追加の費用も一切かかりません。お渡しするのは、鑑定書だけです。</div>
+        <div class="ans">ありません。鑑定の中で、石や道具の購入をお願いすることはありません。追加の費用も一切かかりません。</div>
       </details>
       <details class="faq"><summary>お支払いがうまくいきません。</summary>
-        <div class="ans">よくあることなので、気にしないでください。エラーが出た、操作の途中で止まってしまった、どの方法がいいかわからない。そういう時は、そのままLINEに送ってください。一緒に手順を確認します。</div>
+        <div class="ans">よくあることなので、気にしないでください。エラーが出た、途中で止まった、どの方法がいいかわからない。そのままLINEに送ってください。一緒に手順を確認します。</div>
       </details>
     </div>
+
+    <a class="minicta rv" href="#item">鑑定を申し込む<span class="s">月読の章 / 神言降ろし</span></a>
   </div>
 </section>
 
-<!-- S9 追伸 -->
+<!-- ============ X 追伸 ============ -->
 <section class="s-ai">
   <div class="wrap">
-    <div class="chapno">IX</div>
-    <div class="eyebrow rv lat">From Mizuki</div>
-    <h2 class="rv">最後に</h2>
+    <div class="chapno">X</div>
+    <div class="eyebrow lat">From Mizuki</div>
+    <h2 class="lines"><span class="ln">最後に</span></h2>
     <div class="gline"></div>
 
     <div class="ph portrait rv-s">
-      <img src="../img/k_portrait.jpg" alt="みづき"
+      <img src="../img/k_portrait.jpg" alt="みづき" loading="lazy" decoding="async"
            onerror="this.onerror=null;this.src='../img/moon_03.jpg';this.alt='';">
     </div>
 
-    <div class="rv">
-      <p>私は、神様の声がただ聞こえる人ではありません。</p>
+    <div class="stag">
+      <p class="lead-p">私は、神様の声がただ聞こえる人ではありません。</p>
       <p><strong>神様から届いたものを、今のあなたが受け取れる言葉に変える人です。</strong></p>
-      <p>無料だから軽く見る。<br>無料だから浅く見る。<br>無料だから当たり障りのないことだけ言う。</p>
-      <p>それは、神様から預かった言葉にも、あなたの人生にも失礼だと思っています。</p>
-      <p>だから、無料鑑定でも手を抜きませんでした。</p>
-      <p>そして、そこで視えたものの<strong>奥</strong>が、まだ残っています。</p>
-      <p>あなたがここまで辿り着いたこと自体に、ちゃんと意味があります。</p>
+      <p>無料だから軽く見る。浅く見る。当たり障りのないことだけ言う。<br>それは、神様から預かった言葉にも、あなたの人生にも失礼だと思っています。</p>
+      <p>だから、無料鑑定でも手を抜きませんでした。<br>そして、そこで視えたものの<span class="ew">奥</span>が、まだ残っています。</p>
+      <p>あなたがここまで辿り着いたこと自体に、意味があります。</p>
     </div>
+
+    <div class="whisper rv">金額の話ではありません。<br>「このまま」が怖い方の話です。</div>
 
     <div class="peak rv">
       <div class="l1">迷っている時間も、<br>流れは進んでいます。</div>
       <div class="l2">見にいくのは、<br><em>今日でいい。</em></div>
-      <div class="l3">申し込みは1分。<br>質問へのお返事をいただいてから、二〜三日でお届けします。</div>
+      <div class="l3">限定料金の残り時間は、<br>ページ上部に表示しています。</div>
     </div>
 
     <div class="sign rv">みづき</div>
@@ -1119,7 +528,7 @@ h2::after{
       <span class="arrow">▼</span>
       <span class="btn">本鑑定を受け取る</span>
       <span class="sub">▶ 二つの鑑定から選ぶ</span>
-      <span class="micro">お申し込みは1分で終わります</span>
+      <span class="micro">3日間限定料金・お申し込みは1分</span>
     </a>
   </div>
 </section>
@@ -1133,97 +542,15 @@ h2::after{
 </footer>
 
 <div class="sticky" id="sticky">
-  <span class="lab">無料鑑定を受け取った方へ</span>
+  <span class="lab"><span class="hot">残りわずか</span>限定料金<span class="cdmini"></span></span>
   <div class="row">
     <div class="pricebox"><div class="p">4,980<small>円〜</small></div><div class="n">月読の章 / 神言降ろし</div></div>
     <a href="#item">鑑定を選ぶ</a>
   </div>
 </div>
 
-<script>
-(function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var targets = document.querySelectorAll('.rv,.rv-s');
-  if(reduce){ targets.forEach(function(el){ el.classList.add('on'); }); }
-  else if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
-    },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
-    targets.forEach(function(el){ io.observe(el); });
-  } else { targets.forEach(function(el){ el.classList.add('on'); }); }
-
-  if(!reduce){
-    var pc = document.getElementById('particles');
-    if(pc){
-      var n = window.innerWidth < 768 ? 16 : 34;
-      for(var i=0;i<n;i++){
-        var p = document.createElement('div');
-        p.className='particle';
-        p.style.left=(Math.random()*100)+'%';
-        p.style.setProperty('--duration',(9+Math.random()*11)+'s');
-        p.style.setProperty('--delay',(Math.random()*10)+'s');
-        p.style.setProperty('--size',(2+Math.random()*3).toFixed(1)+'px');
-        pc.appendChild(p);
-      }
-    }
-  }
-
-  var chk = document.getElementById('chk');
-  if(chk){
-    var items = chk.querySelectorAll('li');
-    if(reduce){ items.forEach(function(li){ li.classList.add('on'); }); }
-    else{
-      var kio = new IntersectionObserver(function(es){
-        es.forEach(function(e){
-          if(!e.isIntersecting) return;
-          items.forEach(function(li,i){ setTimeout(function(){ li.classList.add('on'); }, i*260); });
-          kio.unobserve(e.target);
-        });
-      },{threshold:.3});
-      kio.observe(chk);
-    }
-  }
-
-  document.querySelectorAll('[data-count]').forEach(function(el){
-    var goal = parseInt(el.getAttribute('data-count'),10);
-    if(reduce){ el.textContent = goal.toLocaleString(); return; }
-    var done=false;
-    var cio = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(!e.isIntersecting || done) return;
-        done=true;
-        var t0=null, dur=1900;
-        function step(ts){
-          if(!t0) t0=ts;
-          var pr=Math.min((ts-t0)/dur,1);
-          var eased=1-Math.pow(1-pr,3);
-          el.textContent=Math.floor(goal*eased).toLocaleString();
-          if(pr<1) requestAnimationFrame(step); else el.textContent=goal.toLocaleString();
-        }
-        requestAnimationFrame(step);
-        cio.unobserve(e.target);
-      });
-    },{threshold:.5});
-    cio.observe(el);
-  });
-
-  var bar=document.getElementById('progbar'), sticky=document.getElementById('sticky'), ticking=false;
-  function onScroll(){
-    if(ticking) return; ticking=true;
-    requestAnimationFrame(function(){
-      var h=document.documentElement.scrollHeight-window.innerHeight, y=window.scrollY;
-      if(bar) bar.style.width = h>0 ? Math.min(100,(y/h)*100)+'%' : '0%';
-      if(sticky){ if(y>window.innerHeight*1.15) sticky.classList.add('on'); else sticky.classList.remove('on'); }
-      ticking=false;
-    });
-  }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  onScroll();
-})();
-</script>
-
-<script src="../assets/track-config.js?v=202609252040"></script>
-<script src="../assets/track.js?v=202609252040"></script>
+<script src="../assets/lp.js?v=202609102219"></script>
+<script src="../assets/track-config.js?v=202609252005"></script>
+<script src="../assets/track.js?v=202609252005"></script>
 </body>
 </html>
