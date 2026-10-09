@@ -359,3 +359,7 @@ footer::before{
 @media (prefers-reduced-motion:reduce){
   h2::before{transition:none;opacity:.9;transform:rotate(166deg)}
 }
+
+/* 表示速度（2026-10-09）: 本文ゴシックのWebフォントを廃止しHiragino Sansへ。約1MB削減。
+   見出しの明朝（Shippori Mincho B1）は世界観の核なので維持する。 */
+:root{--sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",system-ui,sans-serif}
